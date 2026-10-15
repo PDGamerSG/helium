@@ -1,0 +1,59 @@
+services:
+  neo4j:
+    image: neo4j:enterprise
+    container_name: helium-neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      NEO4J_ACCEPT_LICENSE_AGREEMENT: eval
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD:-helium-dev-password}
+      NEO4J_PLUGINS: '["apoc","graph-data-science"]'
+      NEO4J_dbms_security_procedures_unrestricted: apoc.*,gds.*
+      NEO4J_dbms_security_procedures_allowlist: apoc.*,gds.*
+      NEO4J_server_memory_heap_initial__size: 1G
+      NEO4J_server_memory_heap_max__size: 2G
+      NEO4J_server_memory_pagecache_size: 512M
+      NEO4J_db_transaction_timeout: 30s
+    volumes:
+      - helium_neo4j_data:/data
+      - helium_neo4j_logs:/logs
+      - helium_neo4j_plugins:/plugins
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:7474 || exit 1"]
+      interval: 5s
+      timeout: 3s
+      retries: 40
+
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    container_name: helium-api
+    depends_on:
+      neo4j:
+        condition: service_healthy
+    env_file: .env
+    environment:
+      NEO4J_URI: bolt://neo4j:7687
+      OLLAMA_BASE_URL: http://host.docker.internal:11434/v1
+    ports:
+      - "8080:8000"
+    volumes:
+      - ./data:/app/data:ro
+
+  web:
+    build:
+      context: ./apps/web
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8081}
+    container_name: helium-web
+    depends_on:
+      - api
+    ports:
+      - "3002:3000"
+
+volumes:
+  helium_neo4j_data:
+  helium_neo4j_logs:
+  helium_neo4j_plugins:
