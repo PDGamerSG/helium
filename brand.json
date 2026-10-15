@@ -1,0 +1,13 @@
+{
+  "name": "Helium",
+  "tagline": "Memory with a trail.",
+  "description": "A time-aware memory workspace for teams and their agents.",
+  "voice": ["clear", "grounded", "quietly confident"],
+  "palette": {
+    "ink": "#102230",
+    "sky": "#8ED8FF",
+    "mint": "#C5F5D5",
+    "ember": "#FFB36B",
+    "paper": "#F6F8F5"
+  }
+}
