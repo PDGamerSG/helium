@@ -122,4 +122,3 @@ The strongest demonstration is: **“This decision changed. Here is the source, 
 - Judge an early prototype by whether someone can find the changed value, open its source, identify the affected work and owner, and distinguish an unsent draft from a completed action.
 
 Repository grounding: `README.md`, `PRODUCT.md`, `DESIGN.md`, `docs/frontend-design.md`, `docs/decision-impact.md`, `docs/contracts/http-api.md`, and `apps/web/package.json`. API fit was assessed from repository contracts, not through a live API test in this research.
-
