@@ -20,8 +20,8 @@ Neo4j remains the system of record. Tenant databases and `commons` provide isola
 - Ruff checks Python sources.
 - Web typecheck and lint run from `apps/web`.
 - Every feature commit has a focused verification command recorded in the implementation plan.
-- The final repository is checked for stale product names in public files, clean working tree, and a 21-commit sequence with timestamps separated by more than 20 minutes.
+- The final repository is checked for stale product names in public files, clean working tree, and a 27-commit sequence with timestamps separated by more than 20 minutes.
 
 ## Commit sequencing
 
-The implementation uses 21 commits from workspace foundation through final documentation. Commit subjects are imperative, short, and scoped like the `On-Record` reference. Commit metadata uses randomized gaps between 25 and 55 minutes; this records the requested review cadence without waiting in real time.
+The implementation uses 27 commits from workspace foundation through final documentation. Commit subjects are imperative, short, and scoped like the `On-Record` reference. Commit metadata uses randomized gaps between 25 and 55 minutes; this records the requested review cadence without waiting in real time.

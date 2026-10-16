@@ -33,7 +33,7 @@ uv sync --all-packages
 uv run --package helium-api pytest
 ```
 
-The full local setup and the Helium demo path are documented in `docs/helium-demo.md` once the application slices are installed.
+The full local setup and the Helium demo path are documented in [`docs/helium-demo.md`](docs/helium-demo.md).
 
 ## Attribution
 

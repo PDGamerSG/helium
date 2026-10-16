@@ -3,7 +3,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 IGNORED = {".git", ".venv", "node_modules", ".next", "uv.lock", "pnpm-lock.yaml"}
-ALLOWED = {"docs/UPSTREAM.md", "docs/superpowers/specs/2026-10-16-helium-rebrand-design.md"}
+ALLOWED = {"docs/UPSTREAM.md", "docs/superpowers/specs/2026-10-16-helium-rebrand-design.md", "docs/superpowers/plans/2026-10-16-helium-rebrand.md"}
 FORBIDDEN = ("Minutes", "MINUTES_", "minutes-neo4j", "minutes-api", "minutes-web", "minutes-workspace")
 
 for path in ROOT.rglob("*"):
