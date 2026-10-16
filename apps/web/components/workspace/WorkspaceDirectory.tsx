@@ -94,7 +94,8 @@ export function WorkspaceDirectory() {
   const { data, error, loading, refetch } = useResource(() => api.tenants.list(), []);
   return <div className="ws-directory">
     <header className="ws-directory-heading">
-      <div><span className="ws-directory-eyebrow"><Network size={15} /> Your connected company</span><h1>A place for every team.</h1><p>Pick up the conversations, decisions, and work that matter.</p></div>
+      <div><span className="ws-directory-eyebrow"><Network size={15} /> Your connected company</span><p className="eyebrow">HELIUM WORKSPACE</p>
+      <h1>A place for every team.</h1><p>Pick up the conversations, decisions, and work that matter.</p></div>
       <NewTenantDialog onCreated={refetch} />
     </header>
     {error && <div className="space-y-3"><ErrorNote error={`Workspaces could not be loaded: ${error.message}`} /><Button variant="outline" onClick={refetch}>Try again</Button></div>}
