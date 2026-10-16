@@ -10,7 +10,7 @@ export default function Page() {
   return (
     <main className="helium-home">
       <nav className="topbar" aria-label="Primary navigation">
-        <Link className="wordmark" href="/" aria-label="Helium home"><span className="wordmark-mark">H</span>helium</a>
+        <Link className="wordmark" href="/" aria-label="Helium home"><span className="wordmark-mark">H</span>helium</Link>
         <div className="topbar-links"><a href="#memory">Memory</a><a href="#signals">Signals</a><button>Open workspace</button></div>
       </nav>
       <section className="hero" id="memory">
