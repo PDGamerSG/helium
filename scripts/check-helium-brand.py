@@ -10,7 +10,7 @@ for path in ROOT.rglob("*"):
     if not path.is_file() or any(part in IGNORED for part in path.parts):
         continue
     rel = path.relative_to(ROOT).as_posix()
-    if rel in ALLOWED or rel == "README.md" or path.suffix not in {".md", ".py", ".ts", ".tsx", ".css", ".json", ".yml", ".yaml", ".toml", ".html"}:
+    if rel in ALLOWED or rel == "README.md" or rel == "scripts/check-helium-brand.py" or path.suffix not in {".md", ".py", ".ts", ".tsx", ".css", ".json", ".yml", ".yaml", ".toml", ".html"}:
         continue
     text = path.read_text(encoding="utf-8", errors="ignore")
     if any(word in text for word in FORBIDDEN):
