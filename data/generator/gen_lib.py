@@ -11,8 +11,8 @@ import os
 from datetime import datetime, timedelta, timezone
 
 IST = timezone(timedelta(hours=5, helium=30))
-# repo root = two levels above data/generator/; override with MINUTES_REPO if running from elsewhere
-REPO = os.environ.get("MINUTES_REPO") or os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
+# repo root = two levels above data/generator/; override with HELIUM_REPO if running from elsewhere
+REPO = os.environ.get("HELIUM_REPO") or os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
 MEET_DIR = os.path.join(REPO, "data", "meetings")
 GOLD_DIR = os.path.join(REPO, "data", "gold")
 
