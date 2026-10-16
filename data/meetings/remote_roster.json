@@ -1,0 +1,26 @@
+[
+  {
+    "id": "spk_mee006",
+    "name": "David",
+    "role": "industrial designer",
+    "email": "mee006@remote.example"
+  },
+  {
+    "id": "spk_fee005",
+    "name": "Laura",
+    "role": "project manager",
+    "email": "fee005@remote.example"
+  },
+  {
+    "id": "spk_mee007",
+    "name": "Craig",
+    "role": "user interface designer",
+    "email": "mee007@remote.example"
+  },
+  {
+    "id": "spk_mee008",
+    "name": "Andrew",
+    "role": "marketing expert",
+    "email": "mee008@remote.example"
+  }
+]

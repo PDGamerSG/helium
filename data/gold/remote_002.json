@@ -1,0 +1,140 @@
+{
+  "meeting_id": "mtg_remote_002",
+  "items": [
+    {
+      "kind": "decision",
+      "subject": "teletext",
+      "predicate": "status",
+      "object": "out of scope",
+      "speaker_id": "spk_fee005",
+      "segment_index": 7,
+      "quote": "the company's decided that teletext is outdated uh because of how popular the internet is. Nobody uses teletext very much anymore, so we don't really need to consider that in the functionality"
+    },
+    {
+      "kind": "fact",
+      "subject": "remote control",
+      "predicate": "scope_includes",
+      "object": "television only",
+      "speaker_id": "spk_fee005",
+      "segment_index": 7,
+      "quote": "we only use the remote control to control the television, not the V_C_R_, D_V_D_ or anything else"
+    },
+    {
+      "kind": "fact",
+      "subject": "corporate colour",
+      "predicate": "requires",
+      "object": "corporate colour and slogan in the design",
+      "speaker_id": "spk_fee005",
+      "segment_index": 7,
+      "quote": "the company want the corporate colour and slogan to be implemented in the new design"
+    },
+    {
+      "kind": "decision",
+      "subject": "target demographic",
+      "predicate": "decided",
+      "object": "people aged 15 to 35",
+      "speaker_id": "spk_fee005",
+      "segment_index": 214,
+      "quote": "Okay, so fifteen to thirty five, look fairly young. You know, they have bit of expendable income to spend on this sort of thing."
+    },
+    {
+      "kind": "decision",
+      "subject": "speech recognition",
+      "predicate": "status",
+      "object": "left open",
+      "speaker_id": "spk_mee006",
+      "segment_index": 240,
+      "quote": "I suggest that we think about speech recognition, anyway it's a it's something that can be used to fulfil a function, but at end of the day we don't look at the technology, but we look at the function first."
+    },
+    {
+      "kind": "decision",
+      "subject": "infra-red sensor",
+      "predicate": "uses_pattern",
+      "object": "infra-red",
+      "speaker_id": "spk_fee005",
+      "segment_index": 322,
+      "quote": "not worry so much about uh how we transmit it um because I mean it it's tried and tested intra-red, so we could stay with tha"
+    },
+    {
+      "kind": "decision",
+      "subject": "battery",
+      "predicate": "decided",
+      "object": "regular batteries",
+      "speaker_id": "spk_fee005",
+      "segment_index": 356,
+      "quote": "Okay, so just stick to to regular"
+    },
+    {
+      "kind": "decision",
+      "subject": "buttons",
+      "predicate": "scope_includes",
+      "object": "on/off",
+      "speaker_id": "spk_mee007",
+      "segment_index": 362,
+      "quote": "I think we just say that it was gonna be the the most basic stuff possible. Um on off, up and down channels, up and down volume and uh skip to a channel."
+    },
+    {
+      "kind": "decision",
+      "subject": "buttons",
+      "predicate": "scope_includes",
+      "object": "channel up and down",
+      "speaker_id": "spk_mee007",
+      "segment_index": 362,
+      "quote": "Um on off, up and down channels, up and down volume and uh skip to a channel."
+    },
+    {
+      "kind": "decision",
+      "subject": "buttons",
+      "predicate": "scope_includes",
+      "object": "volume up and down",
+      "speaker_id": "spk_mee007",
+      "segment_index": 362,
+      "quote": "Um on off, up and down channels, up and down volume and uh skip to a channel."
+    },
+    {
+      "kind": "decision",
+      "subject": "buttons",
+      "predicate": "scope_includes",
+      "object": "channel number buttons",
+      "speaker_id": "spk_mee007",
+      "segment_index": 362,
+      "quote": "Um on off, up and down channels, up and down volume and uh skip to a channel."
+    },
+    {
+      "kind": "decision",
+      "subject": "buttons",
+      "predicate": "uses_pattern",
+      "object": "grouped into audio, video and device controls",
+      "speaker_id": "spk_mee006",
+      "segment_index": 374,
+      "quote": "maybe I could suggest we we break them down into three simple categories. One would be audio controls, one would be video controls, and the other one would be a device."
+    },
+    {
+      "kind": "commitment",
+      "subject": "components concept",
+      "predicate": "owner",
+      "object": "David",
+      "speaker_id": "spk_fee005",
+      "segment_index": 387,
+      "quote": "for uh our Industrial Designer, you're gonna be thinking about the components concept"
+    },
+    {
+      "kind": "commitment",
+      "subject": "user interface concept",
+      "predicate": "owner",
+      "object": "Craig",
+      "speaker_id": "spk_fee005",
+      "segment_index": 387,
+      "quote": "User Interface Designer gonna be thinking about our user interface"
+    },
+    {
+      "kind": "commitment",
+      "subject": "trend watching",
+      "predicate": "owner",
+      "object": "Andrew",
+      "speaker_id": "spk_fee005",
+      "segment_index": 387,
+      "quote": "marketing you're gonna be thinking about trend watching"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "meeting_id": "mtg_remote_001",
+  "items": [
+    {
+      "kind": "fact",
+      "subject": "remote control",
+      "predicate": "requires",
+      "object": "original, trendy and user friendly",
+      "speaker_id": "spk_fee005",
+      "segment_index": 12,
+      "quote": "design a new remote control. Um, as you can see it's supposed to be original, trendy and user friendly."
+    },
+    {
+      "kind": "decision",
+      "subject": "selling price",
+      "predicate": "decided",
+      "object": "25 Euro",
+      "speaker_id": "spk_fee005",
+      "segment_index": 79,
+      "quote": "we're gonna be selling this remote control for twenty five Euro"
+    },
+    {
+      "kind": "fact",
+      "subject": "remote control",
+      "predicate": "scope_includes",
+      "object": "international sales",
+      "speaker_id": "spk_fee005",
+      "segment_index": 79,
+      "quote": "so we're gonna be selling this on an international scale"
+    },
+    {
+      "kind": "decision",
+      "subject": "production cost",
+      "predicate": "decided",
+      "object": "at most 12.50 Euro",
+      "speaker_id": "spk_fee005",
+      "segment_index": 79,
+      "quote": "we don't want it to cost any more than uh twelve fifty Euros, so fifty percent of the selling price"
+    },
+    {
+      "kind": "commitment",
+      "subject": "working design",
+      "predicate": "owner",
+      "object": "David",
+      "speaker_id": "spk_fee005",
+      "segment_index": 201,
+      "quote": "as the industrial designer, you're gonna be working on you know the actual working design of it"
+    },
+    {
+      "kind": "commitment",
+      "subject": "technical functions",
+      "predicate": "owner",
+      "object": "Craig",
+      "speaker_id": "spk_fee005",
+      "segment_index": 201,
+      "quote": "for user interface, technical functions, I guess that's you know like what we've been talking about, what it'll actually do"
+    },
+    {
+      "kind": "commitment",
+      "subject": "user requirements",
+      "predicate": "owner",
+      "object": "Andrew",
+      "speaker_id": "spk_fee005",
+      "segment_index": 203,
+      "quote": "You'll be just thinking about what it actually what, you know, what requirements it has to has to fulfil"
+    },
+    {
+      "kind": "fact",
+      "subject": "remote control",
+      "predicate": "requires",
+      "object": "features that fit the production cost cap",
+      "speaker_id": "spk_mee006",
+      "segment_index": 223,
+      "quote": "Because there's a cap there, so um depends on how much you can cram into that price."
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "meeting_id": "mtg_remote_003",
+  "items": [
+    {
+      "kind": "fact",
+      "subject": "corporate colour",
+      "predicate": "decided",
+      "object": "yellow",
+      "speaker_id": "spk_fee005",
+      "segment_index": 110,
+      "quote": "I think it's yellow because like the website is yellow and there's a band at the bottom is yellow"
+    },
+    {
+      "kind": "decision",
+      "subject": "case",
+      "predicate": "decided",
+      "object": "curvy shape",
+      "speaker_id": "spk_mee007",
+      "segment_index": 264,
+      "quote": "I think we could go for like um maybe not a p a fruit shape but a very sort of curvy type shape."
+    },
+    {
+      "kind": "decision",
+      "subject": "materials",
+      "predicate": "uses_pattern",
+      "object": "soft fruit-like feel",
+      "speaker_id": "spk_mee007",
+      "segment_index": 264,
+      "quote": "Um you could have the same sort of texture and colour as a fruit."
+    },
+    {
+      "kind": "decision",
+      "subject": "case",
+      "predicate": "uses_pattern",
+      "object": "snowman shape",
+      "speaker_id": "spk_fee005",
+      "segment_index": 314,
+      "quote": "So call it the snowman-shape trademark."
+    },
+    {
+      "kind": "decision",
+      "subject": "case",
+      "predicate": "decided",
+      "object": "yellow",
+      "speaker_id": "spk_mee007",
+      "segment_index": 317,
+      "quote": "So I reckon it'd look quite nice if we just had um this here, had a sorta background yellow, and then have sort of a nice bold colour for the buttons."
+    },
+    {
+      "kind": "decision",
+      "subject": "LCD display",
+      "predicate": "decided",
+      "object": "no LCD display",
+      "speaker_id": "spk_fee005",
+      "segment_index": 336,
+      "quote": "So so no need for an L_C_D_ display?"
+    },
+    {
+      "kind": "decision",
+      "subject": "talk-back function",
+      "predicate": "decided",
+      "object": "no talk-back",
+      "speaker_id": "spk_fee005",
+      "segment_index": 347,
+      "quote": "I would say no need for a talk-back. Uh does anybody disagree with that?"
+    },
+    {
+      "kind": "decision",
+      "subject": "battery",
+      "predicate": "decided",
+      "object": "kinetic battery",
+      "speaker_id": "spk_fee005",
+      "segment_index": 363,
+      "supersedes": {
+        "subject": "battery",
+        "predicate": "decided"
+      },
+      "quote": "I really like the idea of this kinetic thing where you'd have the back-up of the battery, but have have kinetic power, I mean what does anybody think about that?"
+    },
+    {
+      "kind": "decision",
+      "subject": "buttons",
+      "predicate": "decided",
+      "object": "rubber buttons",
+      "speaker_id": "spk_fee005",
+      "segment_index": 381,
+      "quote": "Yeah I know we're gonna have like rubber buttons that feel kind of"
+    },
+    {
+      "kind": "decision",
+      "subject": "jog dial",
+      "predicate": "status",
+      "object": "approved",
+      "speaker_id": "spk_fee005",
+      "segment_index": 440,
+      "quote": "we do need to make a decision on whether we want to incorporate a jog dial in nice and quickly. Um I'm all for them actually, I think they're quite you know th very quick to m to use. So does anybody oppose the idea of of incorporating one into the design at all? No."
+    },
+    {
+      "kind": "decision",
+      "subject": "corporate colour",
+      "predicate": "scope_includes",
+      "object": "slogan on the casing",
+      "speaker_id": "spk_fee005",
+      "segment_index": 452,
+      "quote": "Yeah let's let's try and get the slogan on there"
+    },
+    {
+      "kind": "commitment",
+      "subject": "prototype",
+      "predicate": "owner",
+      "object": "David and Craig",
+      "speaker_id": "spk_fee005",
+      "segment_index": 462,
+      "quote": "the next meeting's gonna be in thirty helium, and so you can see in the screen here what each of you are gonna hopefully be doing, uh I know that the designers are gonna be working with Play-doh on that."
+    },
+    {
+      "kind": "decision",
+      "subject": "materials",
+      "predicate": "decided",
+      "object": "plastic and rubber",
+      "speaker_id": "spk_mee008",
+      "segment_index": 477,
+      "quote": "materials we sorta said we'd do plastic and rubber, didn't we"
+    }
+  ]
+}

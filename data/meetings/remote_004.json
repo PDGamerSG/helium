@@ -1,0 +1,4685 @@
+{
+  "version": 1,
+  "note": "Real transcript from the AMI Meeting Corpus (CC BY 4.0, https://groups.inf.ed.ac.uk/ami/corpus/), converted by data/ami/fetch_ami.py from the manual annotation release. The corpus records the meeting date but no clock time, so same-day meetings are placed at 10:00, 12:00, 14:00 and 16:00 UTC in their real order. Speaker names are the corpus participant ids; roles come from corpusResources/meetings.xml.",
+  "source": {
+    "corpus": "AMI Meeting Corpus",
+    "meeting": "ES2002d",
+    "recorded_on": "13-12-04",
+    "licence": "CC BY 4.0"
+  },
+  "meeting": {
+    "id": "mtg_remote_004",
+    "title": "ES2002d: detailed design",
+    "started_at": "2004-12-13T16:00:00+00:00",
+    "ended_at": "2004-12-13T16:40:00.860000+00:00",
+    "audio_uri": "data/meetings/remote_004.wav"
+  },
+  "speakers": [
+    {
+      "id": "spk_mee006",
+      "name": "David",
+      "role": "industrial designer"
+    },
+    {
+      "id": "spk_fee005",
+      "name": "Laura",
+      "role": "project manager"
+    },
+    {
+      "id": "spk_mee008",
+      "name": "Andrew",
+      "role": "marketing expert"
+    },
+    {
+      "id": "spk_mee007",
+      "name": "Craig",
+      "role": "user interface designer"
+    }
+  ],
+  "segments": [
+    {
+      "start_ms": 2410,
+      "end_ms": 30510,
+      "speaker_id": "spk_fee005",
+      "text": "Okay we all all set? Right. Well this is the uh final detailed design meeting. Um we're gonna discuss the look and feel design, the user interface design, and we're gonna evaluate the product. And the end result of this meeting has to be a decision on the details of this remote control, like absolute final decision, um and then I'm gonna have to specify the final design in the final report."
+    },
+    {
+      "start_ms": 31000,
+      "end_ms": 59260,
+      "speaker_id": "spk_fee005",
+      "text": "So um just from from last time to recap, we said we were gonna have a snowman shaped remote control with no L_C_D_ display, no need for talk-back, it was hopefully gonna be kinetic power and battery uh with rubber buttons, maybe backlighting the buttons with some internal L_E_D_s to shine through the casing, um hopefully a jog-dial, and incorporating the slogan somewhere as well. Anything I've missed? Okay um so uh if you want to present your prototype go ahead."
+    },
+    {
+      "start_ms": 59260,
+      "end_ms": 59390,
+      "speaker_id": "spk_mee006",
+      "text": "No."
+    },
+    {
+      "start_ms": 70110,
+      "end_ms": 71750,
+      "speaker_id": "spk_mee007",
+      "text": "Uh-oh. This is it? Um, there are a few changes we've made. Um, well look at the expense sheet, and uh it turned to be quite a lot expensive to have open up and have lots of buttons and stuff inside, so instead we've um this is gonna be an L_C_D_ screen, um just a a very very basic one, very small um with access to the menu through the the scroll wheel and uh confirm"
+    },
+    {
+      "start_ms": 71750,
+      "end_ms": 73910,
+      "speaker_id": "spk_mee006",
+      "text": "Ninja Homer, made in Japan."
+    },
+    {
+      "start_ms": 76930,
+      "end_ms": 77460,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 79570,
+      "end_ms": 80190,
+      "speaker_id": "spk_fee005",
+      "text": "Mm."
+    },
+    {
+      "start_ms": 84930,
+      "end_ms": 85280,
+      "speaker_id": "spk_fee005",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 96640,
+      "end_ms": 98460,
+      "speaker_id": "spk_mee007",
+      "text": "Um button. Uh, apart from that, it's just pretty much the same as we discussed last time."
+    },
+    {
+      "start_ms": 98460,
+      "end_ms": 98750,
+      "speaker_id": "spk_mee008",
+      "text": "Mm 'kay."
+    },
+    {
+      "start_ms": 101920,
+      "end_ms": 111340,
+      "speaker_id": "spk_mee006",
+      "text": "And there isn't uh d it doesn't open up to the advanced functions? So the advanced functions are still hidden from you, but they're hidden in the sense that um they're not in use."
+    },
+    {
+      "start_ms": 111800,
+      "end_ms": 112250,
+      "speaker_id": "spk_mee008",
+      "text": "Where are they?"
+    },
+    {
+      "start_ms": 112760,
+      "end_ms": 114850,
+      "speaker_id": "spk_mee006",
+      "text": "Um they're in the L_C_D_ panel and the jog-dial? Okay 'cause"
+    },
+    {
+      "start_ms": 114850,
+      "end_ms": 116080,
+      "speaker_id": "spk_mee008",
+      "text": "Ah, right. Great."
+    },
+    {
+      "start_ms": 116080,
+      "end_ms": 118100,
+      "speaker_id": "spk_fee005",
+      "text": "So w what kind of thing uh is gonna be"
+    },
+    {
+      "start_ms": 118100,
+      "end_ms": 121540,
+      "speaker_id": "spk_mee006",
+      "text": "The L_C_D_ panel just displays um functionally what you're doing. If you're using an advanced function right, like um c brightness, contrast, whatever, it will just say You know it's like it only has four columns, it's a very simple L_C_D_ like, whereas many the minimum amount we need that the user will automatically know like this is brightness or this is contrast."
+    },
+    {
+      "start_ms": 121540,
+      "end_ms": 121770,
+      "speaker_id": "spk_mee008",
+      "text": "Right."
+    },
+    {
+      "start_ms": 125940,
+      "end_ms": 126230,
+      "speaker_id": "spk_mee008",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 131400,
+      "end_ms": 131670,
+      "speaker_id": "spk_mee008",
+      "text": "Right."
+    },
+    {
+      "start_ms": 136580,
+      "end_ms": 136760,
+      "speaker_id": "spk_fee005",
+      "text": "Mm-hmm. Okay cool."
+    },
+    {
+      "start_ms": 136760,
+      "end_ms": 137920,
+      "speaker_id": "spk_mee008",
+      "text": "Right, 'kay."
+    },
+    {
+      "start_ms": 137920,
+      "end_ms": 140720,
+      "speaker_id": "spk_mee006",
+      "text": "It might even be one, a bit more complex L_C_D_ panel with pictures like maybe the sun or the, you know, the the symbols of the various functions."
+    },
+    {
+      "start_ms": 140720,
+      "end_ms": 141110,
+      "speaker_id": "spk_mee008",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 145770,
+      "end_ms": 146110,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm, and what is this here?"
+    },
+    {
+      "start_ms": 146110,
+      "end_ms": 147820,
+      "speaker_id": "spk_fee005",
+      "text": "Oh right okay. Cool."
+    },
+    {
+      "start_ms": 148820,
+      "end_ms": 149700,
+      "speaker_id": "spk_mee006",
+      "text": "That's a number pad."
+    },
+    {
+      "start_ms": 149700,
+      "end_ms": 151600,
+      "speaker_id": "spk_mee008",
+      "text": "Okay so the number pad is 'Kay, great."
+    },
+    {
+      "start_ms": 151600,
+      "end_ms": 153450,
+      "speaker_id": "spk_fee005",
+      "text": "Where are we gonna have the slogan?"
+    },
+    {
+      "start_ms": 154180,
+      "end_ms": 154790,
+      "speaker_id": "spk_mee006",
+      "text": "Um they're al along this Yeah."
+    },
+    {
+      "start_ms": 154790,
+      "end_ms": 156650,
+      "speaker_id": "spk_mee007",
+      "text": "You know, just like right inside there."
+    },
+    {
+      "start_ms": 157490,
+      "end_ms": 158400,
+      "speaker_id": "spk_fee005",
+      "text": "Okay cool."
+    },
+    {
+      "start_ms": 158400,
+      "end_ms": 162780,
+      "speaker_id": "spk_mee006",
+      "text": "You have this space here, and then you have this thing on the side as well, or at the bottom."
+    },
+    {
+      "start_ms": 164100,
+      "end_ms": 164200,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 164200,
+      "end_ms": 166390,
+      "speaker_id": "spk_mee006",
+      "text": "'Cause slogans are usually quite small, right, they're not like huge so they're s"
+    },
+    {
+      "start_ms": 166390,
+      "end_ms": 166530,
+      "speaker_id": "spk_mee008",
+      "text": "Mm."
+    },
+    {
+      "start_ms": 168790,
+      "end_ms": 168970,
+      "speaker_id": "spk_mee008",
+      "text": "Yep."
+    },
+    {
+      "start_ms": 170710,
+      "end_ms": 170930,
+      "speaker_id": "spk_mee006",
+      "text": "Say a button's about say a button's about this size, right, so you would still have plenty of space for a slogan, say even for that."
+    },
+    {
+      "start_ms": 170930,
+      "end_ms": 171020,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 171020,
+      "end_ms": 171740,
+      "speaker_id": "spk_mee008",
+      "text": "Looks good."
+    },
+    {
+      "start_ms": 173650,
+      "end_ms": 173870,
+      "speaker_id": "spk_mee008",
+      "text": "Yep."
+    },
+    {
+      "start_ms": 175070,
+      "end_ms": 176440,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 176440,
+      "end_ms": 178510,
+      "speaker_id": "spk_fee005",
+      "text": "So if this isn't to scale, what kind of"
+    },
+    {
+      "start_ms": 179600,
+      "end_ms": 181760,
+      "speaker_id": "spk_fee005",
+      "text": "Dimensions are you thinking about here?"
+    },
+    {
+      "start_ms": 182850,
+      "end_ms": 185420,
+      "speaker_id": "spk_mee007",
+      "text": "Well we want the other buttons to be big enough to push easily with a finger so we reckon maybe that'll be about the same size as the palm of your hand."
+    },
+    {
+      "start_ms": 185420,
+      "end_ms": 186120,
+      "speaker_id": "spk_fee005",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 189400,
+      "end_ms": 189770,
+      "speaker_id": "spk_mee008",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 190390,
+      "end_ms": 195090,
+      "speaker_id": "spk_mee006",
+      "text": "Yep so that would be about a centimetre for a button, so one two three"
+    },
+    {
+      "start_ms": 197420,
+      "end_ms": 200850,
+      "speaker_id": "spk_mee006",
+      "text": "Four centimetres. Plus maybe half o five"
+    },
+    {
+      "start_ms": 200850,
+      "end_ms": 201240,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 202440,
+      "end_ms": 202920,
+      "speaker_id": "spk_mee008",
+      "text": "About nine in total."
+    },
+    {
+      "start_ms": 202920,
+      "end_ms": 203120,
+      "speaker_id": "spk_mee006",
+      "text": "Six seven eight, about yeah nine total."
+    },
+    {
+      "start_ms": 203120,
+      "end_ms": 204890,
+      "speaker_id": "spk_fee005",
+      "text": "Six, seven, eight, nine, ten."
+    },
+    {
+      "start_ms": 205420,
+      "end_ms": 205990,
+      "speaker_id": "spk_fee005",
+      "text": "So we're talking about ten centimetres. That would be good. So ten centimetres in height. Okay um."
+    },
+    {
+      "start_ms": 205990,
+      "end_ms": 207300,
+      "speaker_id": "spk_mee008",
+      "text": "That sounds good. Yeah."
+    },
+    {
+      "start_ms": 208760,
+      "end_ms": 208890,
+      "speaker_id": "spk_mee008",
+      "text": "Yep."
+    },
+    {
+      "start_ms": 209730,
+      "end_ms": 210430,
+      "speaker_id": "spk_mee006",
+      "text": "Nine, ten."
+    },
+    {
+      "start_ms": 211120,
+      "end_ms": 211710,
+      "speaker_id": "spk_mee006",
+      "text": "Yep."
+    },
+    {
+      "start_ms": 215190,
+      "end_ms": 220610,
+      "speaker_id": "spk_mee008",
+      "text": "That'd be good, in fact a pen is about ten centimetres usually, so that would be that sounds like a really good size, if you see it there."
+    },
+    {
+      "start_ms": 220610,
+      "end_ms": 221120,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 222230,
+      "end_ms": 224240,
+      "speaker_id": "spk_fee005",
+      "text": "That's great and it's very bright as well. So um okay."
+    },
+    {
+      "start_ms": 224240,
+      "end_ms": 224450,
+      "speaker_id": "spk_mee008",
+      "text": "Mm."
+    },
+    {
+      "start_ms": 225980,
+      "end_ms": 232430,
+      "speaker_id": "spk_mee008",
+      "text": "Is it possible uh I'm just gonna bring up the idea of colours. Is these are these the colours that of production, or is this just what we had available?"
+    },
+    {
+      "start_ms": 232430,
+      "end_ms": 233240,
+      "speaker_id": "spk_mee007",
+      "text": "Well I'm"
+    },
+    {
+      "start_ms": 234440,
+      "end_ms": 240070,
+      "speaker_id": "spk_mee007",
+      "text": "We're gonna have again the the sort of the foggy um yellow from last time that lit up when you pushed the button."
+    },
+    {
+      "start_ms": 240240,
+      "end_ms": 240470,
+      "speaker_id": "spk_mee008",
+      "text": "Right."
+    },
+    {
+      "start_ms": 240860,
+      "end_ms": 240910,
+      "speaker_id": "spk_mee007",
+      "text": "Um"
+    },
+    {
+      "start_ms": 240910,
+      "end_ms": 245880,
+      "speaker_id": "spk_fee005",
+      "text": "Okay so just could you just list all the things that it does s so I can write them in the report."
+    },
+    {
+      "start_ms": 245880,
+      "end_ms": 256260,
+      "speaker_id": "spk_mee007",
+      "text": "But um this button um, because it's red it's sort of very prominent, we're gonna use it as uh it can be the power button if you hold it for maybe two seconds it'll send a stand-by signal. Um apart from that it's gonna be used as a confirm button for the L_C_D_ screen and you use this as a jog-dial."
+    },
+    {
+      "start_ms": 256260,
+      "end_ms": 256620,
+      "speaker_id": "spk_fee005",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 259320,
+      "end_ms": 259830,
+      "speaker_id": "spk_mee006",
+      "text": "Excuse me."
+    },
+    {
+      "start_ms": 259890,
+      "end_ms": 260120,
+      "speaker_id": "spk_mee006",
+      "text": "Sure."
+    },
+    {
+      "start_ms": 262000,
+      "end_ms": 262320,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 264300,
+      "end_ms": 267020,
+      "speaker_id": "spk_fee005",
+      "text": "Okay so that's like an okay button, right."
+    },
+    {
+      "start_ms": 267490,
+      "end_ms": 267750,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 268090,
+      "end_ms": 268670,
+      "speaker_id": "spk_mee006",
+      "text": "Oh we've discussed how h high it is, but how wide is it?"
+    },
+    {
+      "start_ms": 268670,
+      "end_ms": 269260,
+      "speaker_id": "spk_mee007",
+      "text": "I don't know."
+    },
+    {
+      "start_ms": 272680,
+      "end_ms": 273120,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 273120,
+      "end_ms": 273830,
+      "speaker_id": "spk_mee008",
+      "text": "How high is it?"
+    },
+    {
+      "start_ms": 274020,
+      "end_ms": 275280,
+      "speaker_id": "spk_mee006",
+      "text": "No as in the height, but what about the width?"
+    },
+    {
+      "start_ms": 275280,
+      "end_ms": 275540,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 277250,
+      "end_ms": 277350,
+      "speaker_id": "spk_mee007",
+      "text": "Didn't put five centimetres."
+    },
+    {
+      "start_ms": 277350,
+      "end_ms": 279140,
+      "speaker_id": "spk_fee005",
+      "text": "Oh oh like depth of the actual thing."
+    },
+    {
+      "start_ms": 279140,
+      "end_ms": 280240,
+      "speaker_id": "spk_mee006",
+      "text": "Do we need five? I don't think five is be about th three and a half."
+    },
+    {
+      "start_ms": 280240,
+      "end_ms": 280870,
+      "speaker_id": "spk_mee007",
+      "text": "Um."
+    },
+    {
+      "start_ms": 283110,
+      "end_ms": 283450,
+      "speaker_id": "spk_mee008",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 284260,
+      "end_ms": 284280,
+      "speaker_id": "spk_mee007",
+      "text": "Something by there."
+    },
+    {
+      "start_ms": 284280,
+      "end_ms": 285930,
+      "speaker_id": "spk_fee005",
+      "text": "Oh is this k to get an idea of scale from your from your thing there okay. So you can power on and off, what else can you do?"
+    },
+    {
+      "start_ms": 285930,
+      "end_ms": 286770,
+      "speaker_id": "spk_mee006",
+      "text": "Yeah, yeah."
+    },
+    {
+      "start_ms": 286770,
+      "end_ms": 287170,
+      "speaker_id": "spk_mee008",
+      "text": "Sure."
+    },
+    {
+      "start_ms": 290570,
+      "end_ms": 291090,
+      "speaker_id": "spk_mee008",
+      "text": "Three and a half."
+    },
+    {
+      "start_ms": 291940,
+      "end_ms": 294340,
+      "speaker_id": "spk_mee007",
+      "text": "Um you can skip straight to a channel using these buttons."
+    },
+    {
+      "start_ms": 294340,
+      "end_ms": 295190,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 300990,
+      "end_ms": 307610,
+      "speaker_id": "spk_mee007",
+      "text": "Um, were gonna have the volume control here, but um because we've got the the L_C_D_ and the jog-dial we just thought we'd um use that as the volume."
+    },
+    {
+      "start_ms": 308080,
+      "end_ms": 309760,
+      "speaker_id": "spk_fee005",
+      "text": "Okay jog-dial for volume."
+    },
+    {
+      "start_ms": 312010,
+      "end_ms": 312120,
+      "speaker_id": "spk_fee005",
+      "text": "And what else do you do with the jog-dial?"
+    },
+    {
+      "start_ms": 312120,
+      "end_ms": 312690,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 314200,
+      "end_ms": 318230,
+      "speaker_id": "spk_mee007",
+      "text": "Um you can use it for um more advanced functions like contrast, colour and"
+    },
+    {
+      "start_ms": 318840,
+      "end_ms": 320890,
+      "speaker_id": "spk_fee005",
+      "text": "Contrast, brightness, yeah, and anything else?"
+    },
+    {
+      "start_ms": 320890,
+      "end_ms": 321850,
+      "speaker_id": "spk_mee007",
+      "text": "Um yeah."
+    },
+    {
+      "start_ms": 324790,
+      "end_ms": 329950,
+      "speaker_id": "spk_mee007",
+      "text": "Um just whatever else we wanted to include as the advanced functions, um we didn't actually go through and specify the"
+    },
+    {
+      "start_ms": 330570,
+      "end_ms": 332890,
+      "speaker_id": "spk_fee005",
+      "text": "Well of the designers what are they?"
+    },
+    {
+      "start_ms": 332960,
+      "end_ms": 334970,
+      "speaker_id": "spk_mee007",
+      "text": "Uh what can a T_V_ do?"
+    },
+    {
+      "start_ms": 335830,
+      "end_ms": 338310,
+      "speaker_id": "spk_mee006",
+      "text": "Okay things like um brightness, contrast, um maybe tuning the channels."
+    },
+    {
+      "start_ms": 338310,
+      "end_ms": 338660,
+      "speaker_id": "spk_fee005",
+      "text": "Uh-huh."
+    },
+    {
+      "start_ms": 342180,
+      "end_ms": 342900,
+      "speaker_id": "spk_fee005",
+      "text": "Okay channel tuning. That's a good one."
+    },
+    {
+      "start_ms": 342900,
+      "end_ms": 343980,
+      "speaker_id": "spk_mee006",
+      "text": "Um."
+    },
+    {
+      "start_ms": 345080,
+      "end_ms": 347410,
+      "speaker_id": "spk_mee006",
+      "text": "What else? Um the various inputs. Are you having a V_C_R_, are you having you know which input do you have?"
+    },
+    {
+      "start_ms": 347410,
+      "end_ms": 348290,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm, mm-hmm."
+    },
+    {
+      "start_ms": 349430,
+      "end_ms": 350260,
+      "speaker_id": "spk_fee005",
+      "text": "Okay auxiliary inputs."
+    },
+    {
+      "start_ms": 350260,
+      "end_ms": 350880,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm, probably colour or sharpness."
+    },
+    {
+      "start_ms": 350880,
+      "end_ms": 351330,
+      "speaker_id": "spk_mee006",
+      "text": "Um."
+    },
+    {
+      "start_ms": 353060,
+      "end_ms": 354570,
+      "speaker_id": "spk_mee006",
+      "text": "Yep, colour, sharpness. Um a lot of these things will have to be um free and open for users to define them."
+    },
+    {
+      "start_ms": 354570,
+      "end_ms": 355660,
+      "speaker_id": "spk_fee005",
+      "text": "Sharpness."
+    },
+    {
+      "start_ms": 360060,
+      "end_ms": 360150,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 360150,
+      "end_ms": 364630,
+      "speaker_id": "spk_fee005",
+      "text": "Okay what about uh sound settings? Uh d can you change any of those at all?"
+    },
+    {
+      "start_ms": 364630,
+      "end_ms": 365020,
+      "speaker_id": "spk_mee008",
+      "text": "Audio."
+    },
+    {
+      "start_ms": 365190,
+      "end_ms": 366830,
+      "speaker_id": "spk_mee006",
+      "text": "Audio, we have like your basic y your base, your mid-range, your high range."
+    },
+    {
+      "start_ms": 366830,
+      "end_ms": 367560,
+      "speaker_id": "spk_mee007",
+      "text": "Um."
+    },
+    {
+      "start_ms": 371300,
+      "end_ms": 371900,
+      "speaker_id": "spk_mee006",
+      "text": "Um."
+    },
+    {
+      "start_ms": 371920,
+      "end_ms": 373220,
+      "speaker_id": "spk_mee007",
+      "text": "The the balance hmm."
+    },
+    {
+      "start_ms": 373400,
+      "end_ms": 378480,
+      "speaker_id": "spk_mee006",
+      "text": "Yep, left-right balance, um maybe even pre-programmed sound modes, like um the user could determine like a series of sound modes, and then what could happen would be um when you click on that then it would go to that setting."
+    },
+    {
+      "start_ms": 378480,
+      "end_ms": 379080,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 383860,
+      "end_ms": 384110,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 388790,
+      "end_ms": 388950,
+      "speaker_id": "spk_fee005",
+      "text": "Okay, is there anything else at all it can do?"
+    },
+    {
+      "start_ms": 388950,
+      "end_ms": 389270,
+      "speaker_id": "spk_mee008",
+      "text": "Mm 'kay."
+    },
+    {
+      "start_ms": 389740,
+      "end_ms": 389960,
+      "speaker_id": "spk_mee006",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 393440,
+      "end_ms": 404420,
+      "speaker_id": "spk_fee005",
+      "text": "That 'cause that's that's fine. Just need to know so I can write it down. Okay um right I g I guess that's it, so we can now um"
+    },
+    {
+      "start_ms": 405740,
+      "end_ms": 408040,
+      "speaker_id": "spk_fee005",
+      "text": "We can now have a little look at the"
+    },
+    {
+      "start_ms": 409240,
+      "end_ms": 412350,
+      "speaker_id": "spk_fee005",
+      "text": "The Excel sheet and price listing, and see if we need to"
+    },
+    {
+      "start_ms": 413420,
+      "end_ms": 413820,
+      "speaker_id": "spk_mee007",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 413890,
+      "end_ms": 421580,
+      "speaker_id": "spk_fee005",
+      "text": "Um if we need to rethink anything at all. So um for this first part here power-wise, have we got battery? Do we have kinetic as well? No. Okay, just battery."
+    },
+    {
+      "start_ms": 421580,
+      "end_ms": 422140,
+      "speaker_id": "spk_mee006",
+      "text": "The battery."
+    },
+    {
+      "start_ms": 424420,
+      "end_ms": 424780,
+      "speaker_id": "spk_mee006",
+      "text": "No."
+    },
+    {
+      "start_ms": 426390,
+      "end_ms": 426870,
+      "speaker_id": "spk_mee006",
+      "text": "Um."
+    },
+    {
+      "start_ms": 430480,
+      "end_ms": 431020,
+      "speaker_id": "spk_mee006",
+      "text": "We need an"
+    },
+    {
+      "start_ms": 431020,
+      "end_ms": 432420,
+      "speaker_id": "spk_fee005",
+      "text": "And that's because of cost restraints is it? Okay um what about the electronics here? Advanced chip."
+    },
+    {
+      "start_ms": 432420,
+      "end_ms": 432690,
+      "speaker_id": "spk_mee006",
+      "text": "Yep."
+    },
+    {
+      "start_ms": 432690,
+      "end_ms": 433070,
+      "speaker_id": "spk_mee007",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 433960,
+      "end_ms": 440480,
+      "speaker_id": "spk_mee006",
+      "text": "Yeah advanced chip. We need an advanced chip I think, yep. Let me just confirm that. Yes I think so."
+    },
+    {
+      "start_ms": 446550,
+      "end_ms": 446860,
+      "speaker_id": "spk_mee006",
+      "text": "Yep."
+    },
+    {
+      "start_ms": 449080,
+      "end_ms": 452310,
+      "speaker_id": "spk_fee005",
+      "text": "Okay um the case, what does it mean by single and double, do you know?"
+    },
+    {
+      "start_ms": 452960,
+      "end_ms": 456680,
+      "speaker_id": "spk_mee007",
+      "text": "Um I think single would just be sort of one sort of oval whereas double is this sort of thing."
+    },
+    {
+      "start_ms": 456850,
+      "end_ms": 456851,
+      "speaker_id": "spk_mee006",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 456851,
+      "end_ms": 458070,
+      "speaker_id": "spk_fee005",
+      "text": "So we want double-curved? Okay."
+    },
+    {
+      "start_ms": 458070,
+      "end_ms": 458320,
+      "speaker_id": "spk_mee006",
+      "text": "Yep."
+    },
+    {
+      "start_ms": 460870,
+      "end_ms": 461720,
+      "speaker_id": "spk_fee005",
+      "text": "Um."
+    },
+    {
+      "start_ms": 461720,
+      "end_ms": 462320,
+      "speaker_id": "spk_mee006",
+      "text": "Plastic."
+    },
+    {
+      "start_ms": 464600,
+      "end_ms": 466190,
+      "speaker_id": "spk_fee005",
+      "text": "Is there any rubber at all in the buttons or any"
+    },
+    {
+      "start_ms": 466190,
+      "end_ms": 467650,
+      "speaker_id": "spk_mee006",
+      "text": "I think we're gonna have to skip the rubber."
+    },
+    {
+      "start_ms": 467780,
+      "end_ms": 468840,
+      "speaker_id": "spk_fee005",
+      "text": "Okay, um and we wanted special colours didn't we? So I'll have to put that Oh no wait we ho how many colours have we got there?"
+    },
+    {
+      "start_ms": 468840,
+      "end_ms": 469780,
+      "speaker_id": "spk_mee006",
+      "text": "Um."
+    },
+    {
+      "start_ms": 471530,
+      "end_ms": 471750,
+      "speaker_id": "spk_mee006",
+      "text": "Yep."
+    },
+    {
+      "start_ms": 475970,
+      "end_ms": 479250,
+      "speaker_id": "spk_mee006",
+      "text": "For the case itself, one colour. It's one special colour."
+    },
+    {
+      "start_ms": 479250,
+      "end_ms": 480320,
+      "speaker_id": "spk_fee005",
+      "text": "Just one colour, okay."
+    },
+    {
+      "start_ms": 480560,
+      "end_ms": 482400,
+      "speaker_id": "spk_mee006",
+      "text": "'Cause the case unit itself, the rest of our components go on top of it."
+    },
+    {
+      "start_ms": 482400,
+      "end_ms": 482760,
+      "speaker_id": "spk_fee005",
+      "text": "Okay so interface-wise, is it this third option we have, the two of them there?"
+    },
+    {
+      "start_ms": 482760,
+      "end_ms": 483030,
+      "speaker_id": "spk_mee008",
+      "text": "Mm."
+    },
+    {
+      "start_ms": 485650,
+      "end_ms": 486080,
+      "speaker_id": "spk_mee006",
+      "text": "Yes."
+    },
+    {
+      "start_ms": 487220,
+      "end_ms": 489590,
+      "speaker_id": "spk_mee006",
+      "text": "One and the L_C_ display."
+    },
+    {
+      "start_ms": 490150,
+      "end_ms": 493680,
+      "speaker_id": "spk_fee005",
+      "text": "Okay and then buttons, we have what, two colours?"
+    },
+    {
+      "start_ms": 493680,
+      "end_ms": 494300,
+      "speaker_id": "spk_mee006",
+      "text": "How many"
+    },
+    {
+      "start_ms": 494840,
+      "end_ms": 497150,
+      "speaker_id": "spk_mee007",
+      "text": "Um we have um got some push buttons as well."
+    },
+    {
+      "start_ms": 497150,
+      "end_ms": 497870,
+      "speaker_id": "spk_mee008",
+      "text": "Or even clear."
+    },
+    {
+      "start_ms": 498690,
+      "end_ms": 499900,
+      "speaker_id": "spk_mee006",
+      "text": "We've got push buttons as well."
+    },
+    {
+      "start_ms": 503040,
+      "end_ms": 503470,
+      "speaker_id": "spk_fee005",
+      "text": "Like uh oh wait so push button and integrated scroll wheel push okay."
+    },
+    {
+      "start_ms": 503470,
+      "end_ms": 503670,
+      "speaker_id": "spk_mee007",
+      "text": "'Kay."
+    },
+    {
+      "start_ms": 506600,
+      "end_ms": 509180,
+      "speaker_id": "spk_mee007",
+      "text": "So I reckon we've got one button for this thing 'cause it's just one big sheet of rubber."
+    },
+    {
+      "start_ms": 509590,
+      "end_ms": 509930,
+      "speaker_id": "spk_fee005",
+      "text": "Uh-huh."
+    },
+    {
+      "start_ms": 510630,
+      "end_ms": 512430,
+      "speaker_id": "spk_mee007",
+      "text": "I'm not sure if that counts but"
+    },
+    {
+      "start_ms": 512870,
+      "end_ms": 513030,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 513030,
+      "end_ms": 516020,
+      "speaker_id": "spk_mee006",
+      "text": "Okay let's just be safe and put like say four buttons for that one."
+    },
+    {
+      "start_ms": 516740,
+      "end_ms": 517320,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 517760,
+      "end_ms": 522750,
+      "speaker_id": "spk_mee006",
+      "text": "Okay um and maybe a special colour for the buttons, so maybe four again."
+    },
+    {
+      "start_ms": 523590,
+      "end_ms": 523660,
+      "speaker_id": "spk_fee005",
+      "text": "Four. So w why are we arriving at the number four? Where does the number four come from?"
+    },
+    {
+      "start_ms": 523660,
+      "end_ms": 525530,
+      "speaker_id": "spk_mee007",
+      "text": "You can see we're we're all very far beyond the"
+    },
+    {
+      "start_ms": 528820,
+      "end_ms": 532140,
+      "speaker_id": "spk_mee006",
+      "text": "'Cause that's one button by its the complexity of twelve buttons."
+    },
+    {
+      "start_ms": 532530,
+      "end_ms": 534090,
+      "speaker_id": "spk_fee005",
+      "text": "Okay right, so we're writing down four."
+    },
+    {
+      "start_ms": 534090,
+      "end_ms": 536650,
+      "speaker_id": "spk_mee006",
+      "text": "So we're just estimating that yeah it would be less."
+    },
+    {
+      "start_ms": 536760,
+      "end_ms": 537220,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 539580,
+      "end_ms": 541330,
+      "speaker_id": "spk_fee005",
+      "text": "How about these? Are we wanting them in no they're just is everything gonna be plastic? Okay. So we're w w quite far over. Now we're gonna something's gonna have to go. Um we're at sixteen point eight and"
+    },
+    {
+      "start_ms": 541330,
+      "end_ms": 541770,
+      "speaker_id": "spk_mee006",
+      "text": "No."
+    },
+    {
+      "start_ms": 543480,
+      "end_ms": 544590,
+      "speaker_id": "spk_mee006",
+      "text": "Yep. Yep."
+    },
+    {
+      "start_ms": 554170,
+      "end_ms": 558840,
+      "speaker_id": "spk_mee008",
+      "text": "Uh how mm-hmm how are we going to achieve this high-end product if"
+    },
+    {
+      "start_ms": 560010,
+      "end_ms": 561030,
+      "speaker_id": "spk_fee005",
+      "text": "Well we h something has to go to the tune of two point t three Euro, so let me see, what are we I mean oh yes sorry, four point three. My maths is all out."
+    },
+    {
+      "start_ms": 561030,
+      "end_ms": 562890,
+      "speaker_id": "spk_mee008",
+      "text": "We only have very sparse"
+    },
+    {
+      "start_ms": 568960,
+      "end_ms": 570640,
+      "speaker_id": "spk_mee008",
+      "text": "Two point three? Four point three no?"
+    },
+    {
+      "start_ms": 573890,
+      "end_ms": 577360,
+      "speaker_id": "spk_mee007",
+      "text": "Well we could take out ones by making it single curved, just fill in those bits."
+    },
+    {
+      "start_ms": 578660,
+      "end_ms": 579240,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 579330,
+      "end_ms": 579670,
+      "speaker_id": "spk_mee008",
+      "text": "And then where is the"
+    },
+    {
+      "start_ms": 579670,
+      "end_ms": 580600,
+      "speaker_id": "spk_mee006",
+      "text": "How much would that save us? That will only save you one. The other thing could be that um you could take away the L_C_D_ panel and the advanced chip together, um because when you"
+    },
+    {
+      "start_ms": 580600,
+      "end_ms": 581750,
+      "speaker_id": "spk_fee005",
+      "text": "How much would that save us? One."
+    },
+    {
+      "start_ms": 581750,
+      "end_ms": 582630,
+      "speaker_id": "spk_mee007",
+      "text": "That is one."
+    },
+    {
+      "start_ms": 590860,
+      "end_ms": 591970,
+      "speaker_id": "spk_mee006",
+      "text": "Do something on the T_V_, the T_V_ responds and reacts as well, so the user could be looking at the T_V_ and pushing his thing so we may not need to so when we scroll we need just some way to get the T_V_ to respond, which I think is a technically doable thing so"
+    },
+    {
+      "start_ms": 591970,
+      "end_ms": 592290,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 597140,
+      "end_ms": 598110,
+      "speaker_id": "spk_mee007",
+      "text": "That's fair enough, yeah."
+    },
+    {
+      "start_ms": 599150,
+      "end_ms": 599430,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 601340,
+      "end_ms": 601670,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 602970,
+      "end_ms": 603130,
+      "speaker_id": "spk_fee005",
+      "text": "Okay so"
+    },
+    {
+      "start_ms": 603130,
+      "end_ms": 603400,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 605220,
+      "end_ms": 605500,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 605560,
+      "end_ms": 610500,
+      "speaker_id": "spk_fee005",
+      "text": "So w what's our reviewed suggestion? Um take away the L_C_ display?"
+    },
+    {
+      "start_ms": 610500,
+      "end_ms": 610690,
+      "speaker_id": "spk_mee006",
+      "text": "Yep."
+    },
+    {
+      "start_ms": 612690,
+      "end_ms": 612810,
+      "speaker_id": "spk_mee006",
+      "text": "And the advanced chip goes away as well."
+    },
+    {
+      "start_ms": 612810,
+      "end_ms": 613060,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 614740,
+      "end_ms": 616600,
+      "speaker_id": "spk_fee005",
+      "text": "To be replaced with a regular chip."
+    },
+    {
+      "start_ms": 616600,
+      "end_ms": 617100,
+      "speaker_id": "spk_mee006",
+      "text": "Regular chip."
+    },
+    {
+      "start_ms": 618460,
+      "end_ms": 618750,
+      "speaker_id": "spk_mee006",
+      "text": "Yep."
+    },
+    {
+      "start_ms": 621840,
+      "end_ms": 621850,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 621850,
+      "end_ms": 622120,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 622120,
+      "end_ms": 623660,
+      "speaker_id": "spk_mee006",
+      "text": "So what that means is that um"
+    },
+    {
+      "start_ms": 623660,
+      "end_ms": 631480,
+      "speaker_id": "spk_fee005",
+      "text": "And so we've got point three to get rid of. Um and we ha where are the four the four push buttons are where exactly now?"
+    },
+    {
+      "start_ms": 631760,
+      "end_ms": 633870,
+      "speaker_id": "spk_mee006",
+      "text": "The twelve buttons that you see there."
+    },
+    {
+      "start_ms": 633870,
+      "end_ms": 634730,
+      "speaker_id": "spk_fee005",
+      "text": "Twelve buttons."
+    },
+    {
+      "start_ms": 635300,
+      "end_ms": 637600,
+      "speaker_id": "spk_mee007",
+      "text": "That's um one piece of rubber but it's gonna have twelve button things underneath so"
+    },
+    {
+      "start_ms": 637600,
+      "end_ms": 638200,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 638200,
+      "end_ms": 641400,
+      "speaker_id": "spk_mee006",
+      "text": "Functionally you're gonna have to intercept So four is a good estimate for"
+    },
+    {
+      "start_ms": 641840,
+      "end_ms": 642350,
+      "speaker_id": "spk_fee005",
+      "text": "Do you think?"
+    },
+    {
+      "start_ms": 642980,
+      "end_ms": 647710,
+      "speaker_id": "spk_mee006",
+      "text": "Yeah, so you can't actually cut It's like three times the number of buttons, four, eight, twelve."
+    },
+    {
+      "start_ms": 647710,
+      "end_ms": 653070,
+      "speaker_id": "spk_fee005",
+      "text": "Like is is that one big button or is it twelve buttons, how can it be something in between?"
+    },
+    {
+      "start_ms": 653070,
+      "end_ms": 658820,
+      "speaker_id": "spk_mee006",
+      "text": "It It needs to be more than one big button because if you open up your phone, underneath there's actually one button underneath, it's just that the panel itself is a single panel."
+    },
+    {
+      "start_ms": 658820,
+      "end_ms": 659130,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 659540,
+      "end_ms": 660120,
+      "speaker_id": "spk_fee005",
+      "text": "Mm."
+    },
+    {
+      "start_ms": 663670,
+      "end_ms": 663860,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 663860,
+      "end_ms": 666810,
+      "speaker_id": "spk_fee005",
+      "text": "Okay well we have point three to get rid of somewhere."
+    },
+    {
+      "start_ms": 668080,
+      "end_ms": 668190,
+      "speaker_id": "spk_mee006",
+      "text": "We just report that it has to be over budget, or the colours, you could take away s colours for th for the buttons."
+    },
+    {
+      "start_ms": 668190,
+      "end_ms": 668780,
+      "speaker_id": "spk_fee005",
+      "text": "Mm."
+    },
+    {
+      "start_ms": 672260,
+      "end_ms": 673130,
+      "speaker_id": "spk_fee005",
+      "text": "No can do."
+    },
+    {
+      "start_ms": 674830,
+      "end_ms": 675730,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah we could just go with um"
+    },
+    {
+      "start_ms": 675730,
+      "end_ms": 676300,
+      "speaker_id": "spk_mee007",
+      "text": "Yeah w"
+    },
+    {
+      "start_ms": 676450,
+      "end_ms": 677760,
+      "speaker_id": "spk_mee006",
+      "text": "Normal coloured buttons."
+    },
+    {
+      "start_ms": 679460,
+      "end_ms": 681760,
+      "speaker_id": "spk_fee005",
+      "text": "Well do you want colour differentiation here?"
+    },
+    {
+      "start_ms": 682200,
+      "end_ms": 682240,
+      "speaker_id": "spk_mee006",
+      "text": "No that's not the button we're talking about. That's the buttons only refer to the pad so"
+    },
+    {
+      "start_ms": 682240,
+      "end_ms": 682850,
+      "speaker_id": "spk_mee007",
+      "text": "Um"
+    },
+    {
+      "start_ms": 683240,
+      "end_ms": 684140,
+      "speaker_id": "spk_fee005",
+      "text": "Oh yeah sorry yeah then."
+    },
+    {
+      "start_ms": 686650,
+      "end_ms": 687770,
+      "speaker_id": "spk_fee005",
+      "text": "Right so"
+    },
+    {
+      "start_ms": 688130,
+      "end_ms": 689790,
+      "speaker_id": "spk_mee006",
+      "text": "Should we take that off uh?"
+    },
+    {
+      "start_ms": 690060,
+      "end_ms": 690740,
+      "speaker_id": "spk_fee005",
+      "text": "Ah."
+    },
+    {
+      "start_ms": 692390,
+      "end_ms": 692440,
+      "speaker_id": "spk_mee006",
+      "text": "Hey it's back to the original. Um so then these just become normal coloured buttons, so that might be some some way of cutting the cost."
+    },
+    {
+      "start_ms": 692440,
+      "end_ms": 692850,
+      "speaker_id": "spk_fee005",
+      "text": "That's it."
+    },
+    {
+      "start_ms": 693610,
+      "end_ms": 693780,
+      "speaker_id": "spk_mee008",
+      "text": "Hmm."
+    },
+    {
+      "start_ms": 697360,
+      "end_ms": 697600,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 700480,
+      "end_ms": 700750,
+      "speaker_id": "spk_mee008",
+      "text": "Mm."
+    },
+    {
+      "start_ms": 701560,
+      "end_ms": 716100,
+      "speaker_id": "spk_fee005",
+      "text": "Okay, ach that's a shame. Um right, so take away that completely? Ah. And now we're under budget. So we do have point five Euro to play with if we wanted. Um"
+    },
+    {
+      "start_ms": 716100,
+      "end_ms": 716260,
+      "speaker_id": "spk_mee007",
+      "text": "So I reckon"
+    },
+    {
+      "start_ms": 716260,
+      "end_ms": 719380,
+      "speaker_id": "spk_mee008",
+      "text": "How about with embossing the logo, isn't that going to cost us some money?"
+    },
+    {
+      "start_ms": 719990,
+      "end_ms": 721060,
+      "speaker_id": "spk_fee005",
+      "text": "Doesn't say so."
+    },
+    {
+      "start_ms": 721060,
+      "end_ms": 721380,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 721660,
+      "end_ms": 721670,
+      "speaker_id": "spk_mee008",
+      "text": "That's a freebie."
+    },
+    {
+      "start_ms": 721670,
+      "end_ms": 724140,
+      "speaker_id": "spk_mee007",
+      "text": "Reckon that probably counts as a special form for the buttons."
+    },
+    {
+      "start_ms": 724360,
+      "end_ms": 724620,
+      "speaker_id": "spk_mee006",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 724660,
+      "end_ms": 725830,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah that's a good idea."
+    },
+    {
+      "start_ms": 727430,
+      "end_ms": 728120,
+      "speaker_id": "spk_fee005",
+      "text": "Just one?"
+    },
+    {
+      "start_ms": 730580,
+      "end_ms": 733120,
+      "speaker_id": "spk_fee005",
+      "text": "Does that mean that one button has a special form or"
+    },
+    {
+      "start_ms": 734000,
+      "end_ms": 735520,
+      "speaker_id": "spk_mee007",
+      "text": "I think there's just one button so handy."
+    },
+    {
+      "start_ms": 735520,
+      "end_ms": 750510,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah okay. Well well there we go. So I'm just gonna have to redraw this now. So we're not gonna have the L_C_D_ anymore, and we'll just gonna have an on t on the T_V_ it'll show you what you're doing, which I think is fair enough, and so this is gonna be one big thing here."
+    },
+    {
+      "start_ms": 753010,
+      "end_ms": 754670,
+      "speaker_id": "spk_fee005",
+      "text": "Um."
+    },
+    {
+      "start_ms": 755560,
+      "end_ms": 761430,
+      "speaker_id": "spk_mee008",
+      "text": "Was the goal in your in your prototype design that it be as low profile as possible?"
+    },
+    {
+      "start_ms": 762260,
+      "end_ms": 762650,
+      "speaker_id": "spk_mee006",
+      "text": "What do you mean by profile?"
+    },
+    {
+      "start_ms": 762650,
+      "end_ms": 763200,
+      "speaker_id": "spk_mee007",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 763620,
+      "end_ms": 765140,
+      "speaker_id": "spk_mee008",
+      "text": "Sort of flat as possible."
+    },
+    {
+      "start_ms": 765620,
+      "end_ms": 765870,
+      "speaker_id": "spk_mee006",
+      "text": "No."
+    },
+    {
+      "start_ms": 766170,
+      "end_ms": 768840,
+      "speaker_id": "spk_mee007",
+      "text": "You see I envision it as being um quite deep sort of deep enough to be comfy to hold in your hands rather than being wide and flat."
+    },
+    {
+      "start_ms": 768840,
+      "end_ms": 769100,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 770550,
+      "end_ms": 772420,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah that's what I was thinking, to Sure, okay."
+    },
+    {
+      "start_ms": 772420,
+      "end_ms": 774200,
+      "speaker_id": "spk_mee006",
+      "text": "We didn't have enough Play-Doh to make it three D_."
+    },
+    {
+      "start_ms": 774200,
+      "end_ms": 777050,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah alright yeah fair enough. Okay, just thought I'd ask."
+    },
+    {
+      "start_ms": 777910,
+      "end_ms": 779700,
+      "speaker_id": "spk_mee006",
+      "text": "So there's one more dimension to the thing which we need to to add, and you might want to add in the report, length, width, and height."
+    },
+    {
+      "start_ms": 779700,
+      "end_ms": 779950,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 784010,
+      "end_ms": 785240,
+      "speaker_id": "spk_fee005",
+      "text": "Right okay. So just to well to be thorough then, width-wise we're looking at about what three centimetres or something?"
+    },
+    {
+      "start_ms": 785240,
+      "end_ms": 785440,
+      "speaker_id": "spk_mee006",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 792360,
+      "end_ms": 792620,
+      "speaker_id": "spk_mee006",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 793040,
+      "end_ms": 794830,
+      "speaker_id": "spk_fee005",
+      "text": "Okay and then so height-wise"
+    },
+    {
+      "start_ms": 794830,
+      "end_ms": 795360,
+      "speaker_id": "spk_mee008",
+      "text": "Hmm."
+    },
+    {
+      "start_ms": 801250,
+      "end_ms": 804050,
+      "speaker_id": "spk_fee005",
+      "text": "How how tall do you envisage it being? About that big? About two centimetres, okay."
+    },
+    {
+      "start_ms": 804050,
+      "end_ms": 804400,
+      "speaker_id": "spk_mee007",
+      "text": "Yeah it works, yeah."
+    },
+    {
+      "start_ms": 804400,
+      "end_ms": 804570,
+      "speaker_id": "spk_mee006",
+      "text": "Two."
+    },
+    {
+      "start_ms": 807140,
+      "end_ms": 809380,
+      "speaker_id": "spk_mee008",
+      "text": "Two's not very high at all though. Maybe a bit higher?"
+    },
+    {
+      "start_ms": 809380,
+      "end_ms": 810860,
+      "speaker_id": "spk_mee006",
+      "text": "This is about this is about two."
+    },
+    {
+      "start_ms": 812920,
+      "end_ms": 813630,
+      "speaker_id": "spk_mee006",
+      "text": "Slightly more than two, so"
+    },
+    {
+      "start_ms": 813630,
+      "end_ms": 813930,
+      "speaker_id": "spk_mee007",
+      "text": "See, about that thick."
+    },
+    {
+      "start_ms": 813930,
+      "end_ms": 814270,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 815370,
+      "end_ms": 815590,
+      "speaker_id": "spk_fee005",
+      "text": "Okay. Ach, that is Yeah. Okay we'll s we'll say two point five. Okay um so we have it within cost anyway."
+    },
+    {
+      "start_ms": 815590,
+      "end_ms": 816920,
+      "speaker_id": "spk_mee008",
+      "text": "Maybe closer to three even or two and a half."
+    },
+    {
+      "start_ms": 816920,
+      "end_ms": 817400,
+      "speaker_id": "spk_mee006",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 825650,
+      "end_ms": 828830,
+      "speaker_id": "spk_fee005",
+      "text": "Um so yeah project evaluation is this point."
+    },
+    {
+      "start_ms": 830210,
+      "end_ms": 830730,
+      "speaker_id": "spk_fee005",
+      "text": "Um."
+    },
+    {
+      "start_ms": 831550,
+      "end_ms": 831810,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 832830,
+      "end_ms": 834780,
+      "speaker_id": "spk_fee005",
+      "text": "Right uh."
+    },
+    {
+      "start_ms": 836720,
+      "end_ms": 841480,
+      "speaker_id": "spk_fee005",
+      "text": "Okay so can we close that? This is what it's the final spec that it's gonna be. Someone is gonna have to yeah that's fine that's fine."
+    },
+    {
+      "start_ms": 841480,
+      "end_ms": 841760,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 845120,
+      "end_ms": 866320,
+      "speaker_id": "spk_mee008",
+      "text": "Um it's probably just I dunno if it's worth getting into, but um just in in that we want this to be stylish, should we think a little bit more out of the box in terms of a button grid, because I've seen there's lots of devices out there that that instead of taking your standard nine nine square grid, and they have it sort of stylized or in different concept that that"
+    },
+    {
+      "start_ms": 866320,
+      "end_ms": 868950,
+      "speaker_id": "spk_mee006",
+      "text": "I think that's something that's very hard to catch, so you you restrict the number of people who wanna try something. The the look and the colour is something which is cool, but I think that there's also that factor of if it's too unfamiliar then um because when you put it on the shelf"
+    },
+    {
+      "start_ms": 868950,
+      "end_ms": 869400,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 872380,
+      "end_ms": 873130,
+      "speaker_id": "spk_mee008",
+      "text": "Sure, okay."
+    },
+    {
+      "start_ms": 875400,
+      "end_ms": 876130,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, alright."
+    },
+    {
+      "start_ms": 878950,
+      "end_ms": 880140,
+      "speaker_id": "spk_mee008",
+      "text": "Okay, sure."
+    },
+    {
+      "start_ms": 881320,
+      "end_ms": 883290,
+      "speaker_id": "spk_mee008",
+      "text": "What about button shape? Square buttons?"
+    },
+    {
+      "start_ms": 883330,
+      "end_ms": 885650,
+      "speaker_id": "spk_mee006",
+      "text": "Yeah button shape might be a good idea to change, rather than rather than positioning, 'cause I think positioning is we're kinda engrained into the the telephone kind of"
+    },
+    {
+      "start_ms": 885650,
+      "end_ms": 885990,
+      "speaker_id": "spk_mee008",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 888030,
+      "end_ms": 888340,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 889910,
+      "end_ms": 890310,
+      "speaker_id": "spk_mee008",
+      "text": "Sure."
+    },
+    {
+      "start_ms": 892250,
+      "end_ms": 892590,
+      "speaker_id": "spk_mee007",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 893230,
+      "end_ms": 893510,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 894680,
+      "end_ms": 895120,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 895120,
+      "end_ms": 895660,
+      "speaker_id": "spk_mee006",
+      "text": "Pad."
+    },
+    {
+      "start_ms": 896330,
+      "end_ms": 897800,
+      "speaker_id": "spk_fee005",
+      "text": "Right um."
+    },
+    {
+      "start_ms": 899300,
+      "end_ms": 907360,
+      "speaker_id": "spk_fee005",
+      "text": "So at this point we uh, let me see, discuss uh how satisfied we all are with um"
+    },
+    {
+      "start_ms": 908930,
+      "end_ms": 917010,
+      "speaker_id": "spk_fee005",
+      "text": "With these four points, with the room for creativity in the project, and leadership and teamwork, and the stuff we had around us I guess. Um, let me see uh"
+    },
+    {
+      "start_ms": 917010,
+      "end_ms": 917260,
+      "speaker_id": "spk_mee008",
+      "text": "Mm 'kay."
+    },
+    {
+      "start_ms": 923410,
+      "end_ms": 924810,
+      "speaker_id": "spk_mee008",
+      "text": "Do you want me to d um"
+    },
+    {
+      "start_ms": 927830,
+      "end_ms": 931040,
+      "speaker_id": "spk_mee008",
+      "text": "Do you want me to do my um design evaluation last?"
+    },
+    {
+      "start_ms": 932130,
+      "end_ms": 932131,
+      "speaker_id": "spk_mee006",
+      "text": "Maybe we should do the design evaluation first."
+    },
+    {
+      "start_ms": 932131,
+      "end_ms": 932500,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah I wasn't really sure what that was"
+    },
+    {
+      "start_ms": 932500,
+      "end_ms": 932690,
+      "speaker_id": "spk_mee008",
+      "text": "Or"
+    },
+    {
+      "start_ms": 935500,
+      "end_ms": 935910,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah, yeah go for that first. I wasn't entirely sure what uh who was supposed to be doing that, but y you go for it."
+    },
+    {
+      "start_ms": 935910,
+      "end_ms": 936590,
+      "speaker_id": "spk_mee008",
+      "text": "Evaluation."
+    },
+    {
+      "start_ms": 939930,
+      "end_ms": 940490,
+      "speaker_id": "spk_mee008",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 941300,
+      "end_ms": 941640,
+      "speaker_id": "spk_mee008",
+      "text": "Sure."
+    },
+    {
+      "start_ms": 942910,
+      "end_ms": 946320,
+      "speaker_id": "spk_mee008",
+      "text": "Um, alright so the way this works, I'm gonna need to plug into PowerPoint, I'll try and do it as quick as possible. Um, this is um I'll just go over your head if that's okay."
+    },
+    {
+      "start_ms": 946320,
+      "end_ms": 946760,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 948490,
+      "end_ms": 949040,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 953610,
+      "end_ms": 953810,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 954850,
+      "end_ms": 956580,
+      "speaker_id": "spk_mee006",
+      "text": "I don't think you need the power, so"
+    },
+    {
+      "start_ms": 956750,
+      "end_ms": 957210,
+      "speaker_id": "spk_mee008",
+      "text": "What's that?"
+    },
+    {
+      "start_ms": 957890,
+      "end_ms": 958780,
+      "speaker_id": "spk_mee006",
+      "text": "No, that's okay that's okay."
+    },
+    {
+      "start_ms": 958950,
+      "end_ms": 959770,
+      "speaker_id": "spk_mee008",
+      "text": "I don't need the PowerPoint?"
+    },
+    {
+      "start_ms": 960100,
+      "end_ms": 961800,
+      "speaker_id": "spk_mee006",
+      "text": "No, the power cord itself. Yeah, so then you have a bit more freedom to"
+    },
+    {
+      "start_ms": 961800,
+      "end_ms": 964010,
+      "speaker_id": "spk_mee008",
+      "text": "Oh course, yeah that's true. Let me get that."
+    },
+    {
+      "start_ms": 964900,
+      "end_ms": 965720,
+      "speaker_id": "spk_mee008",
+      "text": "A bit more."
+    },
+    {
+      "start_ms": 970370,
+      "end_ms": 970960,
+      "speaker_id": "spk_mee008",
+      "text": "Okay, so what this is is a set-up for us to um uh use a kind of a like a"
+    },
+    {
+      "start_ms": 970960,
+      "end_ms": 972290,
+      "speaker_id": "spk_mee006",
+      "text": "You you still have your blue fingers."
+    },
+    {
+      "start_ms": 974770,
+      "end_ms": 975260,
+      "speaker_id": "spk_mee007",
+      "text": "Is it?"
+    },
+    {
+      "start_ms": 976060,
+      "end_ms": 977700,
+      "speaker_id": "spk_mee006",
+      "text": "You killed a monster."
+    },
+    {
+      "start_ms": 979640,
+      "end_ms": 1002950,
+      "speaker_id": "spk_mee008",
+      "text": "The idea is that I've set up I've reviewed all of the um the points of discussion from the beginning, and used that as a criteria of evaluation for the um uh for the current design uh th or the plan, and uh so we can review that. Uh I think it's gonna end up being sort of elementary because we're sort we're in n we're not gonna probably use it to change anything but"
+    },
+    {
+      "start_ms": 1005480,
+      "end_ms": 1006720,
+      "speaker_id": "spk_mee008",
+      "text": "Doesn't seem like it's going, does it?"
+    },
+    {
+      "start_ms": 1007530,
+      "end_ms": 1007890,
+      "speaker_id": "spk_fee005",
+      "text": "Oh there it is."
+    },
+    {
+      "start_ms": 1007890,
+      "end_ms": 1015790,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, okay great. Uh and I'm gonna write up our results on the board, so this'll be a way for us to go through and decide if we're um sort of review where we stand with it."
+    },
+    {
+      "start_ms": 1017490,
+      "end_ms": 1020330,
+      "speaker_id": "spk_mee008",
+      "text": "Okay, so um"
+    },
+    {
+      "start_ms": 1021990,
+      "end_ms": 1034120,
+      "speaker_id": "spk_mee008",
+      "text": "So to sort of b bring together two things, sort of design goals and also the market research that we had, uh when we rate this, one is v high in in succeeding or fitting to our original aim and seven is low, okay. So these i these i th are the and um we've been asked to uh to collectively rate this, so what we can do is try and just y work on a consensus system so"
+    },
+    {
+      "start_ms": 1034120,
+      "end_ms": 1034980,
+      "speaker_id": "spk_fee005",
+      "text": "Mm 'kay."
+    },
+    {
+      "start_ms": 1045420,
+      "end_ms": 1046700,
+      "speaker_id": "spk_mee008",
+      "text": "We just come to an agreement. Okay? So the first one uh, stylish look and feel."
+    },
+    {
+      "start_ms": 1046700,
+      "end_ms": 1047160,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 1052710,
+      "end_ms": 1053720,
+      "speaker_id": "spk_mee006",
+      "text": "I rate that pretty highly."
+    },
+    {
+      "start_ms": 1053810,
+      "end_ms": 1053910,
+      "speaker_id": "spk_fee005",
+      "text": "Well yeah, I mean compared to most remote controls you see that's pretty good. I dunno like a six or something. What does anybody else think?"
+    },
+    {
+      "start_ms": 1053910,
+      "end_ms": 1054430,
+      "speaker_id": "spk_mee007",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1055150,
+      "end_ms": 1055400,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1057730,
+      "end_ms": 1057960,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1059880,
+      "end_ms": 1065470,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah um me uh my only reservation with it was that we basically went with yellow because it's the company's colour, and I don't know if yellow's gonna really be a hit."
+    },
+    {
+      "start_ms": 1065470,
+      "end_ms": 1066000,
+      "speaker_id": "spk_fee005",
+      "text": "Mm."
+    },
+    {
+      "start_ms": 1068530,
+      "end_ms": 1068720,
+      "speaker_id": "spk_fee005",
+      "text": "Mm."
+    },
+    {
+      "start_ms": 1068720,
+      "end_ms": 1070260,
+      "speaker_id": "spk_mee008",
+      "text": "But"
+    },
+    {
+      "start_ms": 1070710,
+      "end_ms": 1071290,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 1071490,
+      "end_ms": 1073080,
+      "speaker_id": "spk_mee007",
+      "text": "I'm seeing five then."
+    },
+    {
+      "start_ms": 1073140,
+      "end_ms": 1073850,
+      "speaker_id": "spk_mee008",
+      "text": "What do you guys think?"
+    },
+    {
+      "start_ms": 1074030,
+      "end_ms": 1075750,
+      "speaker_id": "spk_fee005",
+      "text": "I would say five or six. David?"
+    },
+    {
+      "start_ms": 1075750,
+      "end_ms": 1076070,
+      "speaker_id": "spk_mee008",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 1077060,
+      "end_ms": 1078090,
+      "speaker_id": "spk_mee006",
+      "text": "Yep I'm fine with that."
+    },
+    {
+      "start_ms": 1078110,
+      "end_ms": 1079220,
+      "speaker_id": "spk_mee008",
+      "text": "Okay let's go with five then."
+    },
+    {
+      "start_ms": 1079860,
+      "end_ms": 1080410,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 1080500,
+      "end_ms": 1081560,
+      "speaker_id": "spk_mee008",
+      "text": "Fi oh uh just actually the opposite."
+    },
+    {
+      "start_ms": 1081560,
+      "end_ms": 1083060,
+      "speaker_id": "spk_mee006",
+      "text": "It's one to seven, right?"
+    },
+    {
+      "start_ms": 1083140,
+      "end_ms": 1083400,
+      "speaker_id": "spk_mee008",
+      "text": "The So it meant three, okay."
+    },
+    {
+      "start_ms": 1083400,
+      "end_ms": 1086130,
+      "speaker_id": "spk_fee005",
+      "text": "Oh yes sorry then, then I would say two or three."
+    },
+    {
+      "start_ms": 1088360,
+      "end_ms": 1089810,
+      "speaker_id": "spk_mee006",
+      "text": "Wait, what's the scale, one to seven, right?"
+    },
+    {
+      "start_ms": 1089810,
+      "end_ms": 1090050,
+      "speaker_id": "spk_mee007",
+      "text": "One's high-ish isn't it?"
+    },
+    {
+      "start_ms": 1090050,
+      "end_ms": 1090290,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1090290,
+      "end_ms": 1091820,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, one is high."
+    },
+    {
+      "start_ms": 1092030,
+      "end_ms": 1094930,
+      "speaker_id": "spk_mee007",
+      "text": "Ah, okay so yeah, two or three."
+    },
+    {
+      "start_ms": 1095010,
+      "end_ms": 1095650,
+      "speaker_id": "spk_mee008",
+      "text": "'Kay"
+    },
+    {
+      "start_ms": 1095650,
+      "end_ms": 1096140,
+      "speaker_id": "spk_mee006",
+      "text": "Okay, it's upside-down."
+    },
+    {
+      "start_ms": 1096140,
+      "end_ms": 1102170,
+      "speaker_id": "spk_mee008",
+      "text": "Let's go with two point five then. Okay, um control high tech innovation."
+    },
+    {
+      "start_ms": 1103100,
+      "end_ms": 1103370,
+      "speaker_id": "spk_fee005",
+      "text": "Well it has the wee jog-dial but"
+    },
+    {
+      "start_ms": 1103370,
+      "end_ms": 1104790,
+      "speaker_id": "spk_mee008",
+      "text": "We had to remove"
+    },
+    {
+      "start_ms": 1105160,
+      "end_ms": 1108070,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, so we've had to remove a few of our features we wanted, but jog-dial"
+    },
+    {
+      "start_ms": 1108070,
+      "end_ms": 1108620,
+      "speaker_id": "spk_fee005",
+      "text": "Mm."
+    },
+    {
+      "start_ms": 1111010,
+      "end_ms": 1111030,
+      "speaker_id": "spk_mee008",
+      "text": "'s good."
+    },
+    {
+      "start_ms": 1111030,
+      "end_ms": 1111140,
+      "speaker_id": "spk_fee005",
+      "text": "I'd go with three or four, maybe three."
+    },
+    {
+      "start_ms": 1111140,
+      "end_ms": 1111760,
+      "speaker_id": "spk_mee006",
+      "text": "Say it's more"
+    },
+    {
+      "start_ms": 1112050,
+      "end_ms": 1112860,
+      "speaker_id": "spk_mee007",
+      "text": "Eight three."
+    },
+    {
+      "start_ms": 1112860,
+      "end_ms": 1116230,
+      "speaker_id": "spk_mee006",
+      "text": "Medium, but going towards a little bit higher than medium kind of thing. Yep."
+    },
+    {
+      "start_ms": 1116230,
+      "end_ms": 1116900,
+      "speaker_id": "spk_mee008",
+      "text": "Okay, three?"
+    },
+    {
+      "start_ms": 1116900,
+      "end_ms": 1118110,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah about three, okay."
+    },
+    {
+      "start_ms": 1118630,
+      "end_ms": 1119900,
+      "speaker_id": "spk_mee008",
+      "text": "Okay, um"
+    },
+    {
+      "start_ms": 1122310,
+      "end_ms": 1126030,
+      "speaker_id": "spk_mee008",
+      "text": "Style reflects a fruit inspired colour, design. I shouldn't have said colour, but just"
+    },
+    {
+      "start_ms": 1126030,
+      "end_ms": 1126460,
+      "speaker_id": "spk_mee006",
+      "text": "Lemon."
+    },
+    {
+      "start_ms": 1127490,
+      "end_ms": 1127750,
+      "speaker_id": "spk_fee005",
+      "text": "Well that's kind of"
+    },
+    {
+      "start_ms": 1127750,
+      "end_ms": 1128520,
+      "speaker_id": "spk_mee006",
+      "text": "Okay, the blue the blue colours and don't re don't actually represent the colour, except for the b the the red button, they because for want of a"
+    },
+    {
+      "start_ms": 1128520,
+      "end_ms": 1128730,
+      "speaker_id": "spk_mee007",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1128730,
+      "end_ms": 1129120,
+      "speaker_id": "spk_mee008",
+      "text": "Sorta."
+    },
+    {
+      "start_ms": 1131620,
+      "end_ms": 1131850,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1133570,
+      "end_ms": 1133870,
+      "speaker_id": "spk_mee008",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 1135130,
+      "end_ms": 1135210,
+      "speaker_id": "spk_fee005",
+      "text": "But the yellow, I mean it could be a lemon yellow colour, couldn't it?"
+    },
+    {
+      "start_ms": 1135210,
+      "end_ms": 1137410,
+      "speaker_id": "spk_mee008",
+      "text": "Right. Yeah, could be. Yeah."
+    },
+    {
+      "start_ms": 1137410,
+      "end_ms": 1139890,
+      "speaker_id": "spk_mee006",
+      "text": "Yeah, the the yellow is more representative of the colour, but the button itself, the blue can be anything else."
+    },
+    {
+      "start_ms": 1139890,
+      "end_ms": 1140240,
+      "speaker_id": "spk_mee008",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 1140240,
+      "end_ms": 1140570,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1142070,
+      "end_ms": 1143530,
+      "speaker_id": "spk_mee008",
+      "text": "Okay so we'll go two."
+    },
+    {
+      "start_ms": 1144930,
+      "end_ms": 1145390,
+      "speaker_id": "spk_fee005",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 1145460,
+      "end_ms": 1145600,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah?"
+    },
+    {
+      "start_ms": 1146800,
+      "end_ms": 1151500,
+      "speaker_id": "spk_mee008",
+      "text": "Okay, and um design is simple to use, simple in features."
+    },
+    {
+      "start_ms": 1151950,
+      "end_ms": 1153440,
+      "speaker_id": "spk_fee005",
+      "text": "Well yeah, I mean it's really basic looking isn't it? I mean I'd give that nearly a one."
+    },
+    {
+      "start_ms": 1153440,
+      "end_ms": 1157690,
+      "speaker_id": "spk_mee008",
+      "text": "F f yeah f fairly basic, you guys think?"
+    },
+    {
+      "start_ms": 1157860,
+      "end_ms": 1158520,
+      "speaker_id": "spk_mee007",
+      "text": "Yeah one."
+    },
+    {
+      "start_ms": 1158520,
+      "end_ms": 1158840,
+      "speaker_id": "spk_mee006",
+      "text": "Yep, that's fine."
+    },
+    {
+      "start_ms": 1158840,
+      "end_ms": 1160830,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, one? Okay."
+    },
+    {
+      "start_ms": 1161860,
+      "end_ms": 1169410,
+      "speaker_id": "spk_mee008",
+      "text": "Um, soft and spongy, have we achieved that? We've used mostly plastic in the end so it's going to be quite a bit of a compromise for price. Five?"
+    },
+    {
+      "start_ms": 1169410,
+      "end_ms": 1170740,
+      "speaker_id": "spk_mee007",
+      "text": "Yeah I think it's about five."
+    },
+    {
+      "start_ms": 1174070,
+      "end_ms": 1175220,
+      "speaker_id": "spk_fee005",
+      "text": "Five? That's really low. Well"
+    },
+    {
+      "start_ms": 1175220,
+      "end_ms": 1177650,
+      "speaker_id": "spk_mee007",
+      "text": "Yeah well we have to use uh plastic so it's probably gonna be"
+    },
+    {
+      "start_ms": 1177650,
+      "end_ms": 1177910,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah I suppose mm 'kay."
+    },
+    {
+      "start_ms": 1177910,
+      "end_ms": 1178400,
+      "speaker_id": "spk_mee008",
+      "text": "That's"
+    },
+    {
+      "start_ms": 1180050,
+      "end_ms": 1180650,
+      "speaker_id": "spk_mee008",
+      "text": "Um"
+    },
+    {
+      "start_ms": 1181600,
+      "end_ms": 1182020,
+      "speaker_id": "spk_mee006",
+      "text": "Yeah, company logo."
+    },
+    {
+      "start_ms": 1182020,
+      "end_ms": 1185850,
+      "speaker_id": "spk_mee008",
+      "text": "Could we have used an entirely rubber frame to it? Was that an option?"
+    },
+    {
+      "start_ms": 1186450,
+      "end_ms": 1186780,
+      "speaker_id": "spk_mee007",
+      "text": "I think I'd probably increase the cost. We've only got like what, ten cents left so"
+    },
+    {
+      "start_ms": 1186780,
+      "end_ms": 1187900,
+      "speaker_id": "spk_mee006",
+      "text": "I think it'll be cost prohibitive, yeah."
+    },
+    {
+      "start_ms": 1187900,
+      "end_ms": 1189100,
+      "speaker_id": "spk_mee008",
+      "text": "It would cost more than plastic."
+    },
+    {
+      "start_ms": 1190150,
+      "end_ms": 1192280,
+      "speaker_id": "spk_mee008",
+      "text": "Okay, logo, we've got it in there, haven't we?"
+    },
+    {
+      "start_ms": 1192470,
+      "end_ms": 1192830,
+      "speaker_id": "spk_mee006",
+      "text": "Yep."
+    },
+    {
+      "start_ms": 1192830,
+      "end_ms": 1196160,
+      "speaker_id": "spk_fee005",
+      "text": "Yep. Gonna have that on the side, aren't we, like there or something?"
+    },
+    {
+      "start_ms": 1198090,
+      "end_ms": 1202020,
+      "speaker_id": "spk_mee008",
+      "text": "Huh. And um it's within budget, yep. It is, isn't it?"
+    },
+    {
+      "start_ms": 1202020,
+      "end_ms": 1202300,
+      "speaker_id": "spk_mee007",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1203260,
+      "end_ms": 1210320,
+      "speaker_id": "spk_mee008",
+      "text": "Okay, so we can say then that uh out of a possible or what would be our goal here?"
+    },
+    {
+      "start_ms": 1210670,
+      "end_ms": 1212100,
+      "speaker_id": "spk_fee005",
+      "text": "Out of forty nine, I guess."
+    },
+    {
+      "start_ms": 1212100,
+      "end_ms": 1215230,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, out of forty nine with with zero being the highest."
+    },
+    {
+      "start_ms": 1217750,
+      "end_ms": 1223320,
+      "speaker_id": "spk_mee008",
+      "text": "We are at uh two, seven, eight, ten, fifteen point five."
+    },
+    {
+      "start_ms": 1226680,
+      "end_ms": 1227030,
+      "speaker_id": "spk_fee005",
+      "text": "'S pretty good."
+    },
+    {
+      "start_ms": 1227030,
+      "end_ms": 1228290,
+      "speaker_id": "spk_mee008",
+      "text": "So it's pretty good."
+    },
+    {
+      "start_ms": 1230310,
+      "end_ms": 1237530,
+      "speaker_id": "spk_mee008",
+      "text": "Translates to something like about approximately seventy two percent efficacy"
+    },
+    {
+      "start_ms": 1238690,
+      "end_ms": 1239810,
+      "speaker_id": "spk_mee008",
+      "text": "Of our original goal."
+    },
+    {
+      "start_ms": 1240960,
+      "end_ms": 1241190,
+      "speaker_id": "spk_mee008",
+      "text": "Right?"
+    },
+    {
+      "start_ms": 1242240,
+      "end_ms": 1242820,
+      "speaker_id": "spk_fee005",
+      "text": "Uh yeah."
+    },
+    {
+      "start_ms": 1242820,
+      "end_ms": 1244570,
+      "speaker_id": "spk_mee008",
+      "text": "I think 'cause if you turn that into"
+    },
+    {
+      "start_ms": 1245840,
+      "end_ms": 1246410,
+      "speaker_id": "spk_mee008",
+      "text": "A hundred"
+    },
+    {
+      "start_ms": 1247810,
+      "end_ms": 1248530,
+      "speaker_id": "spk_mee008",
+      "text": "It would be about"
+    },
+    {
+      "start_ms": 1248960,
+      "end_ms": 1249750,
+      "speaker_id": "spk_fee005",
+      "text": "Twice that, about thirty one."
+    },
+    {
+      "start_ms": 1249750,
+      "end_ms": 1254040,
+      "speaker_id": "spk_mee008",
+      "text": "About thirty one, and then invert that, it's"
+    },
+    {
+      "start_ms": 1254040,
+      "end_ms": 1256120,
+      "speaker_id": "spk_fee005",
+      "text": "So yeah ab well yeah about sixty nine, seventy percent yeah."
+    },
+    {
+      "start_ms": 1256120,
+      "end_ms": 1258560,
+      "speaker_id": "spk_mee008",
+      "text": "Oh right, about seventy, yeah seventy percent."
+    },
+    {
+      "start_ms": 1259280,
+      "end_ms": 1260100,
+      "speaker_id": "spk_fee005",
+      "text": "It's pretty good."
+    },
+    {
+      "start_ms": 1260770,
+      "end_ms": 1264590,
+      "speaker_id": "spk_mee008",
+      "text": "Okay, good. That was just a little formality for us to go through."
+    },
+    {
+      "start_ms": 1264890,
+      "end_ms": 1265360,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 1265750,
+      "end_ms": 1272880,
+      "speaker_id": "spk_mee008",
+      "text": "Yep, oh hundred pound pen. Sorry alright. No."
+    },
+    {
+      "start_ms": 1272880,
+      "end_ms": 1275500,
+      "speaker_id": "spk_fee005",
+      "text": "Nobody saw it, honestly."
+    },
+    {
+      "start_ms": 1275900,
+      "end_ms": 1276910,
+      "speaker_id": "spk_mee006",
+      "text": "The cameras did."
+    },
+    {
+      "start_ms": 1276910,
+      "end_ms": 1277730,
+      "speaker_id": "spk_mee008",
+      "text": "Hmm."
+    },
+    {
+      "start_ms": 1277960,
+      "end_ms": 1279480,
+      "speaker_id": "spk_fee005",
+      "text": "Is that you all have all finished, or"
+    },
+    {
+      "start_ms": 1279480,
+      "end_ms": 1291520,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah that's that's me. I did have one other um one other frame I thought, I mean I I d not knowing how we would deal with this information, I thought okay in theory this kind of a process would be about refining our design, revisiting our original goals. It's not something I need to p push through, but I thought should we thinking more about the dimensions, um sort of like more of a three dimensional shapes as well as opposed to just that flat um"
+    },
+    {
+      "start_ms": 1291520,
+      "end_ms": 1292150,
+      "speaker_id": "spk_fee005",
+      "text": "Uh-huh."
+    },
+    {
+      "start_ms": 1303670,
+      "end_ms": 1304050,
+      "speaker_id": "spk_fee005",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 1304470,
+      "end_ms": 1308210,
+      "speaker_id": "spk_mee008",
+      "text": "Could our design involve a series of colours so that it's more of like a line where we have like sort of the, I don't know like the harvest line or the vibrant, I dunno the Whatever just some theme and then we have different tones, lime green, lemon. It's just discussion. I mean obviously we can just abandon this, it's fine. I'm just thinking about what we originally set out to do."
+    },
+    {
+      "start_ms": 1308210,
+      "end_ms": 1308350,
+      "speaker_id": "spk_mee006",
+      "text": "Yep."
+    },
+    {
+      "start_ms": 1317830,
+      "end_ms": 1318310,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 1324790,
+      "end_ms": 1325120,
+      "speaker_id": "spk_mee008",
+      "text": "Um, yep so there. That's all."
+    },
+    {
+      "start_ms": 1325120,
+      "end_ms": 1325450,
+      "speaker_id": "spk_fee005",
+      "text": "Right."
+    },
+    {
+      "start_ms": 1327590,
+      "end_ms": 1331530,
+      "speaker_id": "spk_fee005",
+      "text": "Okay, great um are you submitting the"
+    },
+    {
+      "start_ms": 1332900,
+      "end_ms": 1337200,
+      "speaker_id": "spk_fee005",
+      "text": "The um evaluation criteria or am I? I don't know what your instructions have been."
+    },
+    {
+      "start_ms": 1337200,
+      "end_ms": 1343300,
+      "speaker_id": "spk_mee008",
+      "text": "Um, I think to record it and uh I haven't been asked to submit it yet. Yeah."
+    },
+    {
+      "start_ms": 1343410,
+      "end_ms": 1348560,
+      "speaker_id": "spk_fee005",
+      "text": "Okay, uh just wondering if I need to include it in the helium, because if you're submitting it anyway then Okay great."
+    },
+    {
+      "start_ms": 1348560,
+      "end_ms": 1349030,
+      "speaker_id": "spk_mee008",
+      "text": "I will, yeah."
+    },
+    {
+      "start_ms": 1349830,
+      "end_ms": 1350750,
+      "speaker_id": "spk_mee006",
+      "text": "It keeps getting too big."
+    },
+    {
+      "start_ms": 1351200,
+      "end_ms": 1359090,
+      "speaker_id": "spk_fee005",
+      "text": "Cool. Um right, uh well next up then, because we've done finance, is the project evaluation."
+    },
+    {
+      "start_ms": 1360780,
+      "end_ms": 1363830,
+      "speaker_id": "spk_mee006",
+      "text": "'Kay I'm I'm listening I'm just trying to incorporate the logo into the the thing, so I'm playing with the Play-Doh as well."
+    },
+    {
+      "start_ms": 1363830,
+      "end_ms": 1364640,
+      "speaker_id": "spk_fee005",
+      "text": "Oh right, okay."
+    },
+    {
+      "start_ms": 1367380,
+      "end_ms": 1368760,
+      "speaker_id": "spk_mee006",
+      "text": "Just in case you're wondering, why is he still playing with the Play-Doh?"
+    },
+    {
+      "start_ms": 1368760,
+      "end_ms": 1368920,
+      "speaker_id": "spk_mee008",
+      "text": "Huh."
+    },
+    {
+      "start_ms": 1387480,
+      "end_ms": 1390630,
+      "speaker_id": "spk_mee006",
+      "text": "Just about right L_E_G_O_ Lego."
+    },
+    {
+      "start_ms": 1390630,
+      "end_ms": 1392200,
+      "speaker_id": "spk_mee007",
+      "text": "My leg."
+    },
+    {
+      "start_ms": 1400520,
+      "end_ms": 1414300,
+      "speaker_id": "spk_fee005",
+      "text": "Right, okay. Um well do you wanna um just individually say what you think about about these four points and or not those four points, my four points, sorry, forgotten that."
+    },
+    {
+      "start_ms": 1416990,
+      "end_ms": 1417990,
+      "speaker_id": "spk_fee005",
+      "text": "You got a different uh"
+    },
+    {
+      "start_ms": 1430120,
+      "end_ms": 1430250,
+      "speaker_id": "spk_mee008",
+      "text": "Yep."
+    },
+    {
+      "start_ms": 1434580,
+      "end_ms": 1437480,
+      "speaker_id": "spk_mee008",
+      "text": "I like those printer cables that just have the two little butterfly clips like that. It's really quick."
+    },
+    {
+      "start_ms": 1437480,
+      "end_ms": 1440430,
+      "speaker_id": "spk_fee005",
+      "text": "Oh yeah, they're good aren't they, yeah. Right okay, um yeah here we are. Uh as a note we'll do this"
+    },
+    {
+      "start_ms": 1440430,
+      "end_ms": 1441150,
+      "speaker_id": "spk_mee008",
+      "text": "To use."
+    },
+    {
+      "start_ms": 1447280,
+      "end_ms": 1449800,
+      "speaker_id": "spk_fee005",
+      "text": "Alphabetically. Um do you wanna start Andrew?"
+    },
+    {
+      "start_ms": 1449800,
+      "end_ms": 1453340,
+      "speaker_id": "spk_mee008",
+      "text": "Sure, um so what is it you're asking of me now?"
+    },
+    {
+      "start_ms": 1453370,
+      "end_ms": 1457970,
+      "speaker_id": "spk_fee005",
+      "text": "I don't know, just um your opinion on those four those four points really and how we used them. Yeah."
+    },
+    {
+      "start_ms": 1457970,
+      "end_ms": 1465710,
+      "speaker_id": "spk_mee008",
+      "text": "Or sort of our work on setting this up. Yeah. Well, is it uh okay I'll just go through your system then. The the room uh"
+    },
+    {
+      "start_ms": 1466840,
+      "end_ms": 1472330,
+      "speaker_id": "spk_mee008",
+      "text": "Is fairly institutional, but um the main thing is, I think"
+    },
+    {
+      "start_ms": 1473480,
+      "end_ms": 1489300,
+      "speaker_id": "spk_mee008",
+      "text": "Um our use of this space is more just to report on things as opposed to be creative and constructive and it would probably help to um have l sort of a cumulative effect of we have ideas and we come back and then the ideas are still in discussion, you know, as in other words this this room is sort of a centre point of creativity, whereas in reality as we've gone through this, it's not really the centre point of creativity, it's more just a"
+    },
+    {
+      "start_ms": 1489300,
+      "end_ms": 1489660,
+      "speaker_id": "spk_fee005",
+      "text": "Uh-huh."
+    },
+    {
+      "start_ms": 1497140,
+      "end_ms": 1497660,
+      "speaker_id": "spk_fee005",
+      "text": "Well d do you feel though that that you were able to have quite a lot of creative input into the thing?"
+    },
+    {
+      "start_ms": 1497660,
+      "end_ms": 1498360,
+      "speaker_id": "spk_mee008",
+      "text": "D debating"
+    },
+    {
+      "start_ms": 1502370,
+      "end_ms": 1512880,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, yeah but that's just the thing is the quest in terms of the the first point there, the room, it feels as though the creativity goes on when we leave, and then we come here and then we kind of put out our ideas and then, you know."
+    },
+    {
+      "start_ms": 1512880,
+      "end_ms": 1515960,
+      "speaker_id": "spk_fee005",
+      "text": "But I don't I don't think it means the room as in this room. I think it means like you know"
+    },
+    {
+      "start_ms": 1515960,
+      "end_ms": 1518130,
+      "speaker_id": "spk_mee008",
+      "text": "Oh, oh right right, oh right okay room for creativ Oh right I just looked up and saw okay whiteboard, digital pens, the room. No, of course, yeah."
+    },
+    {
+      "start_ms": 1518130,
+      "end_ms": 1519060,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1521040,
+      "end_ms": 1521270,
+      "speaker_id": "spk_fee005",
+      "text": "Room."
+    },
+    {
+      "start_ms": 1522420,
+      "end_ms": 1524700,
+      "speaker_id": "spk_fee005",
+      "text": "Oh yeah. Well I dunno do you th I think it means um I think it means did you feel you were able to give creative input so"
+    },
+    {
+      "start_ms": 1524700,
+      "end_ms": 1525050,
+      "speaker_id": "spk_mee008",
+      "text": "Sorry."
+    },
+    {
+      "start_ms": 1525970,
+      "end_ms": 1526130,
+      "speaker_id": "spk_mee008",
+      "text": "Huh."
+    },
+    {
+      "start_ms": 1527220,
+      "end_ms": 1527620,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1529110,
+      "end_ms": 1544910,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah I th okay on th um yeah dif answering the question uh in those terms I'd say that actually there's sort of a tease of creativity because we're asked to work through this, but actually the guidelines are fairly contrived in terms of um okay fashion trends, say fruit and vegetable colour scheme, but then i then we're told okay use the co company company colours."
+    },
+    {
+      "start_ms": 1544910,
+      "end_ms": 1545450,
+      "speaker_id": "spk_fee005",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 1551940,
+      "end_ms": 1552260,
+      "speaker_id": "spk_fee005",
+      "text": "Mm."
+    },
+    {
+      "start_ms": 1553050,
+      "end_ms": 1560790,
+      "speaker_id": "spk_mee008",
+      "text": "So what do we do. We're told okay um think in terms of style and look and feel and technology, but build something for twelve and a half pounds, so actually the creativity was more more of like a um a f sort of a f formality then an actual"
+    },
+    {
+      "start_ms": 1560790,
+      "end_ms": 1561210,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 1568640,
+      "end_ms": 1568680,
+      "speaker_id": "spk_mee006",
+      "text": "You feel like you're caged within whatever y It's like a balloon in a cage, it can only go so big and not hit the side. The constraints do come in very fast."
+    },
+    {
+      "start_ms": 1568680,
+      "end_ms": 1569140,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 1570540,
+      "end_ms": 1572650,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah within the constraints the"
+    },
+    {
+      "start_ms": 1572910,
+      "end_ms": 1573280,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1574870,
+      "end_ms": 1574940,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, yeah. So"
+    },
+    {
+      "start_ms": 1574940,
+      "end_ms": 1578930,
+      "speaker_id": "spk_fee005",
+      "text": "Okay uh do you know what, actually let's take each point and everybody discuss it, I think. Yeah. So still on the topic of room for creativity uh next up is Craig."
+    },
+    {
+      "start_ms": 1578930,
+      "end_ms": 1579120,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1584550,
+      "end_ms": 1592870,
+      "speaker_id": "spk_mee007",
+      "text": "Um I agree with his point it's um it is quite a lot of fun t to go and then you have sort of hit the end then go right, gotta cut everything out 'cause we don't have enough money."
+    },
+    {
+      "start_ms": 1593160,
+      "end_ms": 1593730,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1593790,
+      "end_ms": 1594010,
+      "speaker_id": "spk_mee006",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1595430,
+      "end_ms": 1595700,
+      "speaker_id": "spk_mee008",
+      "text": "Yep."
+    },
+    {
+      "start_ms": 1596280,
+      "end_ms": 1600430,
+      "speaker_id": "spk_mee006",
+      "text": "I think another point is that the meetings um are more brainstorming sessions than meetings, so time is also a very s um strong factor, and structure. Because for a brainstorming meeting you want a structure that allows you to allows ideas to get tossed, um to be evaluated, and to be reviewed, and to get feedback and come back."
+    },
+    {
+      "start_ms": 1600430,
+      "end_ms": 1600730,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1605330,
+      "end_ms": 1605670,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1605670,
+      "end_ms": 1606090,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1611560,
+      "end_ms": 1611800,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm, mm-hmm."
+    },
+    {
+      "start_ms": 1611800,
+      "end_ms": 1612240,
+      "speaker_id": "spk_fee005",
+      "text": "Mm."
+    },
+    {
+      "start_ms": 1615130,
+      "end_ms": 1615910,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, yeah."
+    },
+    {
+      "start_ms": 1615910,
+      "end_ms": 1620680,
+      "speaker_id": "spk_mee006",
+      "text": "And I guess that point about the room not being r very friendly to that, I think that's a very big thing, and I think the fact that we're wearing these things restricts I feel it 'cause I wear m my glasses, right, and that but that irritates me right it it it does actually you know affect how, w whether you feel comfortable to communicate. I feel like I'm hiding behind the equipment, rather than the equipment is helping me, and you know."
+    },
+    {
+      "start_ms": 1620680,
+      "end_ms": 1620930,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1624160,
+      "end_ms": 1625340,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, sure."
+    },
+    {
+      "start_ms": 1626170,
+      "end_ms": 1626540,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1629530,
+      "end_ms": 1629710,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1632520,
+      "end_ms": 1633220,
+      "speaker_id": "spk_mee008",
+      "text": "New creativity."
+    },
+    {
+      "start_ms": 1637320,
+      "end_ms": 1637490,
+      "speaker_id": "spk_mee008",
+      "text": "Yep."
+    },
+    {
+      "start_ms": 1639750,
+      "end_ms": 1640010,
+      "speaker_id": "spk_mee008",
+      "text": "Right."
+    },
+    {
+      "start_ms": 1640020,
+      "end_ms": 1642630,
+      "speaker_id": "spk_fee005",
+      "text": "So you think a more relaxed atmosphere would be more kind of conducive to creative thought or"
+    },
+    {
+      "start_ms": 1642630,
+      "end_ms": 1644920,
+      "speaker_id": "spk_mee006",
+      "text": "Not not so much an atmosphere, the atmosphere is very relaxed, but the the gear yeah you know that creates boundaries to that um and and the time the time given also restricts"
+    },
+    {
+      "start_ms": 1644920,
+      "end_ms": 1646440,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah, but actual environment?"
+    },
+    {
+      "start_ms": 1647530,
+      "end_ms": 1647690,
+      "speaker_id": "spk_mee008",
+      "text": "Mm."
+    },
+    {
+      "start_ms": 1649590,
+      "end_ms": 1649880,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 1649990,
+      "end_ms": 1650310,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 1652010,
+      "end_ms": 1652340,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 1652340,
+      "end_ms": 1652830,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 1654520,
+      "end_ms": 1657550,
+      "speaker_id": "spk_fee005",
+      "text": "Very good. Um what about leadership?"
+    },
+    {
+      "start_ms": 1659140,
+      "end_ms": 1663030,
+      "speaker_id": "spk_fee005",
+      "text": "I don't know if that means like, if I did a good job or something. I don't really know."
+    },
+    {
+      "start_ms": 1663030,
+      "end_ms": 1669600,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, well well I mean my sense on that is sort of what kind of guidance and direction, encouragement"
+    },
+    {
+      "start_ms": 1669600,
+      "end_ms": 1673080,
+      "speaker_id": "spk_fee005",
+      "text": "From like your personal coach person and stuff like that, do you think maybe?"
+    },
+    {
+      "start_ms": 1673080,
+      "end_ms": 1676670,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah from and you as well I think, just sort of acting as team leader."
+    },
+    {
+      "start_ms": 1677160,
+      "end_ms": 1677690,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 1677840,
+      "end_ms": 1680150,
+      "speaker_id": "spk_mee008",
+      "text": "Um yeah I think I think it's I think it's good. I mean my personal views on on leadership is that effective effective leadership sort of um gives people a certain room for freedom and delegation, but then to come back with something that they take great ownership and"
+    },
+    {
+      "start_ms": 1680150,
+      "end_ms": 1680520,
+      "speaker_id": "spk_mee006",
+      "text": "Excuse me."
+    },
+    {
+      "start_ms": 1692120,
+      "end_ms": 1692570,
+      "speaker_id": "spk_fee005",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 1692570,
+      "end_ms": 1717760,
+      "speaker_id": "spk_mee008",
+      "text": "You know, innovative thought with. In in reality I think here the the different elements of leadership such as the the original b briefing and then the personal coach and the and then you know having having you with your the meeting agenda is actually quite a quite a quite a con confining framework to work within. And so it is leadership almost to the point of sort of disempowering the the the team member, so"
+    },
+    {
+      "start_ms": 1717760,
+      "end_ms": 1719440,
+      "speaker_id": "spk_fee005",
+      "text": "Uh-huh, okay."
+    },
+    {
+      "start_ms": 1719440,
+      "end_ms": 1730320,
+      "speaker_id": "spk_mee008",
+      "text": "But it's not bad leadership, it's just sort of s fairly strong, you know. It turns it turns the individual into more of like a um sort of a predetermined mechanism, as opposed to a sort of a free"
+    },
+    {
+      "start_ms": 1730320,
+      "end_ms": 1733300,
+      "speaker_id": "spk_fee005",
+      "text": "So you think maybe a little too controlling or"
+    },
+    {
+      "start_ms": 1733440,
+      "end_ms": 1734720,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, oh yeah, without without a doubt."
+    },
+    {
+      "start_ms": 1734720,
+      "end_ms": 1736690,
+      "speaker_id": "spk_mee006",
+      "text": "I think controlling is not the right word, I think the interactions are very structured. I think structure is probably what you're saying that, each individual is structured to one particular task, and one parti rather than controlling. I don't think there's a sense of control 'cause all the decisions have been made in terms of a, like a consensus right, we go around and we think about it, but that you know process actually says you have to do it in a certain way. It doesn't tell you, you know, some ways that you might wanna be a bit more creative in terms of the process you know, not the"
+    },
+    {
+      "start_ms": 1736690,
+      "end_ms": 1738080,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah maybe not co confining."
+    },
+    {
+      "start_ms": 1738720,
+      "end_ms": 1738990,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1739670,
+      "end_ms": 1740860,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, yeah."
+    },
+    {
+      "start_ms": 1743380,
+      "end_ms": 1744240,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm, mm-hmm."
+    },
+    {
+      "start_ms": 1744240,
+      "end_ms": 1744830,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 1746310,
+      "end_ms": 1746680,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 1747420,
+      "end_ms": 1747830,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 1750120,
+      "end_ms": 1751070,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm, mm-hmm."
+    },
+    {
+      "start_ms": 1752430,
+      "end_ms": 1753120,
+      "speaker_id": "spk_fee005",
+      "text": "Uh-huh."
+    },
+    {
+      "start_ms": 1753780,
+      "end_ms": 1754990,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm, mm-hmm."
+    },
+    {
+      "start_ms": 1757090,
+      "end_ms": 1757330,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 1757330,
+      "end_ms": 1757810,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 1760550,
+      "end_ms": 1763600,
+      "speaker_id": "spk_mee008",
+      "text": "Mm. Mm-hmm, mm-hmm. Yeah."
+    },
+    {
+      "start_ms": 1764070,
+      "end_ms": 1766980,
+      "speaker_id": "spk_fee005",
+      "text": "Okay, uh what about teamwork?"
+    },
+    {
+      "start_ms": 1769620,
+      "end_ms": 1770930,
+      "speaker_id": "spk_mee008",
+      "text": "Um did, you wanna comment Craig?"
+    },
+    {
+      "start_ms": 1770930,
+      "end_ms": 1774530,
+      "speaker_id": "spk_mee007",
+      "text": "Uh, reckon that was a bit hard because we could only discuss things in the meeting."
+    },
+    {
+      "start_ms": 1774700,
+      "end_ms": 1774820,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1774820,
+      "end_ms": 1775640,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1775970,
+      "end_ms": 1779100,
+      "speaker_id": "spk_mee007",
+      "text": "If we could just go up to somebody outside the meeting and have a quick talk with them, that would've been a lot easier."
+    },
+    {
+      "start_ms": 1779330,
+      "end_ms": 1779560,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1781160,
+      "end_ms": 1781900,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 1781900,
+      "end_ms": 1781910,
+      "speaker_id": "spk_mee008",
+      "text": "Fully agree."
+    },
+    {
+      "start_ms": 1781910,
+      "end_ms": 1791020,
+      "speaker_id": "spk_mee006",
+      "text": "I think you tried to use the common share folder to to to to communicate, but um it just comes back to us so slow in the email um it it doesn't have a, you know, a messenger will go."
+    },
+    {
+      "start_ms": 1791020,
+      "end_ms": 1791190,
+      "speaker_id": "spk_fee005",
+      "text": "Mm."
+    },
+    {
+      "start_ms": 1791190,
+      "end_ms": 1791550,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1796070,
+      "end_ms": 1796100,
+      "speaker_id": "spk_fee005",
+      "text": "Did uh did you guys get the email I sent you? Oh that's alright. I was wondering if that got there okay. Okay, um so um to s to to summarize the teamwork issue, saying that if we could communicate outside the meeting, you know just like quick questions, quick thoughts, whatever, it probably would be bit easier."
+    },
+    {
+      "start_ms": 1796100,
+      "end_ms": 1796320,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1797910,
+      "end_ms": 1798190,
+      "speaker_id": "spk_mee007",
+      "text": "Not just yet."
+    },
+    {
+      "start_ms": 1798190,
+      "end_ms": 1798350,
+      "speaker_id": "spk_mee006",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1798530,
+      "end_ms": 1799560,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, got the email."
+    },
+    {
+      "start_ms": 1799730,
+      "end_ms": 1800080,
+      "speaker_id": "spk_mee006",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 1812340,
+      "end_ms": 1812650,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1813790,
+      "end_ms": 1813990,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, in it"
+    },
+    {
+      "start_ms": 1813990,
+      "end_ms": 1819290,
+      "speaker_id": "spk_mee006",
+      "text": "I think the tools that they were given, the tool set that were given to us are fancy but they don't support collaboration, I think that's the word. They don't support the team working together, you know, they're still very individual tools."
+    },
+    {
+      "start_ms": 1819290,
+      "end_ms": 1821150,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm, mm-hmm, mm-hmm, exactly."
+    },
+    {
+      "start_ms": 1821150,
+      "end_ms": 1822040,
+      "speaker_id": "spk_fee005",
+      "text": "Oh right, okay."
+    },
+    {
+      "start_ms": 1822550,
+      "end_ms": 1823740,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, I mean if you"
+    },
+    {
+      "start_ms": 1825240,
+      "end_ms": 1846670,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, I mean sort of taking upon that idea, w the way I see this i is that it's uh the the s the structure in which we've we've approached this whole task is quite contrary to the p principle of teamwork because the the tasks were d d sort of um divided, and then the work went on in isolation I I don't know what you guys did while you were together, maybe that was a bit different,"
+    },
+    {
+      "start_ms": 1846670,
+      "end_ms": 1847290,
+      "speaker_id": "spk_fee005",
+      "text": "Mm."
+    },
+    {
+      "start_ms": 1850450,
+      "end_ms": 1850510,
+      "speaker_id": "spk_mee008",
+      "text": "But um yeah, but um but actually if you if you imagine not entire the completely same task given to us but us said okay, first thing we have to do is come up with um let's say um a design concept, and we sit here together and do it, well that's what teamwork is. To s to say okay go off and don't talk to each other, it's actually p sort of predisposes you to quite the contrary of teamwork. Um not that we haven't done I think the best we could have done. I'm not dissatisfied with it."
+    },
+    {
+      "start_ms": 1850510,
+      "end_ms": 1852260,
+      "speaker_id": "spk_mee006",
+      "text": "We had Play-Doh fun."
+    },
+    {
+      "start_ms": 1867240,
+      "end_ms": 1867780,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1871900,
+      "end_ms": 1872410,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1877460,
+      "end_ms": 1878170,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 1880460,
+      "end_ms": 1880990,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 1882740,
+      "end_ms": 1886500,
+      "speaker_id": "spk_fee005",
+      "text": "Right, uh anything else to say on teamwork at all? Okay, um what about the you know how we used the whiteboard, the digital pens, the projector, stuff like that? Um did anybody think anything was like really useful, anything was pretty un f"
+    },
+    {
+      "start_ms": 1886500,
+      "end_ms": 1887200,
+      "speaker_id": "spk_mee006",
+      "text": "No, not really."
+    },
+    {
+      "start_ms": 1896570,
+      "end_ms": 1896970,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 1901890,
+      "end_ms": 1902410,
+      "speaker_id": "spk_fee005",
+      "text": "Unsupportive?"
+    },
+    {
+      "start_ms": 1902410,
+      "end_ms": 1920910,
+      "speaker_id": "spk_mee008",
+      "text": "I think the whiteboard, for me, is the kind of thing I would use all the time, but it's um not quite as useful as to us as it could have been, maybe just in the way that we we use it, in the sense that once we have an idea out there or while work was going on in between meetings, that could have been up on a board uh you know as opposed to in like in text."
+    },
+    {
+      "start_ms": 1920910,
+      "end_ms": 1921580,
+      "speaker_id": "spk_fee005",
+      "text": "Mm."
+    },
+    {
+      "start_ms": 1924590,
+      "end_ms": 1938550,
+      "speaker_id": "spk_mee008",
+      "text": "Um, and then we could then keep our ideas sort of building on that. I know that people who design cars and you know in aviation they quite often just have a simple like fibreglass prototype and it's completely you know um abs abstract from the final product, but they use it as a kind of a context to sort of walk around and puzzle and and point and discuss and and and in a way everybody's as we discuss things in the in theoretically and out of our notebooks,"
+    },
+    {
+      "start_ms": 1938550,
+      "end_ms": 1938900,
+      "speaker_id": "spk_fee005",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 1941110,
+      "end_ms": 1941550,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1942630,
+      "end_ms": 1944260,
+      "speaker_id": "spk_fee005",
+      "text": "And point at? Yeah."
+    },
+    {
+      "start_ms": 1949460,
+      "end_ms": 1955020,
+      "speaker_id": "spk_mee008",
+      "text": "We're just we're actually just each of us discussing something that's in each of our own minds. It wasn't until we had this here, you know, like at one point I peeked across and looked at Craig's paper and I'm like, now I know what he's thinking 'cause I saw his book."
+    },
+    {
+      "start_ms": 1955020,
+      "end_ms": 1955450,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1960700,
+      "end_ms": 1961830,
+      "speaker_id": "spk_fee005",
+      "text": "Ah."
+    },
+    {
+      "start_ms": 1962230,
+      "end_ms": 1966540,
+      "speaker_id": "spk_mee008",
+      "text": "But the b the b whiteboard could've actually been this kind of continuing um"
+    },
+    {
+      "start_ms": 1966710,
+      "end_ms": 1970590,
+      "speaker_id": "spk_fee005",
+      "text": "So do you think producing a prototype earlier in the process woulda been a good idea?"
+    },
+    {
+      "start_ms": 1971220,
+      "end_ms": 1971940,
+      "speaker_id": "spk_mee008",
+      "text": "Think could be, yeah."
+    },
+    {
+      "start_ms": 1972110,
+      "end_ms": 1975810,
+      "speaker_id": "spk_mee006",
+      "text": "I think um the the focus of it a lot was the PowerPoint as opposed to the to the whiteboard, and I think that m um is also does you know hinder us and things I think. It will be cooler to have the whiteboard rather than the the PowerPoint, or maybe the whiteboard and the PowerPoint in the same place, you know in the centre of the"
+    },
+    {
+      "start_ms": 1975810,
+      "end_ms": 1976270,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1976650,
+      "end_ms": 1977670,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, yeah."
+    },
+    {
+      "start_ms": 1978740,
+      "end_ms": 1979070,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1980460,
+      "end_ms": 1981270,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, yeah."
+    },
+    {
+      "start_ms": 1982740,
+      "end_ms": 1983130,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 1985110,
+      "end_ms": 1985480,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 1987940,
+      "end_ms": 1988330,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 1990100,
+      "end_ms": 1990730,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, yeah."
+    },
+    {
+      "start_ms": 1990730,
+      "end_ms": 1991130,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 1992070,
+      "end_ms": 2001240,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, because the PowerPoint was provided to us while we had time to prepare, whereas I can imagine if I'd been encouraged to use Paintbrush, for example, or whatever, I would've actually used it, um 'ca you know, just 'cause that's sorta how we what we were set up to to use while we had our time."
+    },
+    {
+      "start_ms": 2001240,
+      "end_ms": 2001500,
+      "speaker_id": "spk_fee005",
+      "text": "Alright."
+    },
+    {
+      "start_ms": 2009750,
+      "end_ms": 2011380,
+      "speaker_id": "spk_fee005",
+      "text": "Okay uh"
+    },
+    {
+      "start_ms": 2011380,
+      "end_ms": 2014100,
+      "speaker_id": "spk_mee006",
+      "text": "I think that there were too many PowerPoints in the meetings. 'Cause the plug-in and the plugging spent we spent a lot of time doing that. And a lot of the information on the PowerPoints, I don't think, you know, we needed to actually it could have, we could have gone through it verbally, especially my slides, I felt that they just you know as opposed to having to present them."
+    },
+    {
+      "start_ms": 2014100,
+      "end_ms": 2014110,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 2014110,
+      "end_ms": 2014460,
+      "speaker_id": "spk_mee007",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2014590,
+      "end_ms": 2015170,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2016050,
+      "end_ms": 2016490,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2017150,
+      "end_ms": 2017620,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2021660,
+      "end_ms": 2022890,
+      "speaker_id": "spk_mee008",
+      "text": "No, not quite."
+    },
+    {
+      "start_ms": 2024050,
+      "end_ms": 2024300,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2025290,
+      "end_ms": 2025480,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2025830,
+      "end_ms": 2026270,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 2027330,
+      "end_ms": 2027620,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2028230,
+      "end_ms": 2031960,
+      "speaker_id": "spk_fee005",
+      "text": "What about the digital pens, did you find them easy enough to use?"
+    },
+    {
+      "start_ms": 2032680,
+      "end_ms": 2033070,
+      "speaker_id": "spk_mee007",
+      "text": "Oh they're a bit clunky."
+    },
+    {
+      "start_ms": 2033070,
+      "end_ms": 2033900,
+      "speaker_id": "spk_mee008",
+      "text": "Sure, yeah."
+    },
+    {
+      "start_ms": 2035210,
+      "end_ms": 2037650,
+      "speaker_id": "spk_mee006",
+      "text": "Yep clunky. Agreed."
+    },
+    {
+      "start_ms": 2037650,
+      "end_ms": 2037800,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2037930,
+      "end_ms": 2038410,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2039350,
+      "end_ms": 2039620,
+      "speaker_id": "spk_mee008",
+      "text": "Yep."
+    },
+    {
+      "start_ms": 2039880,
+      "end_ms": 2041210,
+      "speaker_id": "spk_fee005",
+      "text": "Clunky, okay. Um"
+    },
+    {
+      "start_ms": 2041210,
+      "end_ms": 2041470,
+      "speaker_id": "spk_mee008",
+      "text": "Mm."
+    },
+    {
+      "start_ms": 2043480,
+      "end_ms": 2046450,
+      "speaker_id": "spk_mee006",
+      "text": "Having to tick it before you go off was a bit hindering as well, 'cause you're half way through a thought, and then you run out of paper and then you have to jump."
+    },
+    {
+      "start_ms": 2046450,
+      "end_ms": 2046800,
+      "speaker_id": "spk_mee008",
+      "text": "Mm."
+    },
+    {
+      "start_ms": 2046800,
+      "end_ms": 2047300,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2049730,
+      "end_ms": 2050080,
+      "speaker_id": "spk_fee005",
+      "text": "I know, I think at the very start of today I like wrote a whole load of stuff, didn't click note on one, then went back and wrote one tiny wee thing on the another page, but then did click note, and so I'm quite worried that I've just written over the top of it or something, but they'll have my paper anyway um and haven't done that since."
+    },
+    {
+      "start_ms": 2050080,
+      "end_ms": 2050410,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2060690,
+      "end_ms": 2060870,
+      "speaker_id": "spk_mee008",
+      "text": "Hmm."
+    },
+    {
+      "start_ms": 2062900,
+      "end_ms": 2063090,
+      "speaker_id": "spk_mee008",
+      "text": "Hmm."
+    },
+    {
+      "start_ms": 2063270,
+      "end_ms": 2066760,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm, mm-hmm. Hmm."
+    },
+    {
+      "start_ms": 2066760,
+      "end_ms": 2069940,
+      "speaker_id": "spk_mee006",
+      "text": "But I think the pen is v is very intuitive, everybody knows how to use it, we don't have to worry. So I think the pen's good. It's about the best thing."
+    },
+    {
+      "start_ms": 2069940,
+      "end_ms": 2070260,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm, mm-hmm, mm-hmm."
+    },
+    {
+      "start_ms": 2070260,
+      "end_ms": 2071530,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah, yeah."
+    },
+    {
+      "start_ms": 2074390,
+      "end_ms": 2081550,
+      "speaker_id": "spk_mee008",
+      "text": "And o on the topic of the technology, it just occurred to me that we actually didn't need to move our computers because each computer has all of the files."
+    },
+    {
+      "start_ms": 2082210,
+      "end_ms": 2082450,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2082450,
+      "end_ms": 2083510,
+      "speaker_id": "spk_mee008",
+      "text": "It just occurred to me that they all"
+    },
+    {
+      "start_ms": 2083510,
+      "end_ms": 2084900,
+      "speaker_id": "spk_mee006",
+      "text": "Yeah we only needed one computer and"
+    },
+    {
+      "start_ms": 2084900,
+      "end_ms": 2086160,
+      "speaker_id": "spk_mee008",
+      "text": "We only actually needed one computer."
+    },
+    {
+      "start_ms": 2086160,
+      "end_ms": 2087270,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah, that's true."
+    },
+    {
+      "start_ms": 2087270,
+      "end_ms": 2088370,
+      "speaker_id": "spk_mee008",
+      "text": "If there had been a fifth, that coulda just been sitting there ready to go the whole time."
+    },
+    {
+      "start_ms": 2088370,
+      "end_ms": 2088750,
+      "speaker_id": "spk_mee007",
+      "text": "Good point."
+    },
+    {
+      "start_ms": 2090040,
+      "end_ms": 2093330,
+      "speaker_id": "spk_mee006",
+      "text": "And the computer may not um be conducive to a meeting because um you tend to look at your computer and wanna have the urge to check something, you know, it's useful but"
+    },
+    {
+      "start_ms": 2093330,
+      "end_ms": 2093550,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2096840,
+      "end_ms": 2097150,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2099380,
+      "end_ms": 2099710,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2099970,
+      "end_ms": 2100410,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2101880,
+      "end_ms": 2104500,
+      "speaker_id": "spk_fee005",
+      "text": "Do you think the computers just provide distraction in a meeting?"
+    },
+    {
+      "start_ms": 2104520,
+      "end_ms": 2106320,
+      "speaker_id": "spk_mee006",
+      "text": "I think too many computers are just distracting. Um"
+    },
+    {
+      "start_ms": 2106320,
+      "end_ms": 2106660,
+      "speaker_id": "spk_mee007",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2107280,
+      "end_ms": 2107850,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 2109880,
+      "end_ms": 2112530,
+      "speaker_id": "spk_fee005",
+      "text": "I know I I like to have things written down in front of me actually, like a lot of the stuff that was emailed to me I ended up you know like writing down there or something so I could look at it really quickly and not have the distraction of all of that, um I don't know about anybody else."
+    },
+    {
+      "start_ms": 2112530,
+      "end_ms": 2114530,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm. Yep."
+    },
+    {
+      "start_ms": 2116090,
+      "end_ms": 2116460,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 2116800,
+      "end_ms": 2117150,
+      "speaker_id": "spk_mee006",
+      "text": "Yep."
+    },
+    {
+      "start_ms": 2118160,
+      "end_ms": 2118750,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 2122390,
+      "end_ms": 2122760,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 2123570,
+      "end_ms": 2134920,
+      "speaker_id": "spk_fee005",
+      "text": "Um what else uh any wh I do I'm not really sure what they're looking for when they say new ideas found. Um I don't know is could you think of like anything else that would have been helpful today at all?"
+    },
+    {
+      "start_ms": 2134920,
+      "end_ms": 2136580,
+      "speaker_id": "spk_mee007",
+      "text": "Is this for the project or"
+    },
+    {
+      "start_ms": 2143980,
+      "end_ms": 2149070,
+      "speaker_id": "spk_mee008",
+      "text": "Well, the w main one for me is that uh the process"
+    },
+    {
+      "start_ms": 2150130,
+      "end_ms": 2158990,
+      "speaker_id": "spk_mee008",
+      "text": "Na in a natural f context would not have been interrupted by this necessity to discommunicate ourselves from each other."
+    },
+    {
+      "start_ms": 2158990,
+      "end_ms": 2160570,
+      "speaker_id": "spk_fee005",
+      "text": "Mm. Yeah if we just had uh"
+    },
+    {
+      "start_ms": 2160570,
+      "end_ms": 2170220,
+      "speaker_id": "spk_mee008",
+      "text": "So, that's kind of a new idea for me is like just sort of that idea, well you know it's kind of s hard to keep f working forward on a team a team based project when when you're told you must now work away from your team."
+    },
+    {
+      "start_ms": 2170220,
+      "end_ms": 2171110,
+      "speaker_id": "spk_fee005",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 2175100,
+      "end_ms": 2182230,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah I I dunno I think it was quite good that we had time limits on the meetings because they really could have run on and like my experience with meetings is that they really do, and you can spend a lot of time talking about The only thing is though like when we had our meeting about the conceptual design, I thought there maybe another fifteen helium would have been useful there but um yeah."
+    },
+    {
+      "start_ms": 2182230,
+      "end_ms": 2182650,
+      "speaker_id": "spk_mee008",
+      "text": "Oh yeah."
+    },
+    {
+      "start_ms": 2184040,
+      "end_ms": 2185260,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, yeah."
+    },
+    {
+      "start_ms": 2192690,
+      "end_ms": 2195370,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm, mm-hmm, mm-hmm."
+    },
+    {
+      "start_ms": 2197640,
+      "end_ms": 2206210,
+      "speaker_id": "spk_fee005",
+      "text": "I really thi i I think maybe if we'd like all been working in the one room, and they just said you know like every hour or something everybody make sure yo you know just have a have a short meeting and then just c just to have like something written down, just like you know a a milestone if you like um rather than having meetings, but"
+    },
+    {
+      "start_ms": 2206210,
+      "end_ms": 2206560,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 2208690,
+      "end_ms": 2209100,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 2211360,
+      "end_ms": 2211820,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 2218410,
+      "end_ms": 2218780,
+      "speaker_id": "spk_fee005",
+      "text": "There you go. Um so in closing, I haven't got my five helium to go. Thin Oh there it i Five helium to go. Wonderful. Okay um are the costs within the budget, yes they are. And is the project evaluated, yes it is. So now celebrate."
+    },
+    {
+      "start_ms": 2218780,
+      "end_ms": 2219070,
+      "speaker_id": "spk_mee008",
+      "text": "Hmm."
+    },
+    {
+      "start_ms": 2234590,
+      "end_ms": 2235620,
+      "speaker_id": "spk_mee008",
+      "text": "Great. So it"
+    },
+    {
+      "start_ms": 2235620,
+      "end_ms": 2236810,
+      "speaker_id": "spk_mee006",
+      "text": "And we have Ninja Homer."
+    },
+    {
+      "start_ms": 2237210,
+      "end_ms": 2237590,
+      "speaker_id": "spk_mee008",
+      "text": "So now we"
+    },
+    {
+      "start_ms": 2237590,
+      "end_ms": 2237950,
+      "speaker_id": "spk_mee007",
+      "text": "Oh yeah."
+    },
+    {
+      "start_ms": 2238850,
+      "end_ms": 2240590,
+      "speaker_id": "spk_fee005",
+      "text": "Well apparently now I write the final report. What are you guys doing now?"
+    },
+    {
+      "start_ms": 2240590,
+      "end_ms": 2241450,
+      "speaker_id": "spk_mee007",
+      "text": "Do we know what the other ones are?"
+    },
+    {
+      "start_ms": 2242000,
+      "end_ms": 2242880,
+      "speaker_id": "spk_mee008",
+      "text": "I I don't know."
+    },
+    {
+      "start_ms": 2243010,
+      "end_ms": 2243240,
+      "speaker_id": "spk_fee005",
+      "text": "You dunno?"
+    },
+    {
+      "start_ms": 2243240,
+      "end_ms": 2244670,
+      "speaker_id": "spk_mee007",
+      "text": "Oh wow."
+    },
+    {
+      "start_ms": 2244670,
+      "end_ms": 2244840,
+      "speaker_id": "spk_mee008",
+      "text": "Hmm."
+    },
+    {
+      "start_ms": 2245720,
+      "end_ms": 2247220,
+      "speaker_id": "spk_fee005",
+      "text": "That is lovely."
+    },
+    {
+      "start_ms": 2247220,
+      "end_ms": 2249940,
+      "speaker_id": "spk_mee007",
+      "text": "Hey yeah, I said Ninja Homer."
+    },
+    {
+      "start_ms": 2249940,
+      "end_ms": 2250620,
+      "speaker_id": "spk_mee008",
+      "text": "What did you call it?"
+    },
+    {
+      "start_ms": 2251020,
+      "end_ms": 2253900,
+      "speaker_id": "spk_mee006",
+      "text": "Ninja Homer. See it looks like Homer Simpson"
+    },
+    {
+      "start_ms": 2254260,
+      "end_ms": 2255030,
+      "speaker_id": "spk_mee008",
+      "text": "Huh, huh. Logo."
+    },
+    {
+      "start_ms": 2255030,
+      "end_ms": 2255130,
+      "speaker_id": "spk_mee006",
+      "text": "But it's electronic so it's made in Japan. Yeah it's just a logo."
+    },
+    {
+      "start_ms": 2255130,
+      "end_ms": 2260670,
+      "speaker_id": "spk_fee005",
+      "text": "So is that j is that just is that just a logo or does it do anything? Just a logo and then like Ninja Homer, right okay."
+    },
+    {
+      "start_ms": 2260670,
+      "end_ms": 2260900,
+      "speaker_id": "spk_mee008",
+      "text": "Huh."
+    },
+    {
+      "start_ms": 2261580,
+      "end_ms": 2263730,
+      "speaker_id": "spk_mee006",
+      "text": "Ninja Homer."
+    },
+    {
+      "start_ms": 2264160,
+      "end_ms": 2264320,
+      "speaker_id": "spk_mee008",
+      "text": "Mm."
+    },
+    {
+      "start_ms": 2265600,
+      "end_ms": 2269680,
+      "speaker_id": "spk_mee006",
+      "text": "The the red is supposed to represent the whatever else you wanna print on the side of it."
+    },
+    {
+      "start_ms": 2270090,
+      "end_ms": 2270450,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 2271190,
+      "end_ms": 2271400,
+      "speaker_id": "spk_fee005",
+      "text": "I think it's quite nice."
+    },
+    {
+      "start_ms": 2271400,
+      "end_ms": 2273230,
+      "speaker_id": "spk_mee008",
+      "text": "Fashion technology or something."
+    },
+    {
+      "start_ms": 2274040,
+      "end_ms": 2276860,
+      "speaker_id": "spk_mee006",
+      "text": "You can wear Homer, you can throw Homer when you're frustrated, doh."
+    },
+    {
+      "start_ms": 2276860,
+      "end_ms": 2278650,
+      "speaker_id": "spk_mee008",
+      "text": "Hmm, hmm, hmm."
+    },
+    {
+      "start_ms": 2279570,
+      "end_ms": 2280870,
+      "speaker_id": "spk_fee005",
+      "text": "Oh no, that's cool, it's got I'm kind of I'm slightly gutted that we couldn't get plastic and rubber, I think that would have been nice."
+    },
+    {
+      "start_ms": 2280870,
+      "end_ms": 2281320,
+      "speaker_id": "spk_mee008",
+      "text": "Hmm."
+    },
+    {
+      "start_ms": 2281320,
+      "end_ms": 2282050,
+      "speaker_id": "spk_mee006",
+      "text": "It's clunky."
+    },
+    {
+      "start_ms": 2284920,
+      "end_ms": 2285740,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah, yeah."
+    },
+    {
+      "start_ms": 2286350,
+      "end_ms": 2289040,
+      "speaker_id": "spk_fee005",
+      "text": "Ah well, maybe from now on real reaction should give us more money."
+    },
+    {
+      "start_ms": 2289040,
+      "end_ms": 2289450,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 2290320,
+      "end_ms": 2290550,
+      "speaker_id": "spk_mee006",
+      "text": "Oh, I did learn something new, Play-Doh is useful. No it is it is. It is useful and in in in in in in in um conceptualizing, in being creative. 'Cause like you say, it's something you can put your hands on and feel and touch and get a sense for. Like we were playing with the Play-Doh and the ideas came with the Play-Doh rather than with everything else. You might wanna write that down. It's just, I'm just fiddling with the Play-Doh, and I'm going yeah yeah it's kinda cool."
+    },
+    {
+      "start_ms": 2290550,
+      "end_ms": 2290660,
+      "speaker_id": "spk_mee008",
+      "text": "Hmm."
+    },
+    {
+      "start_ms": 2293640,
+      "end_ms": 2294150,
+      "speaker_id": "spk_fee005",
+      "text": "Play-Doh s"
+    },
+    {
+      "start_ms": 2295480,
+      "end_ms": 2295860,
+      "speaker_id": "spk_mee008",
+      "text": "Huh."
+    },
+    {
+      "start_ms": 2298070,
+      "end_ms": 2298370,
+      "speaker_id": "spk_mee008",
+      "text": "Huh."
+    },
+    {
+      "start_ms": 2300100,
+      "end_ms": 2300700,
+      "speaker_id": "spk_fee005",
+      "text": "Really?"
+    },
+    {
+      "start_ms": 2303120,
+      "end_ms": 2303460,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2303460,
+      "end_ms": 2303890,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2307590,
+      "end_ms": 2308070,
+      "speaker_id": "spk_fee005",
+      "text": "Did they?"
+    },
+    {
+      "start_ms": 2309960,
+      "end_ms": 2310380,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2310690,
+      "end_ms": 2311100,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 2312580,
+      "end_ms": 2313080,
+      "speaker_id": "spk_fee005",
+      "text": "Play-Doh."
+    },
+    {
+      "start_ms": 2313080,
+      "end_ms": 2314030,
+      "speaker_id": "spk_mee008",
+      "text": "No, it's true, yeah."
+    },
+    {
+      "start_ms": 2314660,
+      "end_ms": 2316240,
+      "speaker_id": "spk_mee007",
+      "text": "Guess I'd forgot how good s Play-Doh smells."
+    },
+    {
+      "start_ms": 2316820,
+      "end_ms": 2316910,
+      "speaker_id": "spk_mee008",
+      "text": "Hmm."
+    },
+    {
+      "start_ms": 2316910,
+      "end_ms": 2318560,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah, it smells funny doesn't it. Um"
+    },
+    {
+      "start_ms": 2318560,
+      "end_ms": 2320500,
+      "speaker_id": "spk_mee008",
+      "text": "And some Play-Dohs are actually I think edible aren't they?"
+    },
+    {
+      "start_ms": 2320960,
+      "end_ms": 2320970,
+      "speaker_id": "spk_mee006",
+      "text": "No, all Play-Doh is edible."
+    },
+    {
+      "start_ms": 2320970,
+      "end_ms": 2321710,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah like the stuff for I think it has to be, yeah."
+    },
+    {
+      "start_ms": 2321710,
+      "end_ms": 2323340,
+      "speaker_id": "spk_mee007",
+      "text": "I think they're all non-toxic 'cause it's aimed for like two-year-olds."
+    },
+    {
+      "start_ms": 2323340,
+      "end_ms": 2326390,
+      "speaker_id": "spk_mee006",
+      "text": "It's just wheat, it's the stuff that your mom could make with preservatives and uh"
+    },
+    {
+      "start_ms": 2326470,
+      "end_ms": 2326580,
+      "speaker_id": "spk_mee008",
+      "text": "Wow, hmm."
+    },
+    {
+      "start_ms": 2326580,
+      "end_ms": 2330070,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah um so to wha what are your summarising words about Play-Doh?"
+    },
+    {
+      "start_ms": 2331350,
+      "end_ms": 2332170,
+      "speaker_id": "spk_mee006",
+      "text": "It's helpful to the creative process. Um it engages all your senses not just your sight, but your sense of feel your sense of touch. And it helps you to understand"
+    },
+    {
+      "start_ms": 2332170,
+      "end_ms": 2332290,
+      "speaker_id": "spk_mee008",
+      "text": "Huh."
+    },
+    {
+      "start_ms": 2333490,
+      "end_ms": 2334110,
+      "speaker_id": "spk_fee005",
+      "text": "Okay."
+    },
+    {
+      "start_ms": 2337320,
+      "end_ms": 2337500,
+      "speaker_id": "spk_mee008",
+      "text": "Yep."
+    },
+    {
+      "start_ms": 2338850,
+      "end_ms": 2341650,
+      "speaker_id": "spk_mee008",
+      "text": "Taste."
+    },
+    {
+      "start_ms": 2342020,
+      "end_ms": 2343250,
+      "speaker_id": "spk_mee006",
+      "text": "Dimension as well. I think that that's very helpful because it it starts to pop up, whereas on a piece of paper, on a computer, on a board, um even with a three D_ graphic thing it still, it requires a lot of yeah tangible, that's a nice word. It becomes tangible."
+    },
+    {
+      "start_ms": 2343250,
+      "end_ms": 2343660,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2344150,
+      "end_ms": 2344370,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2347760,
+      "end_ms": 2347770,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2347770,
+      "end_ms": 2349740,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm, yep. Yeah."
+    },
+    {
+      "start_ms": 2352260,
+      "end_ms": 2352760,
+      "speaker_id": "spk_mee007",
+      "text": "Yeah it's not very tangible."
+    },
+    {
+      "start_ms": 2352760,
+      "end_ms": 2353150,
+      "speaker_id": "spk_mee008",
+      "text": "Yeah."
+    },
+    {
+      "start_ms": 2354050,
+      "end_ms": 2354490,
+      "speaker_id": "spk_fee005",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 2354490,
+      "end_ms": 2355950,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm, mm-hmm, mm-hmm."
+    },
+    {
+      "start_ms": 2357610,
+      "end_ms": 2357940,
+      "speaker_id": "spk_mee008",
+      "text": "Mm-hmm."
+    },
+    {
+      "start_ms": 2358760,
+      "end_ms": 2360010,
+      "speaker_id": "spk_fee005",
+      "text": "Tangible."
+    },
+    {
+      "start_ms": 2362670,
+      "end_ms": 2365020,
+      "speaker_id": "spk_fee005",
+      "text": "Okay uh"
+    },
+    {
+      "start_ms": 2370260,
+      "end_ms": 2373560,
+      "speaker_id": "spk_fee005",
+      "text": "Mm. I don't know if there's anything else we needed to discuss."
+    },
+    {
+      "start_ms": 2373560,
+      "end_ms": 2373710,
+      "speaker_id": "spk_mee006",
+      "text": "Nope."
+    },
+    {
+      "start_ms": 2377060,
+      "end_ms": 2378410,
+      "speaker_id": "spk_fee005",
+      "text": "That that's about it really."
+    },
+    {
+      "start_ms": 2381590,
+      "end_ms": 2383440,
+      "speaker_id": "spk_fee005",
+      "text": "Just sit still I guess for a little while."
+    },
+    {
+      "start_ms": 2383590,
+      "end_ms": 2386670,
+      "speaker_id": "spk_mee008",
+      "text": "Do we retreat to our, to continue our"
+    },
+    {
+      "start_ms": 2387120,
+      "end_ms": 2387520,
+      "speaker_id": "spk_mee006",
+      "text": "I think we could probably do it here as long as we don't collaborate."
+    },
+    {
+      "start_ms": 2387520,
+      "end_ms": 2387800,
+      "speaker_id": "spk_fee005",
+      "text": "Um"
+    },
+    {
+      "start_ms": 2388370,
+      "end_ms": 2389700,
+      "speaker_id": "spk_mee008",
+      "text": "R reporting or what i"
+    },
+    {
+      "start_ms": 2389810,
+      "end_ms": 2395280,
+      "speaker_id": "spk_fee005",
+      "text": "Well I dunno. Um I'm sure the little uh the little thing'll pop up any minute now."
+    },
+    {
+      "start_ms": 2395860,
+      "end_ms": 2397040,
+      "speaker_id": "spk_mee006",
+      "text": "Can we turn off the microphones?"
+    },
+    {
+      "start_ms": 2398300,
+      "end_ms": 2400860,
+      "speaker_id": "spk_fee005",
+      "text": "Yeah, yeah if the meeting's over then yeah I guess so."
+    }
+  ]
+}
