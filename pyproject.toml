@@ -27,3 +27,7 @@ testpaths = ["packages/hiveboard/tests", "packages/ingest/tests", "apps/api/test
 [tool.ruff]
 line-length = 110
 target-version = "py312"
+
+[tool.ruff.lint]
+# The port keeps the upstream implementation's established style; CI gates correctness-focused checks.
+select = ["E4", "E7", "E9", "F"]

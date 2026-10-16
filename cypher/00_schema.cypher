@@ -1,4 +1,4 @@
-// Minutes / Hive Board schema for Neo4j. Run once per tenant database (and once on `commons`); every statement
+// Helium graph schema for Neo4j. Run once per tenant database (and once on `commons`); every statement
 // carries IF NOT EXISTS so re-running is a no-op. hiveboard.schema.ensure_schema runs every line below, then the
 // unique `id` constraints for hiveboard.schema.UNIQUE_ID_LABELS (a constraint carries its own index, so no range
 // index on `id` appears here), then CALL db.awaitIndexes so vector and full-text indexes are ONLINE before use.

@@ -121,4 +121,3 @@ def test_fact_agent_reports_extraction_outage_as_failure(seeded):
     assert result.failed is True
     assert "extract" in result.reason.lower()
     assert result.steps[0]["result"]["failed_episodes"] == ["ep_mtg_orbit_001_001"]
-
