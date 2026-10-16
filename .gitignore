@@ -18,3 +18,4 @@ hf-cache/
 Thumbs.db
 *.zip
 *.step
+*.tsbuildinfo
