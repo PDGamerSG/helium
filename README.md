@@ -113,6 +113,46 @@ The seed script replays reviewed labels by default, so it needs no language mode
 | EmbeddingGemma | Default text embeddings | Gemma Terms of Use |
 | AMI Meeting Corpus | Real meeting recordings used for evaluation | CC BY 4.0 |
 
+## ☁️ Explore in the Aura console
+
+To share a team's memory without asking everyone to run Docker, copy it into a [Neo4j Aura](https://console.neo4j.io) instance and open it in the Aura console's **Query**, **Explore**, and **Dashboards** tools. Aura holds one database per instance, so it holds one team at a time. It is a read-only copy for exploring; the Helium API and agents still run against your local Neo4j.
+
+1. Create an Aura instance (AuraDB Free works) and keep the credentials file Aura downloads, for example `Neo4j-<id>-Created-<date>.txt`.
+2. Load the sample teams locally (step 3 of [Download](#-download)), then copy one team into Aura:
+
+   ```bash
+   uv run --package helium-api python data/seed_work.py --tenants orbit
+   uv run --package hiveboard python scripts/mirror_tenant.py --tenant orbit --to-env ~/Downloads/Neo4j-<id>-Created-<date>.txt --wipe
+   ```
+
+   `--wipe` clears the Aura database first. The script reads the URI, user, password, and database from the credentials file, so the password never appears on the command line. It copies the indexes too, so vector and full-text search work in Aura.
+3. In the Aura console, open **Query**, connect to the instance, and try these:
+
+   ```cypher
+   // What is true now, and who said it
+   MATCH (f:Fact {status: 'active'})-[:STATED_BY]->(p:Person)
+   RETURN f.kind AS kind, f.text AS what, p.name AS said_by, datetime({epochMillis: f.valid_from}) AS since
+   ORDER BY since DESC LIMIT 25
+
+   // What replaced what (switch to the graph view)
+   MATCH p = (:Person)<-[:STATED_BY]-(:Fact)-[:SUPERSEDES]->(:Fact)
+   RETURN p
+
+   // The meeting line or email behind each value
+   MATCH (f:Fact {status: 'active'})-[:DERIVED_FROM]->(ep:Episode)<-[:HAS_EPISODE]-(source)
+   OPTIONAL MATCH (ep)-[:SPOKEN_BY|SENT_BY]->(p:Person)
+   RETURN f.text AS fact, p.name AS speaker, coalesce(source.title, source.subject) AS source, ep.text AS line
+   LIMIT 10
+
+   // Work planned on a value that has since changed
+   MATCH (w:WorkItem)-[:DEPENDS_ON]->(planned:Fact {status: 'superseded'})
+   OPTIONAL MATCH (w)-[:OWNED_BY]->(owner:Person)
+   OPTIONAL MATCH (current:Fact {status: 'active'})-[:SUPERSEDES*1..24]->(planned)
+   RETURN w.title AS work, owner.name AS owner, planned.text AS planned_on, current.text AS true_now
+   ```
+
+Aura reports itself as Enterprise and lists the Graph Data Science and Change Data Capture procedures, but on AuraDB Free it cannot create databases, its GDS procedures need a separate Graph Analytics session, and Change Data Capture is off. `HiveDB.capabilities()` detects this, and on Aura it reports `aura: true` and `multi_database`, `gds`, and `cdc` as false. Code pointed at Aura then uses the Cypher fallbacks for PageRank and connected components, and the in-process event bus.
+
 ## 🛡️ Responsible use
 
 Helium stores what people say and write. Tell people before you record or import their meetings and email, and follow your workplace's rules for keeping that data. Agents only draft messages; a person must send them. The API has no login yet, so keep it on a private network.
@@ -126,7 +166,7 @@ Helium stores what people say and write. Tell people before you record or import
 - In the MCP server, `search` and `recall` use a simple word-overlap embedder unless you supply one, so they do not rank by meaning.
 - `docker compose up` builds the earlier `apps/web` shell, not `apps/site`.
 - The sample teams and their dates are synthetic and only illustrate the product.
-- Tested on macOS and in Linux CI. Windows is not tested.
+- Tested on macOS and in Linux CI. On Windows 11, only seeding the sample teams and the Aura mirror have been run.
 - The interface is in English only.
 
 ## 🛠️ Development
@@ -164,7 +204,7 @@ pnpm typecheck && pnpm lint && pnpm build
 | `apps/web/` | Earlier Next.js workspace shell |
 | `data/` | Synthetic sample teams, gold labels, and evaluation fixtures |
 | `docs/` | Architecture, API contracts, and demo runbooks |
-| `scripts/` | Demo and brand checks |
+| `scripts/` | Demo and brand checks, and `mirror_tenant.py` (copy one team into Aura) |
 
 More detail: the demo runbook in [`docs/helium-demo.md`](docs/helium-demo.md), the HTTP API in [`docs/contracts/http-api.md`](docs/contracts/http-api.md), and MCP setup in [`docs/mcp.md`](docs/mcp.md).
 
