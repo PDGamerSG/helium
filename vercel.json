@@ -4,7 +4,7 @@
     "api": {
       "root": "apps/api",
       "framework": "fastapi",
-      "entrypoint": "main:app",
+      "entrypoint": "vercel:app",
       "installCommand": "cd ../.. && uv sync --frozen --no-dev --package helium-api"
     },
     "web": {
