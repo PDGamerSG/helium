@@ -33,7 +33,9 @@ import type {
   WhyResponse,
 } from "./types";
 
-export const API_BASE = (process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8080").replace(/\/+$/, "");
+// Browser requests stay same-origin. The Next.js route forwards them to the
+// internal API service using the HELIUM_API_URL service binding at runtime.
+export const API_BASE = "/api/helium";
 
 export class ApiError extends Error {
   status: number;
