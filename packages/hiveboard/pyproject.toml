@@ -25,3 +25,6 @@ packages = ["hiveboard", "bench"]
 
 [tool.hatch.build.targets.wheel.force-include]
 "../../cypher" = "hiveboard/cypher"
+
+[tool.uv]
+cache-keys = [{ file = "pyproject.toml" }, { file = "hiveboard/**/*.py" }, { file = "../../cypher/*.cypher" }]

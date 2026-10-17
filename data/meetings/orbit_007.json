@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "note": "Synthetic example for the live Orbit demo; fictional people and results. No audio recording exists.",
+  "meeting": {
+    "id": "mtg_orbit_007",
+    "title": "Orbit launch readiness and staged rollout",
+    "started_at": "2026-10-15T10:00:00+05:30",
+    "ended_at": "2026-10-15T10:01:50+05:30"
+  },
+  "speakers": [
+    {
+      "id": "spk_aditya",
+      "name": "Aditya",
+      "role": "lead"
+    },
+    {
+      "id": "spk_priya",
+      "name": "Priya",
+      "role": "backend"
+    },
+    {
+      "id": "spk_rahul",
+      "name": "Rahul",
+      "role": "mobile"
+    },
+    {
+      "id": "spk_sana",
+      "name": "Sana",
+      "role": "design"
+    }
+  ],
+  "segments": [
+    {
+      "start_ms": 0,
+      "end_ms": 10000,
+      "speaker_id": "spk_aditya",
+      "text": "This is our fictional launch-readiness review. The October release remains scheduled for October 16."
+    },
+    {
+      "start_ms": 11000,
+      "end_ms": 21000,
+      "speaker_id": "spk_priya",
+      "text": "The PayU integration passed the sandbox and production smoke tests. The integration is completed."
+    },
+    {
+      "start_ms": 22000,
+      "end_ms": 32000,
+      "speaker_id": "spk_rahul",
+      "text": "Offline mode passed the airplane-mode and reconnect tests. Offline mode is ready for release."
+    },
+    {
+      "start_ms": 33000,
+      "end_ms": 43000,
+      "speaker_id": "spk_sana",
+      "text": "The side drawer passed the 56 dp touch-target and screen-reader checks. Navigation accessibility review is completed."
+    },
+    {
+      "start_ms": 44000,
+      "end_ms": 54000,
+      "speaker_id": "spk_aditya",
+      "text": "Decision: release to five percent of eligible users first. We will expand only after payments and crash metrics pass review."
+    },
+    {
+      "start_ms": 55000,
+      "end_ms": 65000,
+      "speaker_id": "spk_priya",
+      "text": "I own the payment success dashboard. I will finish the launch monitoring checklist by Friday, October 16."
+    },
+    {
+      "start_ms": 66000,
+      "end_ms": 76000,
+      "speaker_id": "spk_rahul",
+      "text": "I own the rollback runbook and will publish it by October 16. The feature flag can disable the new payment flow."
+    },
+    {
+      "start_ms": 77000,
+      "end_ms": 87000,
+      "speaker_id": "spk_sana",
+      "text": "I own the customer support guide. I will deliver the updated screenshots and known-issues page by Monday, October 19."
+    },
+    {
+      "start_ms": 88000,
+      "end_ms": 98000,
+      "speaker_id": "spk_aditya",
+      "text": "Decision: stop the rollout if payment success falls below 98 percent or crash-free sessions fall below 99.5 percent."
+    },
+    {
+      "start_ms": 99000,
+      "end_ms": 109000,
+      "speaker_id": "spk_aditya",
+      "text": "I own the pilot results review. I will approve or hold the 25 percent rollout on Tuesday, October 20."
+    }
+  ]
+}

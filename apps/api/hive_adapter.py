@@ -1031,7 +1031,7 @@ class RealHive:
         return graphrag.search(self.db, tenant, embed, text, k=k)
 
     def list_persons(self, tenant: str) -> list[dict[str, Any]]:
-        res = self._ro(tenant, "MATCH (p:Person) RETURN p ORDER BY p.name")
+        res = self._ro(tenant, "MATCH (p:Person) WHERE p.id IS NOT NULL RETURN p ORDER BY p.name")
         return [self._props(row[0]) for row in res.result_set]
 
     def get_person(self, tenant: str, person_id: str | None) -> dict[str, Any] | None:

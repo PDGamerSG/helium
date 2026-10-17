@@ -81,6 +81,35 @@ Weekdays: orbit standups are Mondays (Sep 7, 14, 21), the design review, custome
 
 **Orbit navigation, `uses_pattern`**: bottom tab bar (`orbit_001` seg 40, Aditya, rationale discoverability) reversed to side drawer (`orbit_003` seg 14, Aditya, rationale Meridian 56 dp minimum touch target), `reverses_meeting: mtg_orbit_001`. The drawer decision is then the precedent for two more decisions in the same meeting (`follows_precedent`). Farah states the underlying requirement herself in `orbit_thread_003` message 1.
 
+## Launch and rollout examples
+
+The live Orbit demo also includes these synthetic sources, with matching saved
+labels in `data/gold/`. The metrics describe fictional demo results.
+
+| Date | Source | Example |
+|---|---|---|
+| Oct 15 | `orbit_007` | Launch readiness, a 5% / 25% / 100% rollout plan, quality gates, owners and dated follow-ups |
+| Oct 16 | `orbit_008` | Pilot results, completed launch work, reconciliation alerts and offline sync improvements |
+| Oct 17 | `orbit_thread_006` | Compliance evidence moves the 25% rollout from Oct 20 to Oct 22, retaining the earlier commitment as history |
+
+Load the original Orbit story and these examples using the database connection
+variables from `.env` or the shell:
+
+```sh
+LLM_BACKEND=fake EMBED_BACKEND=fake HIVE_EVENTS=memory uv run --package helium-api python data/seed.py --tenants orbit --extract gold
+LLM_BACKEND=fake EMBED_BACKEND=fake HIVE_EVENTS=memory uv run --package helium-api python data/seed_work.py --tenants orbit
+```
+
+For Aura's single database, also set `NEO4J_SINGLE_DATABASE=true` and
+`NEO4J_DATABASE` to the configured database name. These commands add data using
+stable IDs and do not reset the database. The first imports eight meetings and
+six email threads; the second adds five example work dependencies. No model API
+key or audio recordings are needed.
+
+When Neo4j's movie sample is present, team people receive a separate `helium:`
+value for its required `personTmdbId` key. Movie people without a Helium `id` are
+excluded from the workspace's people list.
+
 ## Gold label conventions
 
 Shape per contract: `{"meeting_id" | "thread_id", "items": [{kind, subject, predicate, object, speaker_id, segment_index | message_index, ...}]}`. Indices are 0-based. Optional hints, ignored by the matching rule but used by the chain checks and the demo:

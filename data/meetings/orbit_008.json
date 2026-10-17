@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "note": "Synthetic example for the live Orbit demo; fictional people and results. No audio recording exists.",
+  "meeting": {
+    "id": "mtg_orbit_008",
+    "title": "Orbit pilot results and launch follow-ups",
+    "started_at": "2026-10-16T16:00:00+05:30",
+    "ended_at": "2026-10-16T16:01:28+05:30"
+  },
+  "speakers": [
+    {
+      "id": "spk_aditya",
+      "name": "Aditya",
+      "role": "lead"
+    },
+    {
+      "id": "spk_priya",
+      "name": "Priya",
+      "role": "backend"
+    },
+    {
+      "id": "spk_rahul",
+      "name": "Rahul",
+      "role": "mobile"
+    },
+    {
+      "id": "spk_sana",
+      "name": "Sana",
+      "role": "design"
+    }
+  ],
+  "segments": [
+    {
+      "start_ms": 0,
+      "end_ms": 10000,
+      "speaker_id": "spk_aditya",
+      "text": "The October release launched to the five percent pilot today, October 16. The pilot launch is completed."
+    },
+    {
+      "start_ms": 11000,
+      "end_ms": 21000,
+      "speaker_id": "spk_priya",
+      "text": "In this synthetic pilot, payment success is 99.2 percent across 250 test payments. There are no duplicate charges."
+    },
+    {
+      "start_ms": 22000,
+      "end_ms": 32000,
+      "speaker_id": "spk_rahul",
+      "text": "Crash-free sessions are 99.8 percent in the demo cohort. The rollback runbook is published and the rollback drill passed."
+    },
+    {
+      "start_ms": 33000,
+      "end_ms": 43000,
+      "speaker_id": "spk_priya",
+      "text": "The launch monitoring checklist is completed. I will add a payment reconciliation alert by Monday, October 19."
+    },
+    {
+      "start_ms": 44000,
+      "end_ms": 54000,
+      "speaker_id": "spk_sana",
+      "text": "One participant missed the offline sync indicator. I will deliver a clearer indicator design by Wednesday, October 21."
+    },
+    {
+      "start_ms": 55000,
+      "end_ms": 65000,
+      "speaker_id": "spk_rahul",
+      "text": "I will implement the approved offline sync indicator by Friday, October 23. This does not block the payment pilot."
+    },
+    {
+      "start_ms": 66000,
+      "end_ms": 76000,
+      "speaker_id": "spk_aditya",
+      "text": "Decision: keep the pilot at five percent until Meridian compliance signs off. Metrics alone do not authorize expansion."
+    },
+    {
+      "start_ms": 77000,
+      "end_ms": 87000,
+      "speaker_id": "spk_aditya",
+      "text": "Keep Tuesday, October 20 as the provisional expansion date until we hear back from compliance."
+    }
+  ]
+}
