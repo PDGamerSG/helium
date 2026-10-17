@@ -5,7 +5,7 @@
       "root": "apps/api",
       "framework": "fastapi",
       "entrypoint": "vercel:app",
-      "installCommand": "cd ../.. && uv sync --frozen --no-dev --no-editable --package helium-api --no-install-package scipy --no-install-package onnxruntime --no-install-package tokenizers --no-install-package huggingface-hub --no-install-package hf-xet"
+      "installCommand": "cd ../.. && uv sync --frozen --link-mode=copy --no-dev --no-editable --package helium-api --no-install-package scipy --no-install-package onnxruntime --no-install-package tokenizers --no-install-package huggingface-hub --no-install-package hf-xet"
     },
     "web": {
       "root": "apps/site",
