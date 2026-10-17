@@ -295,26 +295,44 @@ class HiveDB:
         return str(self.capabilities().get("version") or "unknown")
 
     def capabilities(self) -> dict[str, Any]:
-        """Probed once: edition, version, and whether GDS, APOC, CDC and multiple databases are available."""
+        """Probed once: edition, version, and whether GDS, APOC, CDC and multiple databases are available.
+
+        Aura reports the `enterprise` edition and lists the GDS and CDC procedures, but has one database per instance
+        (`CREATE DATABASE` is refused) and answers GDS calls only inside an Aura Graph Analytics session. So an Aura
+        server (version `5.27-aura` and the like) counts as single-database, and therefore without CDC, which Helium
+        enables per tenant database; GDS counts as present only when `gds.version()` answers."""
         if self._capabilities is None:
-            caps: dict[str, Any] = {"edition": None, "version": None, "gds": False, "apoc": False, "cdc": False, "multi_database": False, "vector": True}
+            caps: dict[str, Any] = {
+                "edition": None, "version": None, "aura": False, "gds": False, "apoc": False, "cdc": False,
+                "multi_database": False, "vector": True,
+            }
             try:
                 row = self.system().query(
                     "CALL dbms.components() YIELD name, versions, edition WHERE name = 'Neo4j Kernel' RETURN versions[0], edition"
                 ).result_set[0]
                 caps["version"], caps["edition"] = row[0], row[1]
-                caps["multi_database"] = str(row[1]).lower() == "enterprise"
+                caps["aura"] = str(row[0]).lower().endswith("-aura")
+                caps["multi_database"] = str(row[1]).lower() == "enterprise" and not caps["aura"]
             except Exception as exc:  # noqa: BLE001
                 log.warning("dbms.components failed: %s", exc)
             try:
                 names = {r[0] for r in self.system().query("SHOW PROCEDURES YIELD name RETURN name").result_set}
-                caps["gds"] = "gds.pageRank.stream" in names and "gds.wcc.stream" in names
+                caps["gds"] = "gds.pageRank.stream" in names and "gds.wcc.stream" in names and self._gds_answers()
                 caps["apoc"] = "apoc.meta.stats" in names
                 caps["cdc"] = "db.cdc.query" in names and caps["multi_database"]
             except Exception as exc:  # noqa: BLE001
                 log.warning("SHOW PROCEDURES failed: %s", exc)
             self._capabilities = caps
         return self._capabilities
+
+    def _gds_answers(self) -> bool:
+        """True when the embedded GDS plugin runs here (Aura Graph Analytics stubs refuse `gds.version()`)."""
+        try:
+            self._driver.execute_query("RETURN gds.version() AS version")
+            return True
+        except Exception as exc:  # noqa: BLE001
+            log.info("GDS procedures are listed but not usable here (%s); using the Cypher fallbacks", str(exc)[:120])
+            return False
 
     # -- events (in-process bus; hiveboard.events is the public API) --------------------------
     def add_listener(self, tenant: str, fn: EventListener) -> None:

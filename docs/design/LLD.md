@@ -114,7 +114,7 @@ classDiagram
 | `drop_database(name)` | `DROP DATABASE ... IF EXISTS DESTROY DATA WAIT`. | |
 | `usage(tenant) -> dict` | `apoc.meta.stats` (3 s) or plain `count(n)` / `count(r)` when APOC is absent; `total_mb` is always 0.0. | read, 3 s |
 | `ping() -> bool` | `verify_connectivity`, swallowing `ServiceUnavailable`, `Neo4jError`, `OSError`. | |
-| `capabilities() -> dict` | Probed once: `dbms.components` (edition, version, `multi_database` = enterprise) and `SHOW PROCEDURES` (`gds` = `gds.pageRank.stream` and `gds.wcc.stream`, `apoc` = `apoc.meta.stats`, `cdc` = `db.cdc.query` and enterprise). | |
+| `capabilities() -> dict` | Probed once: `dbms.components` (edition, version, `aura` = version ends in `-aura`, `multi_database` = enterprise and not Aura) and `SHOW PROCEDURES` (`gds` = `gds.pageRank.stream` and `gds.wcc.stream` listed and `gds.version()` answers, `apoc` = `apoc.meta.stats`, `cdc` = `db.cdc.query` and `multi_database`). Aura reports `enterprise` and lists GDS and CDC procedures it cannot run, hence the extra checks. | |
 | `add_listener`, `remove_listener`, `dispatch`, `record_only`, `recent_events` | The in-process bus; `dispatch` appends to history then calls every listener, logging (not raising) listener failures. | |
 | `GraphHandle.query(cypher, params=None, timeout=None)` | `session.execute_write` (or a read when the handle is read-only). | write |
 | `GraphHandle.ro_query(cypher, params=None, timeout=None)` | `session.execute_read` with `unit_of_work(timeout=ms/1000)` when a timeout is given; a write clause raises `neo4j.exceptions.ClientError`. | read |
