@@ -1,0 +1,1 @@
+{"ok":true,"neo4j":{"version":"sample","databases":["team-nimbus","team-orbit","team-quill","commons"],"kind":"sample","events":"sample"},"llm":{"backend":"sample","model":"none"},"embeddings":{"model":"none","dim":768},"workers":[]}

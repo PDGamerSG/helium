@@ -1,0 +1,653 @@
+@import "tailwindcss";
+
+@theme {
+  /* One light palette for the landing page and the workspace: white, cool greys and graphite.
+     Colour is reserved for meaning: signal orange marks what is current or new, flag red marks work that needs review. */
+  --color-paper: #ffffff;
+  --color-paper-2: #f5f5f6;
+  --color-paper-3: #ececef;
+  --color-coal: #0e0e10;
+  --color-coal-2: #52525b;
+  --color-coal-3: #74747d;
+  --color-graphite: #111113;
+  --color-signal: #ff5a1f;
+  --color-signal-ink: #b4380b;
+  --color-signal-soft: #fff0e8;
+  --color-flag: #c8321f;
+
+  /* Retired dark palette. Only the unused components in components/core and components/landing still reference it. */
+  --color-g-950: #05080e;
+  --color-g-900: #080d16;
+  --color-g-800: #0b111c;
+  --color-g-700: #121a28;
+  --color-g-600: #1a2536;
+  --color-g-500: #273449;
+  --color-frost: #eef3f9;
+  --color-rime: #b3c0d3;
+  --color-slate: #8593aa;
+  --color-he: #ffae8a;
+  --color-he-soft: #ffc4a8;
+  --color-he-ink: #2a1208;
+  --color-ash: #7e8ba0;
+  --color-ice: #8fe3ff;
+  --color-sheet: #f3f6fa;
+  --color-sheet-2: #e3e9f1;
+  --color-ink: #0b111c;
+  --color-ink-soft: #4b5a70;
+  --color-ink-flag: #c0264b;
+
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-quote: var(--font-spectral), Georgia, serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, "SFMono-Regular", monospace;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-drill: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@layer base {
+  html {
+    background: var(--color-paper);
+    color: var(--color-coal);
+    color-scheme: light;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    caret-color: var(--color-coal);
+    accent-color: var(--color-coal);
+  }
+
+  ::selection {
+    background: var(--color-coal);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-coal);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  a {
+    text-underline-offset: 0.22em;
+    text-decoration-thickness: 1px;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #d4d4d8 transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: #d4d4d8;
+    border: 3px solid transparent;
+    border-radius: 999px;
+    background-clip: padding-box;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  /* Type: Archivo at its normal width, set tight, the same on the landing page and in the workspace. */
+  .t-display {
+    font-variation-settings: "wdth" 100;
+    font-weight: 640;
+    font-size: clamp(2.6rem, 5vw, 4.25rem);
+    line-height: 1.02;
+    letter-spacing: -0.042em;
+  }
+  .t-h2 {
+    font-variation-settings: "wdth" 100;
+    font-weight: 640;
+    font-size: clamp(1.75rem, 2.6vw, 2.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+  }
+  .t-h3 {
+    font-variation-settings: "wdth" 100;
+    font-weight: 620;
+    font-size: 1.15rem;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+  }
+  .t-lede {
+    font-size: clamp(1.1rem, 1.35vw, 1.25rem);
+    line-height: 1.55;
+    color: var(--color-coal-2);
+  }
+  .t-label {
+    font-weight: 560;
+    font-size: 0.78rem;
+    line-height: 1.3;
+    color: var(--color-coal-3);
+  }
+  /* People's words. Set in the body face; the speaker and the quotation marks carry the meaning. */
+  .t-quote {
+    letter-spacing: 0;
+  }
+  .t-num {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Controls: graphite pills, as on the landing page. */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.75rem;
+    padding: 0 1.15rem;
+    border-radius: 999px;
+    font-weight: 560;
+    font-size: 0.95rem;
+    line-height: 1;
+    white-space: nowrap;
+    transition:
+      background-color 160ms var(--ease-out-expo),
+      border-color 160ms var(--ease-out-expo),
+      color 160ms var(--ease-out-expo),
+      transform 120ms var(--ease-out-expo);
+    cursor: pointer;
+  }
+  .btn:active:not(:disabled) {
+    transform: translateY(1px) scale(0.985);
+  }
+  .btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+  }
+  .btn-ink,
+  .btn-he {
+    background: var(--color-coal);
+    color: #fff;
+  }
+  .btn-ink:hover:not(:disabled),
+  .btn-he:hover:not(:disabled) {
+    background: #2a2a2e;
+  }
+  .btn-ink:disabled,
+  .btn-he:disabled {
+    background: var(--color-paper-3);
+    color: var(--color-coal-3);
+    opacity: 1;
+  }
+  .btn-line {
+    border: 1px solid rgb(14 14 16 / 0.14);
+    background: #fff;
+    color: var(--color-coal);
+  }
+  .btn-line:hover:not(:disabled) {
+    border-color: rgb(14 14 16 / 0.3);
+    background: var(--color-paper-2);
+  }
+  .btn-sm {
+    min-height: 2.25rem;
+    padding: 0 0.9rem;
+    font-size: 0.875rem;
+  }
+
+  .field {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0 0.85rem;
+    border-radius: 10px;
+    border: 1px solid rgb(14 14 16 / 0.14);
+    background: #fff;
+    color: var(--color-coal);
+    font-size: 0.95rem;
+    transition:
+      border-color 160ms var(--ease-out-expo),
+      box-shadow 160ms var(--ease-out-expo);
+  }
+  .field::placeholder {
+    color: var(--color-coal-3);
+  }
+  .field:hover {
+    border-color: rgb(14 14 16 / 0.26);
+  }
+  .field:focus-visible {
+    outline: none;
+    border-color: var(--color-coal);
+    box-shadow: 0 0 0 3px rgb(14 14 16 / 0.08);
+  }
+  .field:disabled {
+    background: var(--color-paper-2);
+    color: var(--color-coal-3);
+    cursor: not-allowed;
+  }
+
+  .rule {
+    border-color: rgb(14 14 16 / 0.09);
+  }
+
+  /* State marks: each state has a mark as well as a colour. A quiet orange tag for the value in force,
+     a strike for superseded, a flag for review, a dashed outline for a draft nobody has sent. */
+  .mark-current {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.08em 0.45em 0.1em;
+    border-radius: 5px;
+    background: var(--color-signal-soft);
+    color: var(--color-signal-ink);
+    box-shadow: inset 0 0 0 1px rgb(255 90 31 / 0.22);
+    font-weight: 620;
+  }
+  .mark-superseded {
+    color: var(--color-coal-3);
+    text-decoration-line: line-through;
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: rgb(116 116 125 / 0.8);
+  }
+  .mark-review {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    color: var(--color-flag);
+    font-weight: 600;
+  }
+  .mark-draft {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    padding: 0.1em 0.5em;
+    border: 1px dashed rgb(14 14 16 / 0.32);
+    border-radius: 6px;
+    color: var(--color-coal-2);
+  }
+
+  /* Evidence: the email or utterance a fact came from, on a quiet grey card. */
+  .sheet {
+    background: var(--color-paper-2);
+    color: var(--color-coal);
+    border: 1px solid rgb(14 14 16 / 0.06);
+    border-radius: 12px;
+  }
+
+  .code {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    line-height: 1.65;
+    tab-size: 2;
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+@keyframes bubble-rise {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.6);
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(var(--drift, 0px), var(--rise, -260px), 0) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.enter {
+  animation: rise-in 900ms var(--ease-out-expo) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .enter {
+    animation: none;
+  }
+}
+
+/* Layer tags projected from the WebGL core. */
+.core-tag[data-side="right"] .core-tag-inner {
+  transform: translate(0, -50%);
+}
+.core-tag[data-side="left"] .core-tag-inner {
+  transform: translate(-100%, -50%);
+  flex-direction: row-reverse;
+}
+.core-tag[data-side="left"] .core-tag-detail {
+  display: none;
+}
+.core-tag[data-side="below"] .core-tag-inner {
+  transform: translate(-50%, 14px);
+}
+.core-tag[data-side="below"] .core-tag-leader,
+.core-tag[data-side="below"] .core-tag-detail {
+  display: none;
+}
+
+/* Scanner reveal for section headings. */
+.scan {
+  position: relative;
+}
+.scan[data-scan="armed"] > * {
+  clip-path: inset(0 0 100% 0);
+}
+.scan[data-scan="revealed"] > * {
+  clip-path: inset(0 0 0 0);
+  transition: clip-path 1100ms var(--ease-drill);
+}
+.scan[data-scan="revealed"]::after {
+  content: "";
+  position: absolute;
+  left: -0.5rem;
+  right: -0.5rem;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgb(143 227 255 / 0.9) 18%, rgb(238 243 249 / 0.95) 50%, rgb(143 227 255 / 0.9) 82%, transparent);
+  box-shadow: 0 6px 14px -4px rgb(143 227 255 / 0.55);
+  animation: scan-line 1100ms var(--ease-drill) both;
+  pointer-events: none;
+}
+@keyframes scan-line {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scan[data-scan] > * {
+    clip-path: none !important;
+  }
+  .scan::after {
+    display: none;
+  }
+}
+
+@keyframes drill-cue {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(250%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  [style*="drill-cue"] {
+    animation: none !important;
+  }
+}
+
+/* Landing page. */
+
+@layer components {
+  .lp {
+    background: var(--color-paper);
+    color: var(--color-coal);
+  }
+  .lp :focus-visible {
+    outline-color: var(--color-coal);
+  }
+  .lp .lp-dark :focus-visible {
+    outline-color: #fff;
+  }
+  .lp ::selection {
+    background: var(--color-coal);
+    color: #fff;
+  }
+  /* Archivo at its normal width, set tight: one typeface across the landing and the workspace. */
+  .lp-display {
+    font-variation-settings: "wdth" 100;
+    font-weight: 640;
+    font-size: clamp(2.6rem, 5vw, 4.25rem);
+    line-height: 1.02;
+    letter-spacing: -0.042em;
+  }
+  .lp-h2 {
+    font-variation-settings: "wdth" 100;
+    font-weight: 640;
+    font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+    line-height: 1.08;
+    letter-spacing: -0.036em;
+  }
+  .lp-h3 {
+    font-variation-settings: "wdth" 100;
+    font-weight: 620;
+    font-size: 1.12rem;
+    line-height: 1.3;
+    letter-spacing: -0.012em;
+  }
+  .lp-eyebrow {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-coal-3);
+  }
+  .lp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.875rem;
+    padding: 0 1.3rem;
+    border-radius: 999px;
+    font-weight: 560;
+    font-size: 0.97rem;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    transition:
+      background-color 160ms var(--ease-out-expo),
+      border-color 160ms var(--ease-out-expo),
+      transform 120ms var(--ease-out-expo);
+  }
+  .lp-btn:active {
+    transform: translateY(1px) scale(0.985);
+  }
+  .lp-btn-ink {
+    background: var(--color-coal);
+    color: #fff;
+  }
+  .lp-btn-ink:hover {
+    background: #2a2a2e;
+  }
+  .lp-btn-line {
+    border: 1px solid rgb(14 14 16 / 0.14);
+    background: #fff;
+    color: var(--color-coal);
+  }
+  .lp-btn-line:hover {
+    border-color: rgb(14 14 16 / 0.32);
+  }
+  .lp-btn-light {
+    background: #fff;
+    color: var(--color-coal);
+  }
+  .lp-btn-light:hover {
+    background: #e9e9ec;
+  }
+  .lp-btn-sm {
+    min-height: 2.375rem;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+  }
+  .lp-card {
+    background: #fff;
+    border: 1px solid rgb(14 14 16 / 0.08);
+    border-radius: 16px;
+    box-shadow:
+      0 1px 2px rgb(14 14 16 / 0.04),
+      0 24px 56px -28px rgb(14 14 16 / 0.28);
+  }
+  .lp-rule {
+    border-color: rgb(14 14 16 / 0.09);
+  }
+  /* The value in force: a quiet orange tag, the page's only colour. */
+  .lp-tape {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.08em 0.45em 0.1em;
+    border-radius: 5px;
+    background: var(--color-signal-soft);
+    color: var(--color-signal-ink);
+    box-shadow: inset 0 0 0 1px rgb(255 90 31 / 0.22);
+    font-weight: 620;
+  }
+  .lp-struck {
+    color: var(--color-coal-3);
+    text-decoration-line: line-through;
+    text-decoration-thickness: 1.5px;
+  }
+  /* Keeps small labels readable where they sit over the neuron cloud. */
+  .lp-halo {
+    text-shadow:
+      0 0 3px #fff,
+      0 0 3px #fff,
+      0 0 6px #fff;
+  }
+}
+
+/* The company-brain demo. Nodes fade in on their beat; a fact that gets superseded loses its tag and is struck, never removed. */
+.bn {
+  opacity: 0;
+  transform: translateY(5px) scale(0.96);
+  transition:
+    opacity 420ms var(--ease-out-expo),
+    transform 640ms var(--ease-out-expo);
+}
+.bn[data-on="true"] {
+  opacity: 1;
+  transform: none;
+}
+.bn-val,
+.bn-dot {
+  transition:
+    background-color 380ms var(--ease-out-expo),
+    border-color 380ms var(--ease-out-expo),
+    color 380ms var(--ease-out-expo),
+    box-shadow 380ms var(--ease-out-expo);
+}
+.bn-val[data-replaced="true"] {
+  background-color: transparent;
+  box-shadow: none;
+  color: var(--color-coal-3);
+  text-decoration-line: line-through;
+  text-decoration-thickness: 1.5px;
+}
+.bn-swap {
+  display: grid;
+}
+.bn-swap > * {
+  grid-area: 1 / 1;
+  transition: opacity 380ms var(--ease-out-expo);
+}
+.step-fill {
+  transform-origin: left;
+  animation: step-fill var(--d, 3s) linear both;
+}
+@keyframes step-fill {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes caret {
+  50% {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bn,
+  .bn *,
+  .bn-swap > * {
+    transition: none !important;
+  }
+  .step-fill {
+    animation: none;
+    transform: scaleX(1);
+  }
+}
+
+/* Recording scrubber. */
+.scrub {
+  appearance: none;
+  background: transparent;
+}
+.scrub::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-coal) var(--fill, 0%), rgb(14 14 16 / 0.12) var(--fill, 0%));
+}
+.scrub::-moz-range-track {
+  height: 4px;
+  border-radius: 999px;
+  background: rgb(14 14 16 / 0.12);
+}
+.scrub::-moz-range-progress {
+  height: 4px;
+  border-radius: 999px;
+  background: var(--color-coal);
+}
+.scrub::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  margin-top: -5px;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow:
+    0 0 0 1.5px var(--color-coal),
+    0 2px 6px rgb(14 14 16 / 0.2);
+}
+.scrub::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid var(--color-coal);
+  border-radius: 999px;
+  background: #fff;
+}

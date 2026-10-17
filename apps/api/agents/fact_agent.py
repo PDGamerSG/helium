@@ -24,7 +24,7 @@ log = logging.getLogger(__name__)
 
 class FactAgent(BaseAgent):
     agent_id = "fact_agent"
-    name = "FactAgent"
+    name = "Signal"
     capabilities = ["extract"]
     handles = ("extract_episode", "extract", "record_fact")
     tool_names = ["recall", "active_facts", "write_fact", "finish"]

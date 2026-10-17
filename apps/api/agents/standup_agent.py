@@ -60,7 +60,7 @@ def render_template(template: str, variables: dict[str, Any]) -> dict[str, Any]:
 
 class StandupAgent(BaseAgent):
     agent_id = "standup_agent"
-    name = "StandupAgent"
+    name = "Pulse"
     capabilities = ["standup"]
     handles = ("learn_standup", "run_skill", "standup")
     tool_names = ["open_commitments", "active_facts", "stale_decisions", "recall", "retrieve_skill", "learn_skill", "finish"]

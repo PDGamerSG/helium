@@ -37,6 +37,10 @@ def health(response: Response, ctx: AppContext = Depends(get_ctx)) -> dict[str, 
         "workers": ctx.workers.status() if ctx.workers is not None else [],
         "started_at": ctx.started_at,
     }
+    usage_summary = getattr(ctx.llm, "usage_summary", None)
+    usage = usage_summary() if callable(usage_summary) else None
+    if usage is not None:
+        body["llm"]["usage"] = usage
     if error:
         body["error"] = error
     return body

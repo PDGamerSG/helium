@@ -49,7 +49,7 @@ def superseded_event_to_task(payload: dict[str, Any]) -> dict[str, Any] | None:
 
 class SchedulerAgent(BaseAgent):
     agent_id = "scheduler_agent"
-    name = "SchedulerAgent"
+    name = "Tempo"
     capabilities = ["schedule"]
     handles = ("reschedule", "schedule")
     tool_names = ["why", "active_facts", "open_commitments", "update_commitment", "submit_task", "hand_off", "finish"]

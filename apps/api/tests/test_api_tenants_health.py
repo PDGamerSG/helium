@@ -46,6 +46,7 @@ def test_create_tenant_returns_full_object(client):
     assert "quill" in [t["slug"] for t in client.get("/tenants").json()]
     agents = client.get("/tenants/quill/agents").json()
     assert {a["id"] for a in agents} == {"fact_agent", "followup_agent", "scheduler_agent", "standup_agent", "answer_agent"}
+    assert {a["name"] for a in agents} == {"Signal", "Relay", "Tempo", "Pulse", "Guide"}
 
 
 def test_create_tenant_rejects_bad_slug(client):

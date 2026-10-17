@@ -274,7 +274,9 @@ class CdcTailer:
 
     # -- polling ----------------------------------------------------------------------------
     def _graph(self, tenant: str):
-        return self.db.database(self.db.graph_name(tenant), read_only=True)
+        # Resolve through HiveDB so the reader follows the same physical
+        # database as writes when an Aura instance hosts one logical tenant.
+        return self.db.database(self.db.graph(tenant).name, read_only=True)
 
     def _current(self, tenant: str) -> str:
         return self._graph(tenant).ro_query("CALL db.cdc.current() YIELD id RETURN id").result_set[0][0]

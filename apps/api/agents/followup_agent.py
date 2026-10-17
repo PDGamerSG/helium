@@ -10,7 +10,7 @@ from .tools import _fact_brief
 
 class FollowUpAgent(BaseAgent):
     agent_id = "followup_agent"
-    name = "FollowUpAgent"
+    name = "Relay"
     capabilities = ["followup"]
     handles = ("followup", "nudge", "reschedule", "demo")
     tool_names = ["recall", "why", "open_commitments", "active_facts", "create_issue", "finish"]

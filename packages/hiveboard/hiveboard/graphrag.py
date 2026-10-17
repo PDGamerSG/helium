@@ -56,7 +56,9 @@ def fact_retriever(db: HiveDB, tenant: str, embed: EmbedFn) -> HybridCypherRetri
         FULLTEXT_INDEXES["Fact"],
         RETRIEVAL_QUERY,
         embedder=CallableEmbedder(embed),
-        neo4j_database=db.graph_name(tenant),
+        # Resolve through HiveDB so Aura single-database mode uses its configured
+        # physical database instead of the Enterprise tenant name.
+        neo4j_database=db.graph(tenant).name,
     )
 
 

@@ -1,6 +1,6 @@
-# Contract: HTTP API (`apps/api`, FastAPI) consumed by `apps/web`
+# Contract: HTTP API (`apps/api`, FastAPI) consumed by `apps/site`
 
-Base URL: `NEXT_PUBLIC_API_URL` (default `http://localhost:8080`). JSON everywhere. Errors: `{"error": {"code": str, "message": str}}` with 4xx/5xx. All timestamps epoch ms. `tenant` is a team slug (`orbit`, `nimbus`, `quill` in the seed).
+The site proxies `/api/helium/*` to `HELIUM_API_URL` (default `http://localhost:8081`). JSON everywhere. Errors: `{"error": {"code": str, "message": str}}` with 4xx/5xx. All timestamps epoch ms. `tenant` is a team slug (`orbit`, `nimbus`, `quill` in the seed).
 
 ## Tenants
 - `GET /tenants` → `[{slug, display_name, graph, usage_mb, nodes, edges, counts: {episodes, facts, decisions, commitments, tasks, skills}, acl: {rw_user, ro_user, rules: [str]}}]`

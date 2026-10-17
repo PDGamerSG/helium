@@ -109,7 +109,7 @@ def _subgraph_from_facts(facts: list[dict[str, Any]]) -> dict[str, Any]:
 
 class AnswerAgent(BaseAgent):
     agent_id = "answer_agent"
-    name = "AnswerAgent"
+    name = "Guide"
     capabilities = ["answer"]
     handles = ("question", "answer")
     tool_names = ["recall", "active_facts", "why", "finish"]

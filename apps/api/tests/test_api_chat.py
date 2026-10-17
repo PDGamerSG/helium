@@ -78,6 +78,13 @@ def test_chat_history_is_persistent(client):
     assert client.get("/tenants/orbit/chat/sess_unknown").json() == []
 
 
+def test_chat_history_is_stored_as_turns_in_the_graph(client, seeded):
+    response = _ask(client, "Why did we pick Razorpay?")
+    turns = seeded.hive.get_turns("orbit", response["session_id"])
+    assert [turn["role"] for turn in turns] == ["user", "assistant"]
+    assert turns[1]["meta"]["response"]["session_id"] == response["session_id"]
+
+
 def test_chat_no_match(client):
     body = _ask(client, "zzzz qqqq")
     assert body["router"]["route"] == "vector"

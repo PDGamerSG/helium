@@ -85,7 +85,7 @@ The seed script replays reviewed labels by default, so it needs no language mode
 | Extract | Facts, decisions, and commitments are pulled from each episode and linked to the person and line that produced them. |
 | Supersede | A newer value links to the value it replaces. Both keep the time they were true and the time Helium learned them. |
 | Recall | Questions run hybrid vector and full-text search plus graph paths. Every answer can show the Cypher query that produced it. |
-| React | Neo4j Change Data Capture wakes the Fact, FollowUp, Scheduler, Standup, and Answer agents. Task claims use compare-and-set, so one claim wins. |
+| React | Neo4j Change Data Capture wakes Signal, Relay, Tempo, Pulse, and Guide. Task claims use compare-and-set, so one claim wins. |
 | Impact | Work items planned on a superseded decision are listed. An agent can write an unsent local draft for each one. |
 | Isolate | Each team gets its own Neo4j database, with access enforced by the database. |
 
@@ -164,7 +164,6 @@ Helium stores what people say and write. Tell people before you record or import
 - Performance numbers come from one laptop: 954 mixed operations per second with 20 agents across 4 teams, and read latency of 18 ms at p50 and 43 ms at p99. There is no production deployment.
 - Per-team databases, database access control, and Change Data Capture need Neo4j Enterprise.
 - In the MCP server, `search` and `recall` use a simple word-overlap embedder unless you supply one, so they do not rank by meaning.
-- `docker compose up` builds the earlier `apps/web` shell, not `apps/site`.
 - The sample teams and their dates are synthetic and only illustrate the product.
 - Tested on macOS and in Linux CI. On Windows 11, only seeding the sample teams and the Aura mirror have been run.
 - The interface is in English only.

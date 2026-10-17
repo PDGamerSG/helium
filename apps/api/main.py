@@ -70,7 +70,13 @@ def create_app(ctx: AppContext | None = None, *, start_workers: bool | None = No
         settings = context.settings
         tenants: list[str] = []
         try:
-            tenants = prepare_tenants(context, settings.seed_tenant_list, create_missing=settings.auto_create_tenants)
+            seed_tenants = settings.seed_tenant_list
+            # Aura Free has one physical database and one logical workspace.
+            # Ignore the Enterprise-oriented default seed list after its first
+            # entry so startup does not try to create another tenant.
+            if getattr(context.hive, "single_database", None):
+                seed_tenants = seed_tenants[:1] or context.hive.list_tenants()[:1]
+            tenants = prepare_tenants(context, seed_tenants, create_missing=settings.auto_create_tenants)
             for tenant in context.hive.list_tenants():
                 if tenant not in tenants:
                     context.hive.ensure_schema(tenant)

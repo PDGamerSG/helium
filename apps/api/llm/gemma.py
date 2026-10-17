@@ -1,4 +1,4 @@
-"""Gemma 4 client with gemini | openrouter | ollama backends (docs/contracts/llm.md).
+"""Gemma 4 client with gemini | openrouter | ollama backends, plus Claude (anthropic) (docs/contracts/llm.md).
 
 * ``complete``       plain text
 * ``complete_json``  JSON mode where the backend has one, fences stripped, Pydantic-validated,
@@ -406,6 +406,8 @@ class LLM:
         timeout_s: float = 180.0,
         think: bool = False,
         native_tools: bool | None = None,
+        effort: str | None = None,
+        cache_ttl: str = "5m",
     ) -> None:
         backend = backend.lower()
         self.backend = backend
@@ -419,9 +421,18 @@ class LLM:
             )
         elif backend == "gemini":
             self._backend = GeminiBackend(model, api_key, timeout_s=timeout_s, think=think)
+        elif backend == "anthropic":
+            from .claude import AnthropicBackend
+
+            self._backend = AnthropicBackend(model, api_key, timeout_s=timeout_s, think=think, effort=effort, cache_ttl=cache_ttl)
         else:
-            raise ValueError(f"unknown LLM_BACKEND {backend!r} (expected gemini | openrouter | ollama | fake)")
+            raise ValueError(f"unknown LLM_BACKEND {backend!r} (expected gemini | openrouter | ollama | anthropic | fake)")
         self.native_tools = self._backend.supports_native_tools if native_tools is None else native_tools
+
+    def usage_summary(self) -> dict[str, Any] | None:
+        """Token and prompt-cache totals for backends that report them (anthropic)."""
+        usage = getattr(self._backend, "usage", None)
+        return usage.as_dict() if usage is not None else None
 
     # -- text ---------------------------------------------------------------------------------
     def complete(self, system: str, user: str, temperature: float = 0.1, max_tokens: int = 2048) -> str:
@@ -523,8 +534,14 @@ def run_native_tool_loop(
         response = chat(system, history, temperature=0.1, max_tokens=max_tokens, json_mode=False, tools=schemas)
         if not response.tool_calls:
             return ToolLoopResult(final=response.content.strip(), steps=steps)
+        # ``raw`` lets a backend replay its own response verbatim (Claude: thinking blocks, cache prefix).
         history.append(
-            {"role": "assistant", "content": response.content, "tool_calls": [{"id": c.id, "name": c.name, "args": c.args} for c in response.tool_calls]}
+            {
+                "role": "assistant",
+                "content": response.content,
+                "tool_calls": [{"id": c.id, "name": c.name, "args": c.args} for c in response.tool_calls],
+                "raw": response.raw,
+            }
         )
         for call in response.tool_calls:
             spec = specs.get(call.name)

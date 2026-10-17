@@ -1,0 +1,633 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-15T23:16:48Z",
+  "title": "Design System: Helium",
+  "extensions": {
+    "colorMeta": {
+      "he": {
+        "role": "primary",
+        "displayName": "Helium Peach",
+        "canonical": "#ffae8a",
+        "oklch": "oklch(82.1% 0.107 44.8)",
+        "tonalRamp": [
+          "#190500",
+          "#3f1501",
+          "#6b2801",
+          "#8e4725",
+          "#b16745",
+          "#d68865",
+          "#ffae8a",
+          "#feeae1"
+        ]
+      },
+      "he-soft": {
+        "role": "primary",
+        "displayName": "Discharge Glow",
+        "canonical": "#ffc4a8",
+        "oklch": "oklch(86.6% 0.078 46.6)",
+        "tonalRamp": [
+          "#190500",
+          "#3f1600",
+          "#603118",
+          "#824f36",
+          "#a46f55",
+          "#c79075",
+          "#efb59a",
+          "#feeae0"
+        ]
+      },
+      "he-ink": {
+        "role": "primary",
+        "displayName": "Peach Ink",
+        "canonical": "#2a1208",
+        "oklch": "oklch(21.5% 0.044 42.9)",
+        "tonalRamp": [
+          "#190400",
+          "#361d12",
+          "#54382d",
+          "#73564a",
+          "#957569",
+          "#b79689",
+          "#debcae",
+          "#ffe9e1"
+        ]
+      },
+      "ice": {
+        "role": "secondary",
+        "displayName": "Ice Cyan",
+        "canonical": "#8fe3ff",
+        "oklch": "oklch(87.2% 0.090 221.2)",
+        "tonalRamp": [
+          "#000e13",
+          "#022934",
+          "#044758",
+          "#006881",
+          "#3289a3",
+          "#57abc6",
+          "#7ed2ee",
+          "#d7f4ff"
+        ]
+      },
+      "flag": {
+        "role": "tertiary",
+        "displayName": "Review Rose",
+        "canonical": "#ff6b8b",
+        "oklch": "oklch(71.9% 0.181 9.5)",
+        "tonalRamp": [
+          "#1e0006",
+          "#490019",
+          "#7a012e",
+          "#aa1347",
+          "#d14065",
+          "#f86585",
+          "#ffa8b5",
+          "#fee8eb"
+        ]
+      },
+      "g-950": {
+        "role": "neutral",
+        "displayName": "Abyss",
+        "canonical": "#05080e",
+        "oklch": "oklch(13.3% 0.015 259.3)",
+        "tonalRamp": [
+          "#080b12",
+          "#20242c",
+          "#3b4048",
+          "#595e66",
+          "#787e87",
+          "#999fa8",
+          "#bec5ce",
+          "#e9eff9"
+        ]
+      },
+      "g-900": {
+        "role": "neutral",
+        "displayName": "Deep Field",
+        "canonical": "#080d16",
+        "oklch": "oklch(15.9% 0.021 261.3)",
+        "tonalRamp": [
+          "#070b14",
+          "#1e242e",
+          "#3a404b",
+          "#575e6a",
+          "#767e8a",
+          "#979fac",
+          "#bdc5d2",
+          "#e7effd"
+        ]
+      },
+      "g-800": {
+        "role": "neutral",
+        "displayName": "Polar Night",
+        "canonical": "#0b111c",
+        "oklch": "oklch(17.7% 0.025 262.1)",
+        "tonalRamp": [
+          "#060b16",
+          "#1d2430",
+          "#39404d",
+          "#565e6c",
+          "#757e8c",
+          "#969fae",
+          "#bbc5d5",
+          "#e6effe"
+        ]
+      },
+      "g-700": {
+        "role": "neutral",
+        "displayName": "Shelf",
+        "canonical": "#121a28",
+        "oklch": "oklch(21.7% 0.030 261.3)",
+        "tonalRamp": [
+          "#050b18",
+          "#1c2433",
+          "#374050",
+          "#545e6f",
+          "#737e90",
+          "#949fb2",
+          "#b9c5d8",
+          "#e6effe"
+        ]
+      },
+      "g-600": {
+        "role": "neutral",
+        "displayName": "Selected Slab",
+        "canonical": "#1a2536",
+        "oklch": "oklch(26.3% 0.036 258.9)",
+        "tonalRamp": [
+          "#030b1a",
+          "#192435",
+          "#344053",
+          "#525e72",
+          "#717e93",
+          "#919fb5",
+          "#b6c5dc",
+          "#e5efff"
+        ]
+      },
+      "g-500": {
+        "role": "neutral",
+        "displayName": "Scrollbar Steel",
+        "canonical": "#273449",
+        "oklch": "oklch(32.3% 0.042 259.8)",
+        "tonalRamp": [
+          "#030b1c",
+          "#182438",
+          "#334056",
+          "#505e75",
+          "#6f7e96",
+          "#909fb9",
+          "#b5c5e0",
+          "#e5efff"
+        ]
+      },
+      "frost": {
+        "role": "neutral",
+        "displayName": "Frost",
+        "canonical": "#eef3f9",
+        "oklch": "oklch(96.2% 0.010 252.8)",
+        "tonalRamp": [
+          "#080b0f",
+          "#212429",
+          "#3c4045",
+          "#5a5e63",
+          "#797e83",
+          "#9a9fa4",
+          "#c0c5ca",
+          "#eaeff5"
+        ]
+      },
+      "rime": {
+        "role": "neutral",
+        "displayName": "Rime",
+        "canonical": "#b3c0d3",
+        "oklch": "oklch(80.4% 0.030 257.8)",
+        "tonalRamp": [
+          "#040b18",
+          "#1b2433",
+          "#364050",
+          "#535e6f",
+          "#727e90",
+          "#939fb2",
+          "#b8c5d8",
+          "#e5effe"
+        ]
+      },
+      "slate": {
+        "role": "neutral",
+        "displayName": "Slate",
+        "canonical": "#8593aa",
+        "oklch": "oklch(66.0% 0.038 260.4)",
+        "tonalRamp": [
+          "#030b1b",
+          "#192436",
+          "#344054",
+          "#515e73",
+          "#707e94",
+          "#919fb7",
+          "#b6c5dd",
+          "#e6effe"
+        ]
+      },
+      "ash": {
+        "role": "neutral",
+        "displayName": "Struck Ash",
+        "canonical": "#7e8ba0",
+        "oklch": "oklch(63.4% 0.035 260.0)",
+        "tonalRamp": [
+          "#040b1a",
+          "#1a2435",
+          "#354053",
+          "#525e72",
+          "#717e93",
+          "#929fb5",
+          "#b7c5db",
+          "#e6efff"
+        ]
+      },
+      "sheet": {
+        "role": "neutral",
+        "displayName": "Light Table",
+        "canonical": "#f3f6fa",
+        "oklch": "oklch(97.2% 0.006 255.5)",
+        "tonalRamp": [
+          "#090b0e",
+          "#222427",
+          "#3e4043",
+          "#5b5e61",
+          "#7b7d81",
+          "#9c9fa2",
+          "#c1c4c8",
+          "#eceff3"
+        ]
+      },
+      "sheet-2": {
+        "role": "neutral",
+        "displayName": "Light Table Shade",
+        "canonical": "#e3e9f1",
+        "oklch": "oklch(93.2% 0.013 255.5)",
+        "tonalRamp": [
+          "#080b10",
+          "#20242a",
+          "#3b4046",
+          "#595e65",
+          "#787e85",
+          "#999fa6",
+          "#bfc5cc",
+          "#e9eff7"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#0b111c",
+        "oklch": "oklch(17.7% 0.025 262.1)",
+        "tonalRamp": [
+          "#060b16",
+          "#1d2430",
+          "#39404d",
+          "#565e6c",
+          "#757e8c",
+          "#969fae",
+          "#bbc5d5",
+          "#e6effe"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Ink Soft",
+        "canonical": "#4b5a70",
+        "oklch": "oklch(46.4% 0.041 257.9)",
+        "tonalRamp": [
+          "#020b1c",
+          "#172438",
+          "#324055",
+          "#4f5f75",
+          "#6e7e96",
+          "#8fa0b8",
+          "#b4c5df",
+          "#e5effe"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Frost Hairline",
+        "canonical": "rgb(148 176 214 / 0.14)",
+        "tonalRamp": [
+          "rgb(148 176 214 / 0.06)",
+          "rgb(148 176 214 / 0.08)",
+          "rgb(148 176 214 / 0.14)",
+          "rgb(148 176 214 / 0.18)",
+          "rgb(148 176 214 / 0.22)",
+          "rgb(148 176 214 / 0.3)",
+          "rgb(148 176 214 / 0.4)",
+          "rgb(148 176 214 / 0.6)"
+        ],
+        "note": "One blue-grey (#94b0d6) at stepped alpha: 0.14 rules, 0.22 field borders, 0.3 line buttons and dashed empties, 0.4-0.6 hover."
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero and closing headlines only; Archivo expanded (wdth 112)."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles, drill-stop dates, workspace page titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Sub-section titles; fact values that are a view's subject use the same expanded voice larger."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Hero sentence and section intros, in Rime."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text at 30-38rem measure; workspace rows sit at 0.92-0.98rem."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Metadata, figcaptions, speaker and date lines, in Slate."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Rail axis ends and condensed readouts; sentence case, never uppercase."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Every button; 0.875rem in the small size."
+      },
+      "quote": {
+        "displayName": "Quote",
+        "purpose": "Spectral italic 300, only for words a person said or wrote."
+      },
+      "mono": {
+        "displayName": "Mono",
+        "purpose": "Cypher blocks, fact IDs and graph node-type labels only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "sheet-lift",
+        "value": "0 1px 0 rgb(255 255 255 / 0.6) inset, 0 18px 40px -18px rgb(0 0 0 / 0.55)",
+        "purpose": "Every light-table sheet."
+      },
+      {
+        "name": "floating-bar",
+        "value": "0 18px 40px -24px rgb(0 0 0 / 0.9)",
+        "purpose": "The landing nav once it detaches from the hero."
+      },
+      {
+        "name": "popover",
+        "value": "0 24px 60px -20px rgb(0 0 0 / 0.7)",
+        "purpose": "The source badge dialog."
+      },
+      {
+        "name": "tooltip",
+        "value": "0 18px 40px -16px rgb(0 0 0 / 0.8)",
+        "purpose": "Core rail hover card."
+      },
+      {
+        "name": "readout-tag",
+        "value": "0 6px 18px -6px rgb(0 0 0 / 0.6)",
+        "purpose": "Peach date tag riding the core rail cut."
+      },
+      {
+        "name": "showcase-frame",
+        "value": "0 40px 80px -40px rgb(0 0 0 / 0.9)",
+        "purpose": "The product screenshot on the landing page."
+      },
+      {
+        "name": "discharge-glow",
+        "value": "0 12px 26px -14px rgb(255 174 138 / 0.75)",
+        "purpose": "Hover response under the primary button only."
+      },
+      {
+        "name": "tape-edge",
+        "value": "inset 0 -2px 0 rgb(0 0 0 / 0.12)",
+        "purpose": "Bottom edge of the in-force tape mark."
+      },
+      {
+        "name": "film-grain",
+        "value": "body::after fractal-noise SVG, opacity 0.05, mix-blend-mode soft-light, fixed, z-index 70",
+        "purpose": "Material texture over all dark fields; not a shadow but the system's depth grain."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Default for UI state: buttons, nav, markers, entrances."
+      },
+      {
+        "name": "ease-drill",
+        "value": "cubic-bezier(0.65, 0, 0.35, 1)",
+        "purpose": "Scanner-line heading reveal and the drill cue."
+      },
+      {
+        "name": "duration-press",
+        "value": "120ms",
+        "purpose": "Button press transform."
+      },
+      {
+        "name": "duration-state",
+        "value": "160ms",
+        "purpose": "Button colour and border changes."
+      },
+      {
+        "name": "duration-nav",
+        "value": "500ms",
+        "purpose": "Nav detach, hide on scroll, active-section marker slide."
+      },
+      {
+        "name": "duration-stop",
+        "value": "700ms",
+        "purpose": "Drill-stop article crossfade with 6px blur and 14px rise."
+      },
+      {
+        "name": "duration-enter",
+        "value": "900ms",
+        "purpose": "rise-in entrance: 18px rise, 8px blur to sharp."
+      },
+      {
+        "name": "duration-scan",
+        "value": "1100ms",
+        "purpose": "Scanner-line reveal of section headings below the fold."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "Disables enter, scan, drill cue, strip pan, showcase tilt and agent trace; the WebGL core falls back to a static SVG core."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one action in a group: Helium Peach fill, Peach Ink label, discharge glow on hover.",
+      "html": "<div class=\"ds-btn-primary-stage\"><button class=\"ds-btn-primary\">Open the workspace <svg width=\"16\" height=\"16\" viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3.5 10h13M11.5 5l5 5-5 5\"/></svg></button></div>",
+      "css": ".ds-btn-primary-stage { background: var(--color-g-800, #0b111c); padding: 24px; font-family: var(--font-sans, Archivo, ui-sans-serif, system-ui, sans-serif); color: var(--color-frost, #eef3f9); } .ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; min-height: 3rem; padding: 0 1.25rem; border: 0; border-radius: 3px; background: var(--color-he, #ffae8a); color: var(--color-he-ink, #2a1208); font-family: var(--font-sans, Archivo, ui-sans-serif, system-ui, sans-serif); font-variation-settings: \"wdth\" 100; font-weight: 640; font-size: 0.98rem; line-height: 1; white-space: nowrap; cursor: pointer; transition: background-color 160ms var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)), box-shadow 160ms var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)), transform 120ms var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn-primary svg { transition: transform 300ms var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn-primary:hover { background: var(--color-he-soft, #ffc4a8); box-shadow: 0 12px 26px -14px rgb(255 174 138 / 0.75); } .ds-btn-primary:hover svg { transform: translateX(2px); } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-frost, #eef3f9); outline-offset: 3px; } .ds-btn-primary:active { transform: translateY(1px) scale(0.985); } .ds-btn-primary:disabled { background: var(--color-g-600, #1a2536); color: var(--color-slate, #8593aa); box-shadow: none; cursor: not-allowed; }"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Every secondary action: transparent with a blue-grey hairline border and Frost label.",
+      "html": "<div class=\"ds-btn-line-stage\"><button class=\"ds-btn-line\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M10 3.5v13M5 11.5l5 5 5-5\"/></svg> Drill into September</button> <button class=\"ds-btn-line ds-btn-line-sm\">Next change</button></div>",
+      "css": ".ds-btn-line-stage { background: var(--color-g-800, #0b111c); padding: 24px; font-family: var(--font-sans, Archivo, ui-sans-serif, system-ui, sans-serif); color: var(--color-frost, #eef3f9); } .ds-btn-line { display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem; min-height: 3rem; padding: 0 1.25rem; border: 1px solid rgb(148 176 214 / 0.3); border-radius: 3px; background: transparent; color: var(--color-frost, #eef3f9); font-family: var(--font-sans, Archivo, ui-sans-serif, system-ui, sans-serif); font-variation-settings: \"wdth\" 100; font-weight: 640; font-size: 0.98rem; line-height: 1; white-space: nowrap; cursor: pointer; transition: background-color 160ms var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)), border-color 160ms var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)), transform 120ms var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-btn-line:hover { border-color: rgb(148 176 214 / 0.6); background: rgb(148 176 214 / 0.06); } .ds-btn-line:focus-visible { outline: 2px solid var(--color-he, #ffae8a); outline-offset: 3px; } .ds-btn-line:active { transform: translateY(1px) scale(0.985); } .ds-btn-line:disabled { opacity: 0.5; cursor: not-allowed; } .ds-btn-line-sm { min-height: 2.25rem; padding: 0 0.85rem; font-size: 0.875rem; margin-left: 12px; }"
+    },
+    {
+      "name": "Ask Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Header search for asking the team's memory: Deep Field fill, hairline border, peach on focus, key-cap hint.",
+      "html": "<div class=\"ds-ask-stage\"><label class=\"ds-ask\"><span class=\"ds-ask-icon\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><circle cx=\"8.75\" cy=\"8.75\" r=\"5.25\"/><path d=\"m12.75 12.75 4 4\"/></svg></span><input class=\"ds-ask-input\" placeholder=\"Ask Orbit anything\" /><kbd class=\"ds-ask-kbd\">⌘K</kbd></label></div>",
+      "css": ".ds-ask-stage { background: var(--color-g-800, #0b111c); padding: 24px; font-family: var(--font-sans, Archivo, ui-sans-serif, system-ui, sans-serif); color: var(--color-frost, #eef3f9); } .ds-ask { position: relative; display: block; width: 22rem; max-width: 100%; } .ds-ask-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--color-slate, #8593aa); pointer-events: none; display: flex; } .ds-ask-input { width: 100%; height: 2.25rem; padding: 0 3rem 0 2.25rem; border-radius: 3px; border: 1px solid rgb(148 176 214 / 0.22); background: var(--color-g-900, #080d16); color: var(--color-frost, #eef3f9); font-family: var(--font-sans, Archivo, ui-sans-serif, system-ui, sans-serif); font-size: 0.92rem; caret-color: var(--color-he, #ffae8a); transition: border-color 160ms var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-ask-input::placeholder { color: var(--color-slate, #8593aa); } .ds-ask-input:hover { border-color: rgb(148 176 214 / 0.4); } .ds-ask-input:focus-visible { outline: 2px solid var(--color-he, #ffae8a); outline-offset: 0; border-color: var(--color-he, #ffae8a); } .ds-ask-kbd { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); padding: 0 6px; border: 1px solid rgb(148 176 214 / 0.14); border-radius: 2px; font-family: var(--font-sans, Archivo, ui-sans-serif, system-ui, sans-serif); font-size: 0.72rem; color: var(--color-slate, #8593aa); pointer-events: none; }"
+    },
+    {
+      "name": "Floating Section Nav",
+      "kind": "nav",
+      "refersTo": "nav-floating",
+      "description": "Landing nav after it detaches from the hero: frosted navy bar, sliding peach section marker, peach scroll-depth line at its foot.",
+      "html": "<div class=\"ds-nav-stage\"><nav class=\"ds-nav\"><a class=\"ds-nav-brand\" href=\"#\"><svg width=\"15\" height=\"24\" viewBox=\"0 0 14 22\" aria-hidden=\"true\"><rect x=\"0.75\" y=\"0.75\" width=\"12.5\" height=\"20.5\" rx=\"6.25\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><rect x=\"3\" y=\"5.2\" width=\"8\" height=\"2.2\" rx=\"0.5\" fill=\"#ffae8a\"/><path d=\"M3 10.4h8M3 13.4h8M3 16.4h8\" stroke=\"currentColor\" stroke-width=\"1.1\" opacity=\"0.55\"/></svg><span>Helium</span></a><div class=\"ds-nav-links\"><a class=\"ds-nav-link\" href=\"#\" aria-current=\"location\">The core</a><a class=\"ds-nav-link\" href=\"#\">Any day</a><a class=\"ds-nav-link\" href=\"#\">Receipts</a><a class=\"ds-nav-link\" href=\"#\">Agents</a></div><a class=\"ds-nav-cta\" href=\"#\">Open the workspace <svg width=\"15\" height=\"15\" viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M3.5 10h13M11.5 5l5 5-5 5\"/></svg></a><span class=\"ds-nav-depth\" aria-hidden=\"true\"></span></nav></div>",
+      "css": ".ds-nav-stage { background: var(--color-g-800, #0b111c); padding: 16px; font-family: var(--font-sans, Archivo, ui-sans-serif, system-ui, sans-serif); } .ds-nav { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 56px; max-width: 1120px; padding: 0 16px; border: 1px solid rgb(148 176 214 / 0.16); border-radius: 6px; background: rgb(8 13 22 / 0.82); backdrop-filter: blur(12px); box-shadow: 0 18px 40px -24px rgb(0 0 0 / 0.9); overflow: hidden; } .ds-nav-brand { display: inline-flex; align-items: center; gap: 10px; color: var(--color-frost, #eef3f9); text-decoration: none; font-variation-settings: \"wdth\" 118; font-weight: 760; font-size: 1.2rem; letter-spacing: -0.02em; line-height: 1; } .ds-nav-links { display: flex; align-items: center; } .ds-nav-link { position: relative; padding: 8px 12px; border-radius: 2px; color: var(--color-rime, #b3c0d3); text-decoration: none; font-size: 0.92rem; transition: color 160ms var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-nav-link:hover, .ds-nav-link[aria-current] { color: var(--color-frost, #eef3f9); } .ds-nav-link[aria-current]::after { content: \"\"; position: absolute; left: 12px; right: 12px; bottom: -3px; height: 2px; border-radius: 999px; background: var(--color-he, #ffae8a); } .ds-nav-link:focus-visible, .ds-nav-cta:focus-visible { outline: 2px solid var(--color-he, #ffae8a); outline-offset: 3px; } .ds-nav-cta { display: inline-flex; align-items: center; gap: 0.6rem; min-height: 2.25rem; padding: 0 0.85rem; border-radius: 3px; background: var(--color-he, #ffae8a); color: var(--color-he-ink, #2a1208); text-decoration: none; font-weight: 640; font-size: 0.875rem; line-height: 1; white-space: nowrap; transition: background-color 160ms var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)), box-shadow 160ms var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-nav-cta:hover { background: var(--color-he-soft, #ffc4a8); box-shadow: 0 12px 26px -14px rgb(255 174 138 / 0.75); } .ds-nav-depth { position: absolute; left: 0; bottom: 0; height: 2px; width: 38%; background: rgb(255 174 138 / 0.8); }"
+    },
+    {
+      "name": "State Marks",
+      "kind": "chip",
+      "refersTo": "mark-current",
+      "description": "State as a physical mark plus words: tape for in force, strike for superseded, folded flag for review, dashed pencil outline for an unsent draft.",
+      "html": "<div class=\"ds-marks\"><span class=\"ds-mark-current\">28 Sep</span><span class=\"ds-mark-superseded\">25 Sep</span><span class=\"ds-mark-review\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 17.5V3\"/><path d=\"M5 3.5h9.2a.5.5 0 0 1 .4.8L12.5 7.5l2.1 3.2a.5.5 0 0 1-.4.8H5\" fill=\"currentColor\" fill-opacity=\"0.2\"/></svg> Needs review</span><span class=\"ds-mark-draft\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m12.5 4.5 3 3L7 16H4v-3l8.5-8.5Z\"/></svg> Unsent draft</span></div>",
+      "css": ".ds-marks { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; background: var(--color-g-800, #0b111c); padding: 24px; font-family: var(--font-sans, Archivo, ui-sans-serif, system-ui, sans-serif); font-size: 0.92rem; } .ds-mark-current { display: inline-flex; align-items: center; gap: 0.4em; padding: 0.1em 0.45em 0.12em; background: var(--color-he, #ffae8a); color: var(--color-he-ink, #2a1208); font-weight: 620; border-radius: 1px; box-shadow: inset 0 -2px 0 rgb(0 0 0 / 0.12); } .ds-mark-superseded { color: var(--color-ash, #7e8ba0); text-decoration-line: line-through; text-decoration-thickness: 1.5px; text-decoration-color: rgb(126 139 160 / 0.85); } .ds-mark-review { display: inline-flex; align-items: center; gap: 0.4em; color: var(--color-flag, #ff6b8b); font-weight: 600; } .ds-mark-draft { display: inline-flex; align-items: center; gap: 0.4em; padding: 0.1em 0.5em; border: 1px dashed rgb(179 192 211 / 0.7); border-radius: 2px; color: var(--color-rime, #b3c0d3); }"
+    },
+    {
+      "name": "Evidence Sheet",
+      "kind": "card",
+      "refersTo": "sheet",
+      "description": "Light-table sheet lifted out of the dark: source line, the person's words in Spectral italic, the matched value highlighted in peach, ink links.",
+      "html": "<div class=\"ds-sheet-stage\"><figure class=\"ds-sheet\"><p class=\"ds-sheet-meta\"><span class=\"ds-sheet-src\"><svg width=\"15\" height=\"15\" viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"2.75\" y=\"4.25\" width=\"14.5\" height=\"11.5\" rx=\"1.5\"/><path d=\"m3.5 5.25 6.5 5.25 6.5-5.25\"/></svg><b>Email, “UPI flow: moving to Monday the 28th”</b></span><span class=\"ds-sheet-when\">17 Sep, 14:02</span></p><blockquote class=\"ds-sheet-quote\"><span class=\"ds-sheet-who\">Priya: </span>So I'm moving the UPI flow from Friday the 25th to Monday the <mark class=\"ds-sheet-hit\">28th</mark>.</blockquote><a class=\"ds-sheet-link\" href=\"#\">Open the thread</a></figure></div>",
+      "css": ".ds-sheet-stage { background: var(--color-g-900, #080d16); padding: 24px; font-family: var(--font-sans, Archivo, ui-sans-serif, system-ui, sans-serif); } .ds-sheet { margin: 0; max-width: 28rem; padding: 16px; border-radius: 3px; background: var(--color-sheet, #f3f6fa); color: var(--color-ink, #0b111c); box-shadow: 0 1px 0 rgb(255 255 255 / 0.6) inset, 0 18px 40px -18px rgb(0 0 0 / 0.55); } .ds-sheet-meta { margin: 0; display: flex; justify-content: space-between; gap: 12px; font-size: 0.84rem; color: var(--color-ink-soft, #4b5a70); } .ds-sheet-src { display: inline-flex; align-items: center; gap: 8px; min-width: 0; } .ds-sheet-src b { color: var(--color-ink, #0b111c); font-weight: 600; } .ds-sheet-when { font-variant-numeric: tabular-nums; white-space: nowrap; } .ds-sheet-quote { margin: 12px 0 0; font-family: var(--font-quote, Spectral, Georgia, serif); font-style: italic; font-weight: 300; font-size: 1.05rem; line-height: 1.55; color: var(--color-ink, #0b111c); } .ds-sheet-who { font-family: var(--font-sans, Archivo, ui-sans-serif, system-ui, sans-serif); font-style: normal; font-weight: 600; font-size: 0.84rem; color: var(--color-ink-soft, #4b5a70); } .ds-sheet-hit { background: rgb(255 174 138 / 0.55); color: var(--color-ink, #0b111c); border-radius: 1px; padding: 0 2px; } .ds-sheet-link { display: inline-block; margin-top: 12px; font-size: 0.86rem; font-weight: 600; color: var(--color-ink, #0b111c); text-decoration: underline; text-decoration-color: rgb(11 17 28 / 0.3); text-underline-offset: 4px; transition: text-decoration-color 160ms var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-sheet-link:hover { text-decoration-color: var(--color-ink, #0b111c); } .ds-sheet-link:focus-visible { outline: 2px solid var(--color-he, #ffae8a); outline-offset: 3px; border-radius: 2px; }"
+    },
+    {
+      "name": "Citation Chips",
+      "kind": "chip",
+      "refersTo": "cite-chip",
+      "description": "Numbered receipts inline in an answer; tinted peach at rest, solid peach when its source is showing.",
+      "html": "<div class=\"ds-cite-stage\"><p class=\"ds-cite-line\">Priya first committed to 24 Sep at the kickoff<button class=\"ds-cite\">1</button>, moved it to 25 Sep at the standup<button class=\"ds-cite ds-cite-on\" aria-pressed=\"true\">2</button>, then to 28 Sep by email<button class=\"ds-cite\">3</button>.</p><span class=\"ds-asof\">As of 16 Oct</span></div>",
+      "css": ".ds-cite-stage { background: var(--color-g-900, #080d16); padding: 24px; font-family: var(--font-sans, Archivo, ui-sans-serif, system-ui, sans-serif); } .ds-cite-line { margin: 0; max-width: 34rem; font-size: 1.2rem; line-height: 1.6; color: var(--color-frost, #eef3f9); } .ds-cite { display: inline-grid; place-items: center; height: 1.35em; min-width: 1.35em; margin: 0 0.15em; padding: 0 4px; transform: translateY(-0.12em); vertical-align: middle; border: 0; border-radius: 2px; background: rgb(255 174 138 / 0.12); color: var(--color-he, #ffae8a); font-family: var(--font-sans, Archivo, ui-sans-serif, system-ui, sans-serif); font-size: 0.72em; font-weight: 700; font-variant-numeric: tabular-nums; cursor: pointer; transition: background-color 160ms var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)), color 160ms var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-cite:hover { background: rgb(255 174 138 / 0.22); } .ds-cite-on, .ds-cite-on:hover { background: var(--color-he, #ffae8a); color: var(--color-he-ink, #2a1208); } .ds-cite:focus-visible { outline: 2px solid var(--color-he, #ffae8a); outline-offset: 3px; } .ds-asof { display: inline-block; margin-top: 16px; padding: 2px 8px; border: 1px solid rgb(143 227 255 / 0.35); border-radius: 2px; color: var(--color-ice, #8fe3ff); font-size: 0.92rem; }"
+    },
+    {
+      "name": "Segmented Tabs",
+      "kind": "custom",
+      "refersTo": "tab-selected",
+      "description": "Kind and status filters: hairline track, 2px pills, Selected Slab for the chosen one.",
+      "html": "<div class=\"ds-seg-stage\"><div class=\"ds-seg\" role=\"tablist\" aria-label=\"Kind\"><button class=\"ds-seg-tab\" role=\"tab\" aria-selected=\"true\">Everything</button><button class=\"ds-seg-tab\" role=\"tab\" aria-selected=\"false\">Decisions</button><button class=\"ds-seg-tab\" role=\"tab\" aria-selected=\"false\">Commitments</button><button class=\"ds-seg-tab\" role=\"tab\" aria-selected=\"false\">Facts</button></div></div>",
+      "css": ".ds-seg-stage { background: var(--color-g-800, #0b111c); padding: 24px; font-family: var(--font-sans, Archivo, ui-sans-serif, system-ui, sans-serif); } .ds-seg { display: inline-flex; padding: 2px; border: 1px solid rgb(148 176 214 / 0.14); border-radius: 3px; } .ds-seg-tab { padding: 6px 12px; border: 0; border-radius: 2px; background: transparent; color: var(--color-rime, #b3c0d3); font-family: var(--font-sans, Archivo, ui-sans-serif, system-ui, sans-serif); font-size: 0.88rem; cursor: pointer; transition: color 160ms var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)), background-color 160ms var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-seg-tab:hover { color: var(--color-frost, #eef3f9); } .ds-seg-tab[aria-selected=\"true\"] { background: var(--color-g-600, #1a2536); color: var(--color-frost, #eef3f9); font-weight: 600; } .ds-seg-tab:focus-visible { outline: 2px solid var(--color-he, #ffae8a); outline-offset: 2px; }"
+    },
+    {
+      "name": "Cypher Disclosure",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "Show the query behind any answer: hairline details, Rime summary, JetBrains Mono body.",
+      "html": "<div class=\"ds-cypher-stage\"><details class=\"ds-cypher\" open><summary class=\"ds-cypher-sum\">Hide the Cypher</summary><pre class=\"ds-cypher-code\"><code>MATCH (f:Fact {id: $id})-[:SUPERSEDES*1..10]-&gt;(old:Fact)\nRETURN f, collect(old) AS history</code></pre></details></div>",
+      "css": ".ds-cypher-stage { background: var(--color-g-800, #0b111c); padding: 24px; font-family: var(--font-sans, Archivo, ui-sans-serif, system-ui, sans-serif); } .ds-cypher { max-width: 34rem; border: 1px solid rgb(148 176 214 / 0.14); border-radius: 3px; } .ds-cypher-sum { list-style: none; cursor: pointer; padding: 12px 16px; color: var(--color-rime, #b3c0d3); font-size: 0.9rem; font-weight: 600; transition: color 160ms var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)); } .ds-cypher-sum::-webkit-details-marker { display: none; } .ds-cypher-sum:hover { color: var(--color-frost, #eef3f9); } .ds-cypher-sum:focus-visible { outline: 2px solid var(--color-he, #ffae8a); outline-offset: 3px; border-radius: 2px; } .ds-cypher-code { margin: 0; padding: 12px 16px; border-top: 1px solid rgb(148 176 214 / 0.14); overflow-x: auto; color: var(--color-rime, #b3c0d3); font-family: var(--font-mono, 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace); font-size: 0.78rem; line-height: 1.65; tab-size: 2; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Dark-Field Core Lab",
+    "overview": "Helium looks like a lab bench at night, with an ice core under dark-field light that you read one layer at a time. The ground is polar-night navy and the type is frost white. The only warm light in the room is helium peach, the glow of a discharge tube, and it falls on whatever is current. Other states get a physical mark instead of a hue: a strip of tape for the value in force, a strike through the value it replaced, a folded flag for work that needs review, and a dashed pencil outline for a draft nobody has sent. Evidence comes out of the dark onto cool-white light-table sheets. It is set in ink, and the words people actually said are set in Spectral italic.\n\nOne world runs at two densities. The public entrance is spacious and cinematic. It has expanded Archivo display type up to 6rem, a single orchestrated scroll drill through a WebGL core, and sections separated by hairlines that alternate between two navy tones. The workspace is a dense tool for operators: a 56px header, a sticky core rail on the left, a 30rem drawer on the right, segmented tabs, and rows of facts at about 0.92 to 0.98rem. Both share every token, mark and control.\n\nThe build overrides the direction contract (`.impeccable/surfaces/apps-site-app-page-tsx.md`). The contract still describes a deep slate-teal ground and a helium-yellow D3 line. The user rejected that first palette, and the shipped build replaced it with navy and peach. This file records the build. The confirmed visual rejections are the replaced teal-and-yellow palette and anything that resembles Minutes, the upstream prototype: paper white with cobalt, Cal Sans or Manrope, a nine-tile block mark, or isometric block sculpture.",
+    "keyCharacteristics": [
+      "Polar-night navy ground in five tonal steps. There is no light mode.",
+      "One warm colour, peach, reserved for \"current\": the value in force, the date cut, the active location and the primary action.",
+      "State is always shown as a mark plus words, never by colour alone.",
+      "Evidence sits on cool-white sheets with ink text. Everything else stays dark.",
+      "One sans family (Archivo) driven across its width axis. Spectral italic is only for people's words, and JetBrains Mono is only for Cypher and IDs.",
+      "Tight corners (1 to 3px), frost hairlines, flat resting surfaces, and a 5% film grain over the whole page.",
+      "Sentence case throughout. No uppercase labels.",
+      "Every animated or 3D surface has a reduced-motion path and a fallback that works without WebGL."
+    ],
+    "rules": [
+      {
+        "name": "The Peach Is Now Rule",
+        "body": "Peach means current: the value in force, the date being read, the place you are, and the one action to take next. It is never a category colour or a second accent, and it fills at most one button in any group of controls.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mark, Not Hue Rule",
+        "body": "Every state shows a physical mark and a word. \"In force\" gets tape, \"Superseded\" gets a strike, \"Needs review\" gets a folded flag, and \"Unsent draft\" gets a dashed pencil outline. Screen-reader text names the state wherever the word is not visible.",
+        "section": "colors"
+      },
+      {
+        "name": "The Light Table Rule",
+        "body": "Light surfaces are reserved for things a person reads as evidence: source quotes and emails, the belief-at-a-date table, and drafted notes. Inside a sheet, selection inverts to ink on sheet. Everything else stays on the navy field.",
+        "section": "colors"
+      },
+      {
+        "name": "The Width Axis Rule",
+        "body": "Hierarchy comes from Archivo's width axis as much as from size. Use expanded widths (wdth 104 to 118) at heavy weights for display, titles, values and the wordmark. Use normal width (100) for prose and controls. Use condensed widths (86 to 92) for labels, dates, rail readouts and drawer titles. Never introduce a second sans.",
+        "section": "typography"
+      },
+      {
+        "name": "The Human Words Rule",
+        "body": "Spectral italic is only for words a person said or wrote, and JetBrains Mono is only for Cypher and IDs. Neither one appears on headings, buttons or navigation.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Time Rule",
+        "body": "Every date, count, timing and depth uses tabular numerals, so values that change in place, like the date cut or the rail readout, don't jitter.",
+        "section": "typography"
+      },
+      {
+        "name": "The Floating-Only Rule",
+        "body": "Resting surfaces carry no shadow: sections, cards, rows, fields and disclosures. A shadow appears only on something that floats (the nav bar, popovers, tooltips, the cut readout) or on a sheet lifted out to be read.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Dashed Means Not Yet Rule",
+        "body": "A dashed outline marks anything provisional or absent: an unsent draft, the offline-sample source badge, an empty state, the \"no receipt\" panel, a value not yet said on the light table, and the future remainder of a live value. A solid border means the thing exists in the record.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do keep Helium Peach (#ffae8a) for what is current: the value in force, the date cut, the active location and the single primary action in a group.",
+      "Do pair every state with its mark and its word: tape for \"In force\", a strike for \"Superseded\", a folded flag for \"Needs review\", and a dashed pencil outline for \"Unsent draft\".",
+      "Do put source quotes, emails, belief readings and drafted notes on the Light Table sheet (#f3f6fa) in Ink, with the sheet-lift shadow.",
+      "Do separate resting surfaces with frost hairlines (rgb(148 176 214 / 0.14)) and navy tone steps, not shadows.",
+      "Do set dates, counts, timings and depths in tabular numerals, and use condensed Archivo (wdth 86 to 92) for rail readouts and labels.",
+      "Do use a dashed outline for anything provisional, offline, empty or not yet said.",
+      "Do give every scroll-driven, animated or WebGL surface a `prefers-reduced-motion` path and a static or SVG fallback."
+    ],
+    "donts": [
+      "Don't let anything resemble Minutes: no paper-white with cobalt (#3155ed), no Cal Sans or Manrope, no nine-tile block mark, and no isometric block sculpture.",
+      "Don't return to the replaced first palette of a slate-teal ground with helium or mustard yellow. The user rejected it in favour of navy and peach.",
+      "Don't use peach as a category colour, a second accent or a decorative fill, and don't put two solid peach buttons side by side.",
+      "Don't show state by colour alone.",
+      "Don't set headings, buttons or navigation in Spectral or JetBrains Mono, or prose in mono.",
+      "Don't add shadows to resting cards, rows or sections, and never use hard offset shadows.",
+      "Don't round resting controls or cards beyond 3px, or make pill-shaped buttons. 6px belongs only to the floating nav and the screenshot frame.",
+      "Don't open sections with uppercase tracked eyebrow labels. Sections start on the headline itself.",
+      "Don't lead persuasive surfaces with a centred SaaS hero, a grid of identical cards or a network-constellation hero. Graph structure appears as a small labelled neighbourhood of at most eight nodes inside the Why panel."
+    ]
+  }
+}

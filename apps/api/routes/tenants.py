@@ -51,7 +51,10 @@ def list_tenants(ctx: AppContext = Depends(get_ctx)) -> list[dict]:
 async def create_tenant(body: TenantCreate, ctx: AppContext = Depends(get_ctx)) -> dict:
     if not _SLUG.match(body.slug):
         raise ApiError(400, "invalid_slug", "slug must match [a-z0-9][a-z0-9_]{0,57}")
-    ctx.hive.create_tenant(body.slug, body.display_name)
+    try:
+        ctx.hive.create_tenant(body.slug, body.display_name)
+    except ValueError as exc:
+        raise ApiError(409, "single_database_limit", str(exc)) from exc
     register_default_agents(ctx.hive, body.slug, getattr(ctx.llm, "model", "fake"))
     if ctx.workers is not None:
         await ctx.workers.start_tenant(body.slug)

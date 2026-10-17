@@ -8,7 +8,7 @@
       "installCommand": "cd ../.. && uv sync --frozen --no-dev --package helium-api"
     },
     "web": {
-      "root": "apps/web",
+      "root": "apps/site",
       "framework": "nextjs",
       "bindings": [
         {

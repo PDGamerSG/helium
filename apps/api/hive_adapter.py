@@ -24,11 +24,11 @@ from ingest.fakes import EventListener, MemoryHive, cosine_distance, new_id, now
 log = logging.getLogger(__name__)
 
 AGENT_SPECS: list[tuple[str, str, list[str]]] = [
-    ("fact_agent", "FactAgent", ["extract"]),
-    ("followup_agent", "FollowUpAgent", ["followup"]),
-    ("scheduler_agent", "SchedulerAgent", ["schedule"]),
-    ("standup_agent", "StandupAgent", ["standup"]),
-    ("answer_agent", "AnswerAgent", ["answer"]),
+    ("fact_agent", "Signal", ["extract"]),
+    ("followup_agent", "Relay", ["followup"]),
+    ("scheduler_agent", "Tempo", ["schedule"]),
+    ("standup_agent", "Pulse", ["standup"]),
+    ("answer_agent", "Guide", ["answer"]),
 ]
 
 TASK_STATES = ("submitted", "working", "input_required", "completed", "failed")
@@ -683,7 +683,7 @@ class RealHive:
     publishes_board_events = True
     kind = "neo4j"
 
-    def __init__(self, db: Any, *, rw_password: str, ro_password: str, events_mode: str = "memory", cdc_poll_s: float = 0.5) -> None:
+    def __init__(self, db: Any, *, rw_password: str, ro_password: str, events_mode: str = "memory", cdc_poll_s: float = 0.5, single_database: str | None = None, tenant_names: list[str] | None = None) -> None:
         from hiveboard import analytics, board, events, memory, schema, skills, tenancy
 
         self.db = db
@@ -693,30 +693,38 @@ class RealHive:
         self.ro_password = ro_password
         self.events_mode = events_mode
         self.cdc_poll_s = cdc_poll_s
+        self.single_database = single_database
+        first_tenant = (tenant_names or ["orbit"])[0]
+        self._single_tenants: dict[str, dict[str, Any]] = {first_tenant: {"slug": first_tenant, "display_name": first_tenant.capitalize()}}
         self.cdc: Any = None
         self._lock = threading.RLock()
 
     @classmethod
-    def connect(cls, uri: str, *, user: str | None, password: str | None, rw_password: str, ro_password: str, events_mode: str = "memory", cdc_poll_s: float = 0.5) -> RealHive:
+    def connect(cls, uri: str, *, user: str | None, password: str | None, rw_password: str, ro_password: str, events_mode: str = "memory", cdc_poll_s: float = 0.5, database_name: str | None = None, tenant_names: list[str] | None = None) -> RealHive:
         from hiveboard.db import HiveDB
 
-        db = HiveDB(uri, user=user, password=password)
-        hive = cls(db, rw_password=rw_password, ro_password=ro_password, events_mode=events_mode, cdc_poll_s=cdc_poll_s)
-        for tenant in db.list_tenants():
-            db.configure_ro(tenant, ro_password)
+        db = HiveDB(uri, user=user, password=password, database_name=database_name)
+        hive = cls(db, rw_password=rw_password, ro_password=ro_password, events_mode=events_mode, cdc_poll_s=cdc_poll_s, single_database=database_name, tenant_names=tenant_names)
+        if database_name is None:
+            for tenant in db.list_tenants():
+                db.configure_ro(tenant, ro_password)
         return hive
 
-    @staticmethod
-    def database_name(tenant: str) -> str:
+    def database_name(self, tenant: str) -> str:
         from hiveboard.db import HiveDB
 
-        return HiveDB.graph_name(tenant)
+        return self.single_database or HiveDB.graph_name(tenant)
 
     def capabilities(self) -> dict[str, Any]:
         return dict(self.db.capabilities())
 
     def start_events(self, tenants: list[str]) -> None:
         """CDC mode: tail every tenant database's change log and deliver events from it (writes from any process)."""
+        if self.single_database:
+            # Aura Free has no CDC stream and no system-db administration. The
+            # in-process publisher still updates the workspace SSE feed.
+            self.events_mode = "memory"
+            return
         if self.events_mode != "cdc":
             return
         if not self.db.capabilities().get("cdc"):
@@ -794,9 +802,17 @@ class RealHive:
             return "unknown"
 
     def list_tenants(self) -> list[str]:
+        if self.single_database:
+            return sorted(self._single_tenants)
         return list(self.db.list_tenants())
 
     def create_tenant(self, slug: str, display_name: str) -> dict[str, Any]:
+        if self.single_database:
+            if self._single_tenants and slug not in self._single_tenants:
+                raise ValueError("Aura Free mode supports one logical tenant; configure a separate database for another workspace")
+            self._single_tenants[slug] = {"slug": slug, "display_name": display_name, "created_at": now_ms()}
+            self.ensure_schema(slug)
+            return self.tenant_info(slug)
         info = self._tenancy.create_tenant(self.db, slug, display_name, self.rw_password, self.ro_password)
         self.db.configure_ro(slug, self.ro_password)
         return {**self.tenant_info(slug), "schema": info.get("schema")}
@@ -806,6 +822,8 @@ class RealHive:
 
     def ensure_schema(self, tenant: str) -> dict[str, int]:
         result = dict(self._schema.ensure_schema(self.db, tenant))
+        if self.single_database:
+            return result
         self._tenancy.ensure_tenant_access(self.db, tenant, self.rw_password, self.ro_password)
         # Surface invalid or disabled configured credentials at startup, before workers run.
         self._ro(tenant, "RETURN 1")
@@ -834,6 +852,17 @@ class RealHive:
         return size
 
     def tenant_info(self, tenant: str) -> dict[str, Any]:
+        if self.single_database:
+            meta = self._single_tenants.get(tenant, {})
+            return {
+                "slug": tenant,
+                "display_name": meta.get("display_name") or tenant.capitalize(),
+                "graph": self.single_database,
+                "usage_mb": 0.0,
+                **self.graph_size(tenant),
+                "counts": self.counts(tenant),
+                "acl": {"rw_user": self.db.user, "ro_user": self.db.user, "rules": [f"Aura single database: {self.single_database}"], "isolation": {"databases": [self.single_database], "note": "One workspace uses the entire Aura database."}},
+            }
         registry = {row["slug"]: row for row in self._tenancy.list_registered_tenants(self.db)}
         meta = registry.get(tenant, {})
         try:
@@ -873,6 +902,8 @@ class RealHive:
         return snaps[0] if snaps else {"name": name, "label": label, "taken_at": now_ms()}
 
     def list_snapshots(self, tenant: str) -> list[dict[str, Any]]:
+        if self.single_database:
+            return []
         return [dict(s) for s in self._tenancy.list_snapshots(self.db, tenant)]
 
     # -- memory writes (pipeline surface) ----------------------------------------------------
@@ -1338,6 +1369,8 @@ def build_hive(settings: Any) -> Any:
         ro_password=settings.tenant_ro_password,
         events_mode=str(getattr(settings, "hive_events", "memory") or "memory").lower(),
         cdc_poll_s=float(getattr(settings, "cdc_poll_s", 0.5)),
+        database_name=((settings.neo4j_database or "neo4j") if getattr(settings, "neo4j_single_database", False) else None),
+        tenant_names=getattr(settings, "seed_tenant_list", []),
     )
 
 

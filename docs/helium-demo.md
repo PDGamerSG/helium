@@ -24,17 +24,17 @@ The API exposes `/health`, `/tenants`, `/tenants/{tenant}/memory`, `/tenants/{te
 ## Run the workspace
 
 ```bash
-cd apps/web
+cd apps/site
 pnpm install
 pnpm dev
 ```
 
-Open <http://localhost:3002>. The landing view is the Helium entry point; `/workspaces` opens the workspace directory. Set `NEXT_PUBLIC_MOCK=1` for a deterministic UI preview when the API is not running.
+Open <http://localhost:3003>. The landing view is the Helium entry point; `/workspace` opens the team directory. Set `HELIUM_SOURCE=sample` for a read-only preview when the API is not running.
 
 ## What to show
 
 1. Open a tenant and ask when a commitment is due.
 2. Open the evidence panel to see the speaker, source episode, and supersession chain.
-3. Move a commitment on the board and watch the Scheduler event stream.
-4. Open the timeline to compare what the team knew at two timestamps.
-5. Use the skills and bench pages to inspect learned routines and coordination pressure.
+3. Move a commitment from Crew and watch Tempo's events on the task board.
+4. Open Memory to compare what the team knew at two timestamps.
+5. Use Crew to inspect learned routines and Changes to review affected work.

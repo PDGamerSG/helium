@@ -108,6 +108,7 @@ class HiveDB:
         *,
         admin_user: str | None = None,
         admin_password: str | None = None,
+        database_name: str | None = None,
         max_pool: int = 100,
     ):
         self.uri = uri or os.environ.get("NEO4J_URI") or DEFAULT_URI
@@ -115,6 +116,10 @@ class HiveDB:
         self.password = password or admin_password or os.environ.get("NEO4J_PASSWORD") or ""
         self.admin_user = self.user
         self.admin_password = self.password
+        # Aura Free exposes one pre-created database and does not grant system-db
+        # administration. When set, the API restricts access to one workspace
+        # whose handles use this database. This does not add tenant isolation.
+        self._database_override = database_name
         self._driver = GraphDatabase.driver(
             self.uri, auth=(self.user, self.password), max_connection_pool_size=max_pool, notifications_min_severity="OFF"
         )
@@ -134,6 +139,7 @@ class HiveDB:
         db = cls.__new__(cls)
         db.uri, db.user, db.password = str(getattr(driver, "_uri", "")), "", ""
         db.admin_user, db.admin_password = "", ""
+        db._database_override = None
         db._driver = driver
         db._ro_drivers, db._ro_passwords = {}, {}
         db._lock = threading.Lock()
@@ -193,7 +199,7 @@ class HiveDB:
 
     def graph(self, tenant: str) -> GraphHandle:
         """Read-write handle for a tenant (admin credentials)."""
-        return GraphHandle(self, self._driver, self.graph_name(tenant))
+        return GraphHandle(self, self._driver, self._database_for(tenant))
 
     def ro(self, tenant: str) -> GraphHandle:
         """Read-only handle: the tenant's `team_<slug>_ro` user when its password is configured, otherwise the
@@ -208,7 +214,11 @@ class HiveDB:
                     notifications_min_severity="OFF",
                 )
                 self._ro_drivers[tenant] = driver
-        return GraphHandle(self, driver or self._driver, self.graph_name(tenant), read_only=True)
+        return GraphHandle(self, driver or self._driver, self._database_for(tenant), read_only=True)
+
+    def _database_for(self, tenant: str) -> str:
+        """Resolve a logical tenant to its physical database, including Aura single-db mode."""
+        return self._database_override or self.graph_name(tenant)
 
     def configure_ro(self, tenant: str, password: str | None) -> None:
         """Register (or forget, with None) the ro user's password so `ro()` connects as that user."""
@@ -248,6 +258,10 @@ class HiveDB:
     def create_database(self, name: str, *, cdc: bool = False) -> bool:
         """`CREATE DATABASE name IF NOT EXISTS ... WAIT`; returns True when it was created now. On Enterprise the
         transaction log is enriched (`txLogEnrichment: FULL`) so Change Data Capture can replay every write."""
+        if self._database_override and name != self._database_override:
+            # In single-database Aura mode the physical database already exists;
+            # logical tenant setup must never touch the system database.
+            return False
         if self.graph_exists(name):
             return False
         options = " OPTIONS {txLogEnrichment: 'FULL'}" if cdc and self.capabilities()["cdc"] else ""

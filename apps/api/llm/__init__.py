@@ -29,6 +29,8 @@ def make_llm(settings: Settings | None = None) -> Any:
         max_tokens=settings.llm_max_tokens,
         timeout_s=settings.llm_timeout_s,
         think=False,
+        effort=settings.llm_effort,
+        cache_ttl=settings.llm_cache_ttl,
     )
 
 

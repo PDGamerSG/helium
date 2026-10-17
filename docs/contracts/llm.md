@@ -26,11 +26,14 @@ class Embedder:
 
 Environment
 ```
-LLM_BACKEND=ollama            # gemini | openrouter | ollama
+LLM_BACKEND=ollama            # gemini | openrouter | ollama | anthropic
 LLM_MODEL=gemma4:e4b          # gemini: gemma-4-26b-a4b-it ; openrouter: google/gemma-4-26b-a4b-it ; ollama: gemma4:e4b | gemma4:12b
 LLM_MODEL_SMALL=gemma4:e4b
 GEMINI_API_KEY=
 OPENROUTER_API_KEY=
+ANTHROPIC_API_KEY=            # anthropic: LLM_MODEL=claude-opus-5-5
+LLM_EFFORT=                   # anthropic: low (default) | medium | high | xhigh | max | none
+LLM_CACHE_TTL=5m              # anthropic prompt cache: 5m | 1h
 OLLAMA_BASE_URL=http://localhost:11434/v1
 EMBED_BACKEND=onnx            # onnx | gemini | fake
 EMBED_MODEL=onnx-community/embeddinggemma-300m-ONNX
@@ -40,6 +43,7 @@ HF_HOME=D:\hf-cache
 Backends
 - gemini: `google-genai` SDK, `client.models.generate_content(model=..., contents=..., config=GenerateContentConfig(system_instruction=..., tools=[...], response_mime_type="application/json"))`. Verify that Gemma 4 model ids accept `tools` and `response_mime_type`; if not, the JSON protocol path is used automatically.
 - openrouter and ollama: `openai` SDK with `base_url`; tools in OpenAI format. Ollama serves `/v1/chat/completions` with tools for Gemma 4.
+- anthropic: official `anthropic` SDK, native tool use (`apps/api/llm/claude.py`). Prompt caching puts one breakpoint on the static system prompt (which also covers the tool list) and, in tool loops, a top-level automatic breakpoint that follows the conversation. Single-shot calls cache only the system prompt. Assistant tool turns are replayed verbatim. `temperature` is ignored (current Claude models reject it); thinking stays on, `think=False` maps to `effort=low`, and 4096 tokens of headroom are added to `max_tokens`. Refusals raise `LLMError`; on Opus 5.5, Opus 5, Sonnet 5.5 and Fable 5.1 the server-side `fallbacks: "default"` retry is enabled. Cache totals appear under `llm.usage` in `/health`. Prefixes below the model's minimum (512 tokens on the 5.5 models) are not cached.
 - fake (tests): `FakeLLM(responses=[...])` returns scripted outputs; `FakeEmbedder` returns deterministic hashed vectors of dim 768.
 
 EmbeddingGemma prompt prefixes (from the model card): queries `"task: search result | query: {text}"`, documents `"title: none | text: {text}"`.

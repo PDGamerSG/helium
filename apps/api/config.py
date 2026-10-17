@@ -19,6 +19,8 @@ class Settings(BaseSettings):
     neo4j_uri: str = "bolt://localhost:7687"
     neo4j_user: str = "neo4j"
     neo4j_password: str = "helium-dev-password"
+    neo4j_database: str | None = None
+    neo4j_single_database: bool = False
     tenant_rw_password: str = "change-me-rw"
     tenant_ro_password: str = "change-me-ro"
     hive_events: str = "cdc"  # cdc (Neo4j Change Data Capture, Enterprise) | memory (in-process bus)
@@ -35,6 +37,9 @@ class Settings(BaseSettings):
     gemini_api_key: str | None = None
     gemini_api_key_2: str | None = None  # optional second key, rotated to on 429/5xx
     openrouter_api_key: str | None = None
+    anthropic_api_key: str | None = None  # unset: the SDK falls back to ANTHROPIC_API_KEY / `ant auth login`
+    llm_effort: str | None = None  # anthropic: low | medium | high | xhigh | max | none (unset: low)
+    llm_cache_ttl: str = "5m"  # anthropic prompt-cache TTL: 5m | 1h
     ollama_base_url: str = "http://localhost:11434/v1"
     llm_max_tokens: int = 1024
     llm_timeout_s: float = 180.0
@@ -83,6 +88,7 @@ class Settings(BaseSettings):
         return {
             "gemini": ",".join(k for k in (self.gemini_api_key, self.gemini_api_key_2) if k) or None,
             "openrouter": self.openrouter_api_key,
+            "anthropic": self.anthropic_api_key,
         }.get(self.llm_backend)
 
     @property

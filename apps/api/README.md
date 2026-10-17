@@ -18,7 +18,7 @@ uv run --package helium-api uvicorn apps.api.main:app --port 8081 --reload
 ```
 
 The documented local API listens on 8081
-(`API_PORT=8081`; `docker compose` maps `8080:8000`; the web app on 3002 points at 8081).
+(`API_PORT=8081`; `docker compose` maps `8080:8000`; the site on 3003 points at 8081).
 
 Tests (no Neo4j, no models: `FakeHive`, `FakeLLM`, `FakeEmbedder`):
 
@@ -41,6 +41,7 @@ Container: `docker build -f apps/api/Dockerfile -t helium-api .` (python:3.12-sl
 | Variable | Default | Meaning |
 |---|---|---|
 | `NEO4J_URI` / `NEO4J_USER` / `NEO4J_PASSWORD` | `bolt://localhost:7687` / `neo4j` / `helium-dev-password` | admin connection: creates databases, users, roles, schema |
+| `NEO4J_DATABASE` / `NEO4J_SINGLE_DATABASE` | unset / `false` | Aura Free connection: set the database name (usually `neo4j`) and `true` to use the existing database without Enterprise-only database, user, or CDC administration. This mode exposes one logical workspace (`SEED_TENANTS` first entry). |
 | `TENANT_RW_PASSWORD` / `TENANT_RO_PASSWORD` | `change-me-*` | users `team_<slug>_rw` / `team_<slug>_ro` created per tenant with RBAC grants on `team-<slug>` and `commons` |
 | `HELIUM_EVENTS` / `CDC_POLL_S` | `cdc` / `0.5` | agent wake-ups from Neo4j Change Data Capture (Enterprise) or the in-process bus (`memory`) |
 | `SARVAM_API_KEY` / `SARVAM_STT_MODEL` | unset / `saaras:v3` | enables `POST /tenants/{t}/meetings/transcribe` |
@@ -53,7 +54,7 @@ Container: `docker build -f apps/api/Dockerfile -t helium-api .` (python:3.12-sl
 | `EMBED_MODEL` | `onnx-community/embeddinggemma-300m-ONNX` | HF repo for the ONNX backend |
 | `HF_HOME` | | optional model cache directory (platform default if unset) |
 | `HIVE_BACKEND` | | set to `fake` to run the API entirely in memory (no Neo4j) |
-| `API_PORT`, `CORS_ORIGINS` | `8081`, `http://localhost:3002` | CORS also covers any localhost origin |
+| `API_PORT`, `CORS_ORIGINS` | `8081`, `http://localhost:3003` | CORS also covers any localhost origin |
 | `DATA_DIR` | `data` | `meetings/`, `gold/`, rosters; audio under `data/meetings` |
 | `SEED_TENANTS` | `orbit,nimbus,quill` | tenants whose schema is ensured on startup (`AUTO_CREATE_TENANTS=true` creates missing ones) |
 | `WORKERS_ENABLED` / `WORKER_POLL_S` | `true` / `2.0` | agent workers in the API process |
@@ -138,11 +139,11 @@ Bench and health
 
 | Agent | Capability | Task kinds | Tools |
 |---|---|---|---|
-| FactAgent | `extract` | `extract_episode`, `record_fact` | recall, active_facts, write_fact, finish |
-| FollowUpAgent | `followup` | `followup`, `nudge`, `reschedule` (after hand-off) | recall, why, open_commitments, active_facts, create_issue, finish |
-| SchedulerAgent | `schedule` | `reschedule` (wakes on `fact.superseded` with a date predicate) | why, active_facts, open_commitments, update_commitment, submit_task, hand_off, finish |
-| StandupAgent | `standup` | `learn_standup`, `run_skill` | open_commitments, active_facts, stale_decisions, recall, retrieve_skill, learn_skill, finish |
-| AnswerAgent | `answer` | `question` (and `POST /chat`) | router + recall / graph / templates / read-only Cypher |
+| Signal (`fact_agent`) | `extract` | `extract_episode`, `record_fact` | recall, active_facts, write_fact, finish |
+| Relay (`followup_agent`) | `followup` | `followup`, `nudge`, `reschedule` (after hand-off) | recall, why, open_commitments, active_facts, create_issue, finish |
+| Tempo (`scheduler_agent`) | `schedule` | `reschedule` (wakes on `fact.superseded` with a date predicate) | why, active_facts, open_commitments, update_commitment, submit_task, hand_off, finish |
+| Pulse (`standup_agent`) | `standup` | `learn_standup`, `run_skill` | open_commitments, active_facts, stale_decisions, recall, retrieve_skill, learn_skill, finish |
+| Guide (`answer_agent`) | `answer` | `question` (and `POST /chat`) | router + recall / graph / templates / read-only Cypher |
 
 Workflow tasks submitted by an agent for another agent (`reschedule`) carry `requires: []` and are
 claimed immediately by the submitter, because `next_open_task` only returns tasks whose REQUIRES
