@@ -7,10 +7,10 @@ const source = readFileSync(new URL("../app/api/helium/[...path]/route.ts", impo
 const compiled = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
 
 function proxy(env, upstream) {
-  const module = { exports: {} };
+  const loaded = { exports: {} };
   const require = () => ({ sampleRequest: () => ({ status: 200, body: { sample: true } }) });
-  new Function("module", "exports", "require", "process", "fetch", compiled)(module, module.exports, require, { env }, upstream);
-  return module.exports;
+  new Function("module", "exports", "require", "process", "fetch", compiled)(loaded, loaded.exports, require, { env }, upstream);
+  return loaded.exports;
 }
 
 const request = () => new Request("https://helium.example/api/helium/tenants/orbit/meetings");
