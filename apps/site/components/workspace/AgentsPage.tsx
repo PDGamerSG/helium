@@ -78,6 +78,14 @@ function Trace({ taskId }: { taskId: string }) {
           </p>
           <p className="t-num text-[0.78rem] text-coal-3">{fmtTime(e.t)}</p>
           {e.summary ? <p className="mt-0.5 text-[0.84rem] text-coal-2">{e.summary}</p> : null}
+          {e.to_agent ? <p className="text-[0.84rem] text-coal-2">To {agentName(e.to_agent)}</p> : null}
+          {e.question || e.reason ? <p className="mt-1 text-[0.84rem] text-coal-2">{e.question || e.reason}</p> : null}
+          {e.artifact ? (
+            <div className="mt-2 rounded-[6px] bg-paper-2 p-3 text-[0.84rem] text-coal-2">
+              <p className="font-semibold text-coal">{e.artifact.title || e.artifact.kind?.replace(/_/g, " ") || "Output"}</p>
+              <p className="mt-1 whitespace-pre-line">{e.artifact.body || e.artifact.text}</p>
+            </div>
+          ) : null}
         </li>
       ))}
     </ol>
@@ -241,6 +249,24 @@ export function AgentsPage() {
     return map;
   }, [tasks.data]);
 
+  // Task milestones live in the graph and survive cold starts. SSE adds changes as they happen.
+  const changeLog = useMemo(() => {
+    const saved: (HeliumEvent & { key: string | number })[] = [];
+    for (const task of tasks.data ?? []) {
+      const payload = { task_id: task.id, text: task.payload?.title || task.kind.replace(/_/g, " "), agent: task.owner_agent ? agentName(task.owner_agent) : undefined };
+      saved.push({ key: `${task.id}:submitted`, event: "task.submitted", ts: task.created_at, payload });
+      if (task.status !== "submitted") saved.push({ key: `${task.id}:${task.status}`, event: `task.${task.status === "working" ? "claimed" : task.status}`, ts: task.updated_at, payload });
+    }
+    const merged = [...events, ...saved].sort((a, b) => b.ts - a.ts);
+    const seen = new Set<string>();
+    return merged.filter((event) => {
+      const id = event.payload.task_id ? `${event.event}:${event.payload.task_id}:${event.ts}` : String(event.key);
+      if (seen.has(id)) return false;
+      seen.add(id);
+      return true;
+    }).slice(0, 60);
+  }, [events, tasks.data]);
+
   return (
     <div className="px-5 pb-20 pt-8 sm:px-8 lg:px-12">
       <h1 className="t-h2 text-coal">Crew works in the same memory</h1>
@@ -345,11 +371,12 @@ export function AgentsPage() {
                       {byStatus[c.id].map((t) => (
                         <li key={t.id} className="rounded-[10px] border rule bg-white p-3">
                           <button type="button" onClick={() => setOpen(open === t.id ? null : t.id)} aria-expanded={open === t.id} className="w-full text-left">
-                            <span className="block font-semibold text-coal">{t.kind.replace(/_/g, " ")}</span>
+                            <span className="block font-semibold text-coal">{typeof t.payload?.title === "string" ? t.payload.title : t.kind.replace(/_/g, " ")}</span>
                             <span className="t-num block text-[0.8rem] text-coal-3">
                               {t.owner_agent ? agentName(t.owner_agent) : "Unclaimed"}, version {t.version}, {fmtRelative(t.updated_at, now)}
                             </span>
                           </button>
+                          {typeof t.payload?.summary === "string" ? <p className="mt-2 text-[0.84rem] text-coal-2">{t.payload.summary}</p> : null}
                           {open === t.id ? <Trace taskId={t.id} /> : null}
                         </li>
                       ))}
@@ -374,10 +401,10 @@ export function AgentsPage() {
               </span>
             </div>
             <ol className="max-h-[28rem] overflow-y-auto" aria-live="polite" aria-relevant="additions">
-              {events.length === 0 ? (
+              {changeLog.length === 0 ? (
                 <li className="px-4 py-6 text-[0.9rem] text-coal-3">Quiet. Events appear here the moment the graph changes, from any client.</li>
               ) : (
-                events.map((e) => (
+                changeLog.map((e) => (
                   <li key={e.key} className="border-b rule px-4 py-2.5 last:border-b-0" style={{ animation: "fade-in 400ms var(--ease-out-expo)" }}>
                     <p className="flex items-baseline justify-between gap-3">
                       <span className="code text-[0.76rem] font-medium text-coal">{e.event}</span>

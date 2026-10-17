@@ -5,7 +5,7 @@ from __future__ import annotations
 import asyncio
 from typing import Any
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Query
 from pydantic import BaseModel, Field, field_validator
 
 from ..agents.answer_agent import AnswerAgent
@@ -31,6 +31,12 @@ async def chat(tenant: str, body: ChatBody, ctx: AppContext = Depends(get_ctx)) 
     ctx.ensure_tenant(tenant)
     agent = AnswerAgent(tenant, ctx.hive, ctx.llm, ctx.embedder, ctx.settings)
     return await asyncio.to_thread(agent.answer, body.message, body.session_id)
+
+
+@router.get("/chat")
+def chat_sessions(tenant: str, limit: int = Query(10, ge=1, le=50), ctx: AppContext = Depends(get_ctx)) -> list[dict[str, Any]]:
+    ctx.ensure_tenant(tenant)
+    return ctx.hive.list_chat_sessions(tenant, limit)
 
 
 @router.get("/chat/{session_id}")

@@ -116,6 +116,7 @@ See [the contract and limitations](../../docs/decision-impact.md). These routes 
 
 Chat
 - `POST /tenants/{t}/chat` `{message, session_id?}` - `{answer, session_id, router: {intent, entities, route, template}, cypher: [..], subgraph, sources: [{fact_id, kind, speaker, meeting?, thread?, t_start?, sent_at?, message_id?, container_id}], model, latency_ms}`
+- `GET /tenants/{t}/chat?limit=10` - recent saved conversations `[{id, title, updated_at, turns}]`
 - `GET /tenants/{t}/chat/{session_id}` - `[{role, text, t, response?}]`
 - Prefix a message with `cypher:` (or start with `MATCH`) for the read-only free-form route (read transaction as the tenant's read-only user, 3 s timeout, write clauses rejected).
 

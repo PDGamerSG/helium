@@ -2,9 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 import { IconMail, IconMic, IconSend } from "@/components/icons";
-import { api, ApiError, useSource } from "@/lib/api";
-import { fmtDay, fmtOffset, fmtTime } from "@/lib/format";
-import type { ChatResponse } from "@/lib/types";
+import { api, ApiError, useResource, useSource } from "@/lib/api";
+import { fmtDay, fmtOffset, fmtRelative, fmtTime } from "@/lib/format";
+import type { ChatResponse, ChatSession, ChatTurn } from "@/lib/types";
 import { useWorkspace, type Turn } from "./context";
 
 const SUGGESTIONS: Record<string, string[]> = {
@@ -138,14 +138,42 @@ function TurnView({ turn }: { turn: Turn }) {
 export function AskPanel({ initial, autoSubmit }: { initial?: string; autoSubmit: boolean }) {
   const { tenant, chatTurns: turns, setChatTurns: setTurns } = useWorkspace();
   const source = useSource();
+  const recent = useResource<ChatSession[]>(source === "live" ? `/tenants/${tenant}/chat` : null);
+  const [loadingHistory, setLoadingHistory] = useState(false);
+  const [historyError, setHistoryError] = useState<string | null>(null);
   const [draft, setDraft] = useState(autoSubmit ? "" : (initial ?? ""));
-  const busy = turns.some((turn) => !turn.res && !turn.error);
+  const busy = loadingHistory || turns.some((turn) => !turn.res && !turn.error);
   const field = useRef<HTMLTextAreaElement>(null);
+
+  const resume = async (session: ChatSession) => {
+    if (busy) return;
+    setLoadingHistory(true);
+    setHistoryError(null);
+    try {
+      const history = await api<ChatTurn[]>(`/tenants/${tenant}/chat/${encodeURIComponent(session.id)}`);
+      const restored: Turn[] = [];
+      let question: string | undefined;
+      for (const turn of history) {
+        if (turn.role === "user") question = turn.text;
+        if (turn.role === "assistant" && question && turn.response) {
+          restored.push({ q: question, res: turn.response });
+          question = undefined;
+        }
+      }
+      if (!restored.length) throw new Error("This conversation has no saved answers yet.");
+      setTurns(restored);
+    } catch (error) {
+      setHistoryError(error instanceof Error ? error.message : "Could not open this conversation.");
+    } finally {
+      setLoadingHistory(false);
+    }
+  };
 
   const ask = async (q: string) => {
     const question = q.trim();
     if (!question || busy) return;
     setDraft("");
+    setHistoryError(null);
     const turn: Turn = { q: question };
     setTurns((t) => [...t, turn]);
     try {
@@ -157,6 +185,7 @@ export function AskPanel({ initial, autoSubmit }: { initial?: string; autoSubmit
       setTurns((t) => t.map((x) => (x === turn ? { ...x, error: message } : x)));
     } finally {
       field.current?.focus();
+      recent.reload();
     }
   };
 
@@ -174,6 +203,9 @@ export function AskPanel({ initial, autoSubmit }: { initial?: string; autoSubmit
   return (
     <div className="flex min-h-full flex-col">
       <div className="flex-1 space-y-7 p-5">
+        {turns.length > 0 ? <button type="button" disabled={busy} onClick={() => { setTurns([]); recent.reload(); }} className="btn btn-line btn-sm">New conversation</button> : null}
+        {historyError ? <p role="alert" className="text-[0.9rem] text-flag">{historyError}</p> : null}
+        {loadingHistory ? <p role="status" className="text-[0.9rem] text-coal-3">Opening conversation…</p> : null}
         {turns.length === 0 ? (
           <div>
             <p className="text-[0.95rem] text-coal-2">Answers come only from the team&apos;s record, with a source for every claim.</p>
@@ -189,6 +221,22 @@ export function AskPanel({ initial, autoSubmit }: { initial?: string; autoSubmit
                 </li>
               ))}
             </ul>
+            {recent.data?.length ? (
+              <section className="mt-7 border-t rule pt-5" aria-labelledby="recent-questions">
+                <h3 id="recent-questions" className="text-[0.9rem] font-semibold text-coal">Recent conversations</h3>
+                <ul className="mt-2 space-y-1">
+                  {recent.data.map((session) => (
+                    <li key={session.id}>
+                      <button type="button" disabled={busy} onClick={() => void resume(session)} className="w-full rounded-[10px] px-3 py-2 text-left hover:bg-paper-2">
+                        <span className="block text-[0.95rem] text-coal">{session.title}</span>
+                        <span className="text-[0.8rem] text-coal-3">{Math.floor(session.turns / 2)} answers · {fmtRelative(session.updated_at)}</span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ) : null}
+            {recent.error ? <p role="alert" className="mt-3 text-[0.84rem] text-coal-3">Recent conversations could not load. <button type="button" onClick={recent.reload} className="underline">Retry</button></p> : null}
           </div>
         ) : (
           turns.map((t, i) => <TurnView key={i} turn={t} />)

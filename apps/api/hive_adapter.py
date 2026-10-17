@@ -265,6 +265,14 @@ class FakeHive(MemoryHive):
     def get_turns(self, tenant: str, session_id: str) -> list[dict[str, Any]]:
         return [dict(t) for t in self._turns.get(tenant, {}).get(session_id, [])]
 
+    def list_chat_sessions(self, tenant: str, limit: int = 10) -> list[dict[str, Any]]:
+        sessions = []
+        for session_id, turns in self._turns.get(tenant, {}).items():
+            questions = [t for t in turns if t.get("role") == "user"]
+            if questions:
+                sessions.append({"id": session_id, "title": questions[0]["text"], "updated_at": max(t["t"] for t in turns), "turns": len(turns)})
+        return sorted(sessions, key=lambda s: -s["updated_at"])[:limit]
+
     def search(self, tenant: str, text: str, embed: Any, k: int = 8) -> dict[str, Any]:
         """The fake fuses its cosine recall with substring full-text, standing in for the neo4j-graphrag retriever."""
         hits = {i["id"]: dict(i["node"], score=i["similarity"]) for i in self.recall(tenant, embed(text), k=k)["items"]}
@@ -1197,6 +1205,17 @@ class RealHive:
                     rec["meta"] = {}
             out.append(rec)
         return out
+
+    def list_chat_sessions(self, tenant: str, limit: int = 10) -> list[dict[str, Any]]:
+        result = self._ro(tenant,
+            "MATCH (s:ChatSession)-[:HAS_TURN]->(t:Turn) "
+            "WITH s, t ORDER BY t.t, t.id "
+            "WITH s, collect(t) AS turns "
+            "WITH s, turns, [t IN turns WHERE t.role = 'user'] AS questions "
+            "WHERE size(questions) > 0 "
+            "RETURN s.id, questions[0].text, last(turns).t, size(turns) "
+            "ORDER BY last(turns).t DESC LIMIT $limit", {"limit": limit})
+        return [{"id": sid, "title": title, "updated_at": updated, "turns": count} for sid, title, updated, count in result.result_set]
 
     def run_ro_cypher(self, tenant: str, query: str, params: dict[str, Any] | None = None, timeout_ms: int = 3000) -> dict[str, Any]:
         from hiveboard.records import row_value

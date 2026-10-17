@@ -141,7 +141,10 @@ export type Task = {
   payload?: Record<string, unknown>;
   about?: string[];
 };
-export type TaskTrace = { task: Task; events: { t: number; type: string; agent?: string; summary?: string; artifact?: unknown }[] };
+export type TaskTrace = { task: Task; events: { t: number; type: string; agent?: string; to_agent?: string; summary?: string; question?: string; reason?: string; artifact?: { kind?: string; title?: string; text?: string; body?: string } }[] };
+
+export type ChatSession = { id: string; title: string; updated_at: number; turns: number };
+export type ChatTurn = { role: string; text: string; t: number; response?: ChatResponse };
 
 export type Skill = {
   id: string;

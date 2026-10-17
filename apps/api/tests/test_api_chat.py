@@ -78,6 +78,19 @@ def test_chat_history_is_persistent(client):
     assert client.get("/tenants/orbit/chat/sess_unknown").json() == []
 
 
+def test_recent_conversations_are_persistent_and_tenant_scoped(client, seeded):
+    first = _ask(client, "Which payment provider do we use?")
+    _ask(client, "Who owns offline mode?", first["session_id"])
+    seeded.hive.add_turn("nimbus", "other-team", "user", "Private Nimbus question")
+    sessions = client.get("/tenants/orbit/chat?limit=1").json()
+    assert len(sessions) == 1
+    assert sessions[0]["id"] == first["session_id"]
+    assert sessions[0]["title"] == "Which payment provider do we use?"
+    assert sessions[0]["turns"] == 4 and sessions[0]["updated_at"] > 0
+    assert client.get("/tenants/nimbus/chat").json()[0]["id"] == "other-team"
+    assert client.get("/tenants/orbit/chat?limit=0").status_code == 422
+
+
 def test_chat_history_is_stored_as_turns_in_the_graph(client, seeded):
     response = _ask(client, "Why did we pick Razorpay?")
     turns = seeded.hive.get_turns("orbit", response["session_id"])

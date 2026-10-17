@@ -2,17 +2,15 @@ import { sampleRequest } from "@/lib/sample-api";
 
 /**
  * Proxy to the Helium API (HELIUM_API_URL, default http://localhost:8081). Same-origin requests avoid CORS,
- * and when the API cannot be reached the bundled Orbit sample answers instead. Every response says which one
- * answered in the `x-helium-source` header.
+ * The bundled sample is available for local previews and explicit sample mode. A configured production API
+ * reports its own failures so one slow request cannot silently replace persisted workspace data with fixtures.
  */
 
 export const dynamic = "force-dynamic";
 
 const API = (process.env.HELIUM_API_URL ?? "http://localhost:8081").replace(/\/$/, "");
 const FORCE_SAMPLE = process.env.HELIUM_SOURCE === "sample";
-const RETRY_AFTER_MS = 15000;
-
-let downUntil = 0;
+const CONFIGURED_API = Boolean(process.env.HELIUM_API_URL);
 
 type Ctx = { params: Promise<{ path: string[] }> };
 
@@ -23,7 +21,7 @@ async function live(req: Request, path: string[], method: string, body: string |
   const target = `${API}/${path.map(encodeURIComponent).join("/")}${url.search}`;
   const isEvents = path.at(-1) === "events";
   const connect = new AbortController();
-  const timer = setTimeout(() => connect.abort(new DOMException("timeout", "TimeoutError")), method === "POST" ? 120000 : isEvents ? 5000 : 10000);
+  const timer = setTimeout(() => connect.abort(new DOMException("timeout", "TimeoutError")), method === "POST" ? 120000 : isEvents ? 15000 : 60000);
   const headers: Record<string, string> = { accept: req.headers.get("accept") ?? "*/*" };
   if (body !== undefined) headers["content-type"] = "application/json";
   const range = req.headers.get("range");
@@ -78,19 +76,18 @@ async function handle(req: Request, ctx: Ctx, method: "GET" | "POST") {
   const { path } = await ctx.params;
   const body = method === "POST" ? await req.text() : undefined;
 
-  if (!FORCE_SAMPLE && Date.now() >= downUntil) {
+  if (!FORCE_SAMPLE) {
     try {
       return await live(req, path, method, body);
     } catch (error) {
       if (req.signal.aborted) return new Response(null, { status: 499 });
       const timedOut = error instanceof DOMException && error.name === "TimeoutError";
-      if (method === "POST" && timedOut) {
+      if (CONFIGURED_API) {
         return Response.json(
-          { error: { code: "upstream_timeout", message: "The Helium API took too long to answer." } },
-          { status: 504, headers: { "x-helium-source": "live" } },
+          { error: { code: timedOut ? "upstream_timeout" : "upstream_unavailable", message: timedOut ? "The Helium API took too long to answer. Please retry." : "The Helium API is temporarily unavailable. Please retry." } },
+          { status: timedOut ? 504 : 503, headers: { "x-helium-source": "live", "cache-control": "no-store" } },
         );
       }
-      downUntil = Date.now() + RETRY_AFTER_MS;
     }
   }
 
